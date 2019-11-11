@@ -1,0 +1,20 @@
+{
+  "name": "timedilation",
+  "version": "1.0.0",
+  "description": "Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Cox",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "knex": "^0.17.6",
+    "sessionstorage": "^0.1.0",
+    "sqlite": "^3.0.3",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master"
+  }
+}

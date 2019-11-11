@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Database</title>
+        <style>
+        table
+        {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            padding:2px;
+            margin:5px;
+        }
+
+        td,th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2;}
+
+        tr:hover {background-color: #e7e7e7;}
+
+        th 
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: #1e3379;
+            color: white;
+        }
+
+        .myButton {
+            background-color: #d43404;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Trebuchet MS;
+            font-size: 16px;
+            padding: 8px 14px;
+            text-decoration: none;
+            font-weight: bold;
+            border:none;
+        }
+
+        .myButton:hover {
+            background-color: #9c2501;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+    <table style="font-size: 90%;">
+        <thead>
+            <tr>
+                <th></th>
+                <th>User ID</th>
+                <th>Total Answered</th>
+                <th>Total Correct</th>
+                <th>Total Image Labels</th>
+                <th>Total Image LabelsC</th>
+                <th>WrongImages</th>
+                <th>WrongImageC</th>
+                <th>findImage</th>
+                <th>findImageC</th>
+                <th>typeWords</th>
+                <th>typeWordsC</th>
+                <th>findPatternA</th>
+                <th>findPatternC</th>
+                <th>wrongWordA</th>
+                <th>wrongWordC</th>
+                <th>AVG Res Time (seconds)</th>
+                <th>timeEstimate</th>
+                <th>timeFeel</th>
+                <th>lever</th>
+                <th>hurry</th>
+                <th>awareness</th>
+                <th>distraction</th>
+                <th>motivation</th>
+                <!--<th>rewarding</th>-->
+                <th>boring</th>
+                <th>repetitive</th>
+                <th>pressure</th>
+                <th>educationLevel</th>
+                <th>emotion</th>
+                <th>gender</th>
+                <th>age</th>
+                
+            </tr>
+        </thead>
+        <tbody style="border: 1px solid black;">
+            <% for(var i = 0; i < mainData.length; i++) {%>
+            <tr>
+                
+                <td style="text-align:center;">
+                    <form action="/DeleteMain/<%= mainData[i].userID%>" method="post">
+                        <input type="submit" name="Delete" value="Delete" class="myButton" />
+                    </form>
+                </td>
+                <td><%= mainData[i].userID %></td>
+                <td><%= mainData[i].allA %></td>
+                <td><%= mainData[i].allC %></td>
+                <td><%= mainData[i].labelA %></td>
+                <td><%= mainData[i].labelC %></td>
+                <td><%= mainData[i].findWrongA %></td>
+                <td><%= mainData[i].findWrongC %></td>
+                <td><%= mainData[i].findImageA %></td>
+                <td><%= mainData[i].findImageC %></td>
+                <td><%= mainData[i].typeWordsA %></td>
+                <td><%= mainData[i].typeWordsC %></td>
+                <td><%= mainData[i].findPatternA %></td>
+                <td><%= mainData[i].findPatternC %></td>
+                <td><%= mainData[i].wrongWordA %></td>
+                <td><%= mainData[i].wrongWordC %></td>
+                <td><%= mainData[i].avgResTime %></td>
+                <td><%= mainData[i].timeEstimate %></td>
+                <td><%= mainData[i].timeFeel %></td>
+                <td><%= mainData[i].lever %></td>
+                <td><%= mainData[i].hurry %></td>
+                <td><%= mainData[i].awareness %></td>
+                <td><%= mainData[i].distraction %></td>
+                <td><%= mainData[i].motivation %></td>
+                <!--<td><%= mainData[i].rewarding %></td>-->
+                <td><%= mainData[i].boring %></td>
+                <td><%= mainData[i].repetitive %></td>
+                <td><%= mainData[i].pressure %></td>
+                <td><%= mainData[i].educationLevel %></td>
+                <td><%= mainData[i].emotion %></td>
+                <td><%= mainData[i].gender %></td>
+                <td><%= mainData[i].age %></td>
+                <% }%>
+            
+        </tbody>
+    </table>
+
+    
+    <div class="table">
+
+        
+        <form action="/" method="get">
+            <input type="submit" value="Add New Line" style="background-color:#298000; margin:5px;"  class="myButton">
+        </form>
+    </div>
+</body>
+
+</html>

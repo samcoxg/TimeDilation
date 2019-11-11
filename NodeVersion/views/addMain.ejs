@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Survey</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <style>
+       body
+       {
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color:#4a4a4a;
+            font-weight: 400;
+            background-color: white;
+       }
+       h1{font-size:250%;}
+       html, body 
+       {
+            margin: 0;
+            height: 100%;
+        }
+        
+.radioImage { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+.radioImage + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.radioImage:checked + img {
+  border: 2px solid #0819ff;
+  box-shadow: 0 0 3px #0819ff;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #D3D3D3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #0026ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #0026ff;
+  cursor: pointer;
+}
+
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: #D3D3D3;
+  height: 10px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+}
+    .myButton {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #577eeb), color-stop(1, #577eeb));
+    background:-moz-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-webkit-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-o-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-ms-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:linear-gradient(to bottom, #577eeb 5%, #577eeb 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#577eeb', endColorstr='#577eeb',GradientType=0);
+    background-color:#577eeb;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:8px 16px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #577eeb;
+}
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #577eeb), color-stop(1, #577eeb));
+    background:-moz-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-webkit-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-o-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:-ms-linear-gradient(top, #577eeb 5%, #577eeb 100%);
+    background:linear-gradient(to bottom, #577eeb 5%, #577eeb 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#577eeb', endColorstr='#577eeb',GradientType=0);
+    background-color:#577eeb;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+img{
+    width:400px;
+    height:auto;
+    
+}
+   </style>
+</head>
+
+<body>
+<div id="mainStyle">
+    <p>User ID:</p>
+    <p id='storeUID'><%= mainData[0].userID %></p>
+    
+    <div id="musicPlayerDiv" style="display: none;">
+        <audio id="myAudio1"><source src="/songs/Echos/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio2"><source src="/songs/Sad/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio3"><source src="/songs/Happy/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio4"><source src="/songs/Reflection/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio5"><source src="/songs/Sad2/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio6"><source src="/songs/Inspirational/1.mp3" type="audio/mpeg"></audio>
+
+        <div style="width:70%; margin:0 auto;">
+            <h2>Audio Sampler</h2>
+            <p>This page contains samples of different styles of music. The music is instrumental. Please play each sample and rate how happy or sad it makes you feel on a scale of 1-10,
+                with 1 being <strong>a very sad song</strong> and 10 being <strong>a very happy song.</strong> Please rate the songs based on how they make you feel, indicating whether they improve your mood (happy), or detract from it (sad). After you have made a selection for each song sample,
+                please press "Begin." Music will play throughout your experiment. 
+            </p><br><br>
+            <p>Click the buttons to play the audio.</p>
+            <br>
+            <form id="musicLibrary">
+                <button onclick="playAudio(1)" type="button">Play Sample 1</button>
+                <button onclick="pauseAudio(1)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio1" name="audio1">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <button onclick="playAudio(2)" type="button">Play Sample 2</button>
+                <button onclick="pauseAudio(2)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio2" name="audio2">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <button onclick="playAudio(3)" type="button">Play Sample 3</button>
+                <button onclick="pauseAudio(3)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio3" name="audio3">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <button onclick="playAudio(4)" type="button">Play Sample 4</button>
+                <button onclick="pauseAudio(4)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio4" name="audio4">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <button onclick="playAudio(5)" type="button">Play Sample 5</button>
+                <button onclick="pauseAudio(5)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio5" name="audio5">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <button onclick="playAudio(6)" type="button">Play Sample 6</button>
+                <button onclick="pauseAudio(6)" type="button">Pause</button>
+                <br><br>
+                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
+                <div class="range">
+                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio6" name="audio6">
+                        <div class="sliderticks">
+                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        </div>
+                </div><br><br><br>
+                <input type="button" value="Begin!" onclick="selectMusic()">
+            </form>
+            
+        </div>
+    </div>
+    
+
+    <div id="cap" style="width:50%; margin-left:100px; padding:40px; float:left; top:0; height:900px;">
+        <p id="title"></p>
+        <br>
+        <br>
+        <!--<form id="survey1" class="survey1" action="/addMain" method="post" style="display: none;" name="myForm">-->
+        <form id="survey1" class="survey1"  method="post" style="display: none;" name="myForm" action="/UpdateMain/<%= mainData[0].userID%>">
+            <input type="hidden" id="allA" name="allA"></input>
+            <input type="hidden" id="allC" name="allC"></input>
+            <input type="hidden" id="labelA" name="labelA"></input>
+            <input type="hidden" id="labelC" name="labelC"></input>
+            <input type="hidden" id="findWrongA" name="findWrongA"></input>
+            <input type="hidden" id="findWrongC" name="findWrongC"></input>
+            <input type="hidden" id="findImageA" name="findImageA"></input>
+            <input type="hidden" id="findImageC" name="findImageC"></input>
+            <input type="hidden" id="typeWordsA" name="typeWordsA"></input>
+            <input type="hidden" id="typeWordsC" name="typeWordsC"></input>
+            <input type="hidden" id="findPatternA" name="findPatternA"></input>
+            <input type="hidden" id="findPatternC" name="findPatternC"></input>
+            <input type="hidden" id="wrongWordA" name="wrongWordA"></input>
+            <input type="hidden" id="wrongWordC" name="wrongWordC"></input>
+            <input type="hidden" id="avgResTime" name="avgResTime"></input>
+            <input type="hidden" id="lever" name="lever"></input>
+            
+
+            <label>The task you just participated in was set to run for a random amount of time.
+                Please indicate the number of minutes you think passed during your image-labeling task. Do not try to 
+                estimate or calculate the elapsed time. Just enter the number of minutes you think probably passed. 
+                This should be a guess, not a calculation. </label>
+            <br>
+            <br>
+            <!--<input id="timeEstimate" type="number" name="timeEstimate">-->
+            <div class="range">
+                <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="timeEstimate" name="timeEstimate">
+                <div class="sliderticks">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                    <p>11</p>
+                    <p>12</p>
+                    <p>13</p>
+                    <p>14</p>
+                    <p>15</p>
+
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <label>How did the time seem to pass for you during the image-labeling task?</label>
+            <br>
+            
+            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Very Slowly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Somewhat Slowly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Normal<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Somewhat Quickly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Very Quickly<br>
+            <br>
+            <br>
+
+            <label>Were you in a hurry to finish the image-labeling task?</label>
+            <br><input type="radio" id="hurry" name="hurry" value="yes"> Yes<br>
+            <input type="radio" id="hurry" name="hurry" value="no"> No<br>
+            <br>
+            <br>
+
+            <p style="font-size: 1.2em;">With 0 being "Not at all" and 10 being "Extensively"<br> During the image-labeling task, to what extent do you feel the experiment software…</p>
+       
+            <div style="width:90%; margin:0 auto;">
+                <label>kept you aware of the time passing:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="awareness" name="awareness">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+                <label>was distracting from the task:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="distraction" name="distraction">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+
+                
+                <label>was boring:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="boring" name="boring">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+
+                <label>provided a positive, motivating opportunity:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="motivation" name="motivation">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+
+                <label>was habit forming, or repetetive, to the point of automatic behavior:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="repetitive" name="repetitive">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+
+                <label>was challenging:</label>
+                <div class="range">
+                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="pressure" name="pressure">
+                    <div class="sliderticks">
+                        <p>0</p>
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <label>Please select your education level.</label>
+            <br>
+            <select id="educationLevel" name="educationLevel">
+                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                <option value="No formal education">No formal education</option>
+                <option value="Primary education">Primary education</option>
+                <option value="Secondary education">Secondary education or high school</option>
+                <option value="GED">GED</option>
+                <option value="Vocational qualification">Vocational qualification</option>
+                <option value="Bachelor's degree">Bachelor's degree</option>
+                <option value="Master's degree">Master's degree</option>
+                <option value="Doctorate or higher">Doctorate or higher</option>
+                </select>
+            <br>
+            <br><br><br><br>
+
+            <label>Please rate your general emotional state throughout the experiment with 0 being very negative (sad, angry, or highly stressed) and 10 being very positive (happy, joyful, pleasant): </label><br><br>
+            <div class="range">
+            <input type="range" step="1" min="0" max="10" value="0" class="slider" id="emotion" name="emotion">
+                <div class="sliderticks">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <label>Please select your gender.</label>
+            <br>
+            <input type="radio" id="gender" name="gender" value="male"> Male</input><br>
+            <input type="radio" id="gender" name="gender" value="female"> Female</input><br>
+            <input type="radio" id="gender" name="gender" value="other"> Other</input>
+            <br>
+            <br>
+
+            <label>How did the music played through the experiment affect your emotions?</label>
+            <br>
+            <!--
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It helped me feel happy.<br>
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It helped me to relax.<br>
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It had no effect.<br>
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It made me feel sad.<br>
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It made me angry.<br>
+            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It was annoying<br>
+            <br>
+            <br>
+-->
+            <label>Please indicate your age.</label>
+            <br>
+            <input type="number" id="age" name="age">
+            <br>
+            <br>
+
+            
+            <button type="submit" value="Submit">Submit</button>
+        
+        </form>
+        
+    </div>
+    <div id='wholeGame' style="display: none; height:900px;">
+        <div id="gameCover" style="width: 32%;  margin-right:0px; border: 2px solid black; display:hidden; float:right;">
+            <h3 style="text-align: center;">Accuracy</h3>
+            <div class="w3-light-grey" id="gameBar" style="display:none; ">
+                <div class="w3-container w3-center" id="gameBar2" style="height: 50px; font-size: 1.3em; padding:10px; border-top: 1px solid black;"></div>
+            </div>
+        </div>
+
+        <div id="gameCover" style="width: 32%;  margin-top:15px; margin-right:0px; border: 2px solid black; display:initial; float:right;">
+            <h3 style="text-align: center;">Performance Points</h3>
+            <div class="w3-light-grey" id="perf" style="display:initial; ">
+                <div class="w3-container w3-center" id="perf2" style="height: 50px; font-size: 1.3em; padding:10px; border-top: 1px solid black;"></div>
+            </div>
+        </div>
+
+        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid; display:initial; float:right;">
+            <h3 id="messageBoard" style="padding-left:10px;">Hello! Let's start with an easy one...</h3>
+        </div>
+        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid black; display:initial; float:right;">
+            <h3 id="messageBoard" style="padding-left:10px;">Awards...</h3>
+            <img src='images/awards/1Badge.png' style='width:60px; padding-left:10px;'>
+        </div>
+        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid black; display:initial; float:right;">
+            <h3 id="messageBoard" style="padding-left:10px;">Leaderboard</h3>
+        </div>
+    </div>
+</div>
+
+    
+    
+    <script type="text/javascript" src="/captcha.js"></script>
+</div>    
+</body>
+</html>
