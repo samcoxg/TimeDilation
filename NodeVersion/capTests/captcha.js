@@ -66,23 +66,23 @@ var Questions = [
     [62, "Select the word that best describes this image. <br><br><img src='images/label_image/19.jpg' style='height:300px;'>", "c", "draw", "table", "bed", "evening", 1],
     [63, "Select the word that best describes this image. <br><br><img src='images/label_image/20.jpg' style='height:300px;'>", "d", "toothpick", "sharpener", "pen", "pencil", 1],
     
-    [64, "Choose the option that describes the others.", "a", "country", "Japan", "Mexico", "Canada", "", "", "", "", 6],
-    [65, "Choose the option that describes the others.", "b", "sparrow", "bird", "falcon", "finch", "", "", "", "",6],
-    [66, "Choose the option that describes the others.", "c", "spoon", "fork", "utinsel", "knife", "", "", "", "",6],
-    [67, "Choose the option that describes the others.", "d", "windy", "rainy", "snowy", "weather", "", "", "", "",6],
-    [68, "Finish the following pattern: <br> blue, red, orange, blue... ", "a", "red", "blue", "orange", "brown", "", "", "", "",5],
-    [69, "Finish the following pattern: <br> 12, 21, 13, 31, 14... ", "b", "15", "41", "14", "4.1", "", "", "", "",5],
-    [70, "Finish the following pattern: <br> 10, 20, 40, 80... ", "b", "90", "160", "100", "120", "", "", "", "",5],
-    [71, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer: ", "c", "fall", "leaves", "sun", "christmas", "", "", "", "",5],
-    [72, "Finish the following pattern: <br> 80, 40, 20, 10... ", "d", "20", "2", "0", "5", "", "", "", "",5],
-    [73, "Choose the option that does NOT belong.", "a", "pillow", "river", "tree", "log", "", "", "", "",6],
-    [74, "Choose the option that does NOT belong.", "b", "toaster", "iPhone", "waffle", "hashbrowns", "", "", "", "",6],
-    [75, "Choose the option that does NOT belong.", "c", "shoe", "sock", "pepper", "boot", "", "", "", "",6],
-    [76, "Choose the option that does NOT belong.", "d", "schools", "classes", "teachers", "penguins", "", "", "", "",6],
-    [77, "Choose the option that describes the others.", "a", "color", "red", "blue", "brown", "", "", "", "",6],
-    [78, "Choose the option that describes the others.", "b", "aunt", "relative", "uncle", "cousin", "", "", "", "",6],
-    [79, "Choose the option that describes the others.", "c", "january", "august", "month", "july", "", "", "", "",6],
-    [80, "Choose the option that describes the others.", "d", "tuesday", "sunday", "monday", "day", "", "", "", "",6],
+    [64, "Choose the option that describes the others.", "a", "country", "Japan", "Mexico", "Canada", "Brazil", "China", "Germany", "France", 6],
+    [65, "Choose the option that describes the others.", "b", "sparrow", "bird", "falcon", "finch", "eagle", "duck", "penguin", "robin",6],
+    [66, "Choose the option that describes the others.", "c", "spoon", "fork", "utinsel", "butter knife", "spork", "steak knife", "a giant spork", "plastic fork",6],
+    [67, "Choose the option that describes the others.", "d", "windy", "rainy", "snowy", "weather", "hail", "tornado", "blizzard", "sunshine",6],
+    [68, "Finish the following pattern: <br> blue, red, orange, blue... ", "a", "red", "blue", "orange", "brown", "green", "yellow", "black", "purple",5],
+    [69, "Finish the following pattern: <br> 12, 21, 13, 31, 14... ", "b", "15", "41", "14", "4.1", "114", "4", ".14", "35",5],
+    [70, "Finish the following pattern: <br> 10, 20, 40, 80... ", "b", "90", "160", "100", "120", "90", "60", "40", "140",5],
+    [71, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer: ", "c", "fall", "leaves", "sun", "christmas", "valentine", "canada", "junior mint", "snow",5],
+    [72, "Finish the following pattern: <br> 80, 40, 20, 10... ", "d", "20", "2", "0", "5", "4", "10", "2.5", "20",5],
+    [73, "Choose the option that does NOT belong.", "a", "pillow", "river", "tree", "log", "forest", "bird", "deer", "creek",6],
+    [74, "Choose the option that does NOT belong.", "b", "toaster", "iPhone", "waffle", "hashbrowns", "eggs", "bacon", "frying pan", "sausage",6],
+    [75, "Choose the option that does NOT belong.", "c", "shoe", "sock", "pepper", "boot", "pants", "shirt", "jacket", "belt",6],
+    [76, "Choose the option that does NOT belong.", "d", "schools", "classes", "teachers", "emperor penguins", "grades", "students", "report cards", "desks",6],
+    [77, "Choose the option that describes the others.", "a", "color", "red", "blue", "brown", "yellow", "green", "purple", "more green",6],
+    [78, "Choose the option that describes the others.", "b", "aunt", "relative", "uncle", "cousin", "brother", "sister", "grandma", "niece",6],
+    [79, "Choose the option that describes the others.", "c", "january", "august", "month", "july", "year", "december", "june", "may",6],
+    [80, "Choose the option that describes the others.", "d", "tuesday", "sunday", "monday", "day", "wednesday", "thursday", "friday", "week",6],
     [81, "Choose the option that is most specific", "e", "animal", "mammal", "thing", "species", "red-tailed hawk", "predator", "bird", "hawk",6],
     [82, "Choose the option that is most specific", "f", "car", "vehicle", "motor", "4-wheeled", "transportation", "toyota minivan", "toyota", "van",6],
     [83, "Choose the option that is most specific", "g", "house in California", "home on the beach", "shelter", "building - large", "condo - samll", "miniature condo", "first floor small hawaii condo", "barn",6],
@@ -92,12 +92,13 @@ var Questions = [
     [87, "Choose the option that does NOT belong.", "a", "halloween", "roses", "pine tree", "ornaments", "green", "decorations", "gingersnaps", "hearts",5],
     [88, "Choose the option that does NOT belong.", "b", "sports", "tree", "football", "goals", "lacrosse", "score", "basketball", "timeout",5],
     [89, "Choose the option that does NOT have a pattern.", "a", "200, 100, 50, 10", "1,2,3,4", "2,4,8,16", "200,100,50,25", "3,6,9,12", "100, 50, 25, 22.5", "100, 90, 70, 40", "1,2,4,8",5],
-    [90, "Choose the option that does NOT have a pattern.", "b", "", "b", "", "", "", "", "", "",5],
-    [89, "Choose the option that does NOT have a pattern.", "c", "", "", "c", "", "", "", "", "",5],
-    [90, "Choose the option that DOES have an evident pattern.", "d", "", "", "", "d", "", "", "", "",5],
-    [89, "Choose the option that DOES have an evident pattern.", "f", "", "", "", "", "", "f", "", "",5],
-    [90, "Choose the option that DOES have an evident pattern.", "h", "", "", "", "", "", "", "", "h",5]
-
+    [90, "Choose the option that does NOT have a pattern.", "b", "1234", "1235", "2323", "2342", "12345", "2 4 6 8 10", "54321", "6420",5],
+    [91, "Choose the option that does NOT have a pattern.", "c", "blue, red, blue, red", "1357", "blue, red, yellow", "7531", "green, blue, green, blue", "2468", "8642", "1234",5],
+    [92, "Choose the option that DOES have an evident pattern.", "d", "1,2,3,4,6", "1,3,4,6", "2,4,8,10,12", "1,3,4,6,7,9", "13576", "1223", "1342", "1240",5],
+    [93, "Choose the option that DOES have an evident pattern.", "f", "red, yellow, orange, blue", "blue, red, green, yellow", "blue, brown, green, orange, navy", "soccer, football, tennis, basketball", "january, june, february, december", "maybe this one, maybe?, maybe this one, maybe?", "do, not, pick, this, one, please", "135248",5],
+    [94, "Choose the option that DOES have an evident pattern.", "h", "the", "acfg", "abzd", "13247", "asxf", "qhjt", "sfhk", "aceg",5],
+    [95, "Finish the following pattern: <br> 132435...", "c", "1", "2", "4", "3", "5", "7", "6", "8", 5],
+    [96, "Finish the following pattern: <br> blue, red, green, yellow, green...", "f", "blue", "green", "yellow", "purple", "orange", "red", "blue", "green", 5]
     
 ];
 let instructions = undefined;
@@ -220,10 +221,10 @@ function getQuestion()
                 {
                     if(rNum == Questions[iCount][0])
                     {   
-                        correctAnswer = Questions[iCount][2];
+                        
                         if(Questions[iCount][11] == 4 || Questions[iCount][11] == 2)
                         {
-                            correctAnswer = Questions[iCount][6];
+                            correctAnswer = Questions[iCount][10];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
                             + "</h3><br><br><label><input type='radio' id='a1' value='a' class='radioImage'/> <img src='" + Questions[iCount][2] +"' style='object-fit:cover; width:300px;'></label>"  
@@ -241,7 +242,8 @@ function getQuestion()
                         
                         else
                         {
-                            inputType = Questions[iCount][7];
+                            correctAnswer = Questions[iCount][2];
+                            inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
                                 + "</h3><br><input type='radio' name='answer' id='a1' value='a'> "
                                 + Questions[iCount][3]
@@ -471,7 +473,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (20000 * 2); // 2 minutes = 420,000
+    let end = start + (30000 * 2); // 2 minutes = 420,000
 
     function spinWheel() 
     {
