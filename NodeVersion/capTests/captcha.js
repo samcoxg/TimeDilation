@@ -24,7 +24,7 @@ var Questions = [
     [21, "Choose the word that belongs with the following: <br> hiking, kayaking, repelling... ", "b", "sharing", "backpacking", "driving", "eating", "laughing", "chewing", "crying", "being", 5],
     [22, "Choose the word that belongs with the following: <br> toaster, fridge, oven... ", "h", "knife", "painting", "couch", "couch", "floor", "soda", "earbuds", "stove", 5],
     [23, "Choose the word that belongs with the following: <br> mother, brother, sister... ", "e", "employee", "affiliate", "friend", "individual", "father", "person", "human", "being", 5],
-    [24, "Choose the word that belongs with the following: <br>socks, shirt, pants...", "g", "", "computer", "glasses", "gloves", "", "", "shoes", "", 5],
+    [24, "Choose the word that belongs with the following: <br>socks, shirt, pants...", "g", "foot", "computer", "glasses", "leaf", "tree", "earbuds", "shoes", "feet", 5],
     [25, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/1.jpg' style='width:200px;'>", "a", "28ivw", "28ivv", "82ivw", "28iivw", "2ivw", "29ivw", "", "", 3],
     [26, "Type out the numbers and letters in the image below.  <br><br><img src='images/typeWords/2.jpg' style='width:200px;'>", "b", "ke4z", "k4ez", "kezy", "kezj", "4kez", "d4ez", "5tfr", "4keez", 3],
     [27, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/3.jpg' style='width:200px;'>", "c", "jw26k", "jw6k2", "jw62k", "jw2k6", "wj26k", "jw66k", "jw22k", "jvv26k", 3],
@@ -51,7 +51,6 @@ var Questions = [
     [48, "Choose the option that does NOT belong.", "b", "sparrow", "moose", "hawk", "eagle", "bird", "robin", "sparrow", "falcon", 6],
     [49, "Choose the option that does NOT belong.", "c", "train", "car", "piano", "bus", "truck", "plane", "jet", "bike", 6],
     [50, "Choose the option that does NOT belong.", "d", "ski", "snowboard", "snowshoe", "volcano", "snow", "ice", "cold", "winter", 6],
-    
     [51, "Which of the following images contains a bike?", 'images/dogs/13.jpg', 'images/dogs/11.jpg', 'images/dogs/12.jpg', 'images/dogs/10.jpg', "images/random/1/jpg", "images/random/3/jpg", "images/random/5/jpg", "images/random/7/jpg", "a", 4],
     [52, "Which of the following images contains a bike?", 'images/dogs/18.jpg', 'images/bikes/bike1.jpg', 'images/dogs/17.jpg', 'images/dogs/16.jpg', "images/random/18/jpg", "images/random/17/jpg", "images/random/16/jpg", "images/random/15/jpg", "b",  4],
     [53, "Which of the following images contains a bike?", 'images/dogs/3.jpg', 'images/dogs/15.jpg', 'images/bikes/bike2.jpg', 'images/dogs/5.jpg', "images/random/14/jpg", "images/random/13/jpg", "images/random/12/jpg", "images/random/11/jpg", "c",  4],
@@ -60,7 +59,6 @@ var Questions = [
     [56, "Which of the following images contains fruit?", 'images/dogs/18.jpg', '', 'images/dogs/17.jpg', 'images/dogs/16.jpg', "images/random/4/jpg", "images/fruit/fruit1.jpg", "images/random/6/jpg", "images/random/5/jpg", "f",  4],
     [57, "Which of the following images contains fruit?", 'images/dogs/3.jpg', 'images/dogs/15.jpg', '', 'images/dogs/13.jpg', "images/random/3/jpg", "images/random/18/jpg", "images/fruit/fruit2.jpg", "images/random//jpg", "g",  4],
     [58, "Which of the following images contains fruit?", 'images/wrongImage/1.1.jpg', 'images/wrongImage/2.1.jpg', 'images/wrongImage/3.1.jpg', '', "images/random/14/jpg", "images/random/12/jpg", "images/random/10/jpg", "images/fruit/fruit3.jpg", "h",  4],
-    
     [59, "Select the word that best describes this image. <br><br><img src='images/label_image/16.jpg' style='height:300px;'>", "a", "turtle", "fish", "crab", "lobster", "salamandar", "bird", "swimming thingy", "animal", 1],
     [60, "Select the word that best describes this image. <br><br><img src='images/label_image/17.jpg' style='height:300px;'>", "b", "dinner", "cookie", "plate", "drink", "food", "dessert", "restaraunt", "spoon", 1],
     [61, "Select the word that best describes this image. <br><br><img src='images/label_image/18.jpg' style='height:300px;'>", "c", "fish", "pet", "shark", "friendly", "vegan", "teeth", "smell", "ocean", 1],
@@ -165,7 +163,7 @@ function getQuestion()
                                 + "</h3><br><br><label><input type='radio' id='a1' value='a' class='radioImage'/> <img src='" + Questions[iCount][2] +"' style='object-fit:cover; width:300px;'></label>"  
                                 + "<label><input type='radio' id='a2' value='b'class='radioImage'/> <img src='" + Questions[iCount][3] +"' style='object-fit:cover; width:300px;'></label>"
                                 + "<label><input type='radio' id='a3' value='c'class='radioImage'/> <img src='" + Questions[iCount][4] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a4' value='d'class='radioImage'/> <img src='" + Questions[iCount][5] +"' style='object-fit:cover; width:300px;'></label><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
+                                + "<label><input type='radio' id='a4' value='d'class='radioImage'/> <img src='" + Questions[iCount][5] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             else
                             {
@@ -173,7 +171,7 @@ function getQuestion()
                                 + "</h3><br><br><label><input type='radio' id='a1' value='e' class='radioImage'/> <img src='" + Questions[iCount][6] +"' style='object-fit:cover; width:300px;'></label>"  
                                 + "<label><input type='radio' id='a2' value='f'class='radioImage'/> <img src='" + Questions[iCount][7] +"' style='object-fit:cover; width:300px;'></label>"
                                 + "<label><input type='radio' id='a3' value='g'class='radioImage'/> <img src='" + Questions[iCount][8] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a4' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
+                                + "<label><input type='radio' id='a4' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             Questions[iCount][0] = 0;
                             numFound = true;
@@ -195,7 +193,7 @@ function getQuestion()
                                 + Questions[iCount][5]
                                 + "<br><input type='radio' name='answer' id='a4' value='d'> "
                                 + Questions[iCount][6]
-                                + "<br><br><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
+                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             else
                             {
@@ -208,7 +206,7 @@ function getQuestion()
                                 + Questions[iCount][9]
                                 + "<br><input type='radio' name='answer' id='a4' value='h'> "
                                 + Questions[iCount][10]
-                                + "<br><br><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
+                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             
                             Questions[iCount][0]= 0;
@@ -234,7 +232,7 @@ function getQuestion()
                             + "<label><input type='radio' id='a5' value='e'class='radioImage'/> <img src='" + Questions[iCount][6] +"' style='object-fit:cover; width:300px;'></label>"
                             + "<label><input type='radio' id='a6' value='f'class='radioImage'/> <img src='" + Questions[iCount][7] +"' style='object-fit:cover; width:300px;'></label>"
                             + "<label><input type='radio' id='a7' value='g'class='radioImage'/> <img src='" + Questions[iCount][8] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a8' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
+                            + "<label><input type='radio' id='a8' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' id='checkAcc' onClick='checkAcc()'>";
                             Questions[iCount][0] = 0;
                             numFound = true;
                             iWhile++;
@@ -473,7 +471,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (30000 * 2); // 2 minutes = 420,000
+    let end = start + (210000 * 2); // 2 minutes = 420,000 * 2
 
     function spinWheel() 
     {
