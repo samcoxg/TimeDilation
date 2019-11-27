@@ -19,6 +19,21 @@
             margin: 0;
             height: 100%;
         }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
         
 .radioImage { 
   position: absolute;
@@ -458,29 +473,78 @@ img{
         
     </div>
     <div id='wholeGame' style="display: none; height:900px;">
-        <div id="gameCover" style="width: 32%;  margin-right:0px; border: 2px solid black; display:hidden; float:right;">
-            <h3 style="text-align: center;">Accuracy</h3>
-            <div class="w3-light-grey" id="gameBar" style="display:none; ">
-                <div class="w3-container w3-center" id="gameBar2" style="height: 50px; font-size: 1.3em; padding:10px; border-top: 1px solid black;"></div>
-            </div>
+        <div id="gameCover" style="width: 32%;  margin-right:0px; display:hidden; float:right;">
+            <h3 style="text-align: center;" id="gameBar">XP: 
+            </h3>
         </div>
 
-        <div id="gameCover" style="width: 32%;  margin-top:15px; margin-right:0px; border: 2px solid black; display:initial; float:right;">
-            <h3 style="text-align: center;">Performance Points</h3>
-            <div class="w3-light-grey" id="perf" style="display:initial; ">
-                <div class="w3-container w3-center" id="perf2" style="height: 50px; font-size: 1.3em; padding:10px; border-top: 1px solid black;"></div>
-            </div>
-        </div>
 
-        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid; display:initial; float:right;">
-            <h3 id="messageBoard" style="padding-left:10px;">Hello! Let's start with an easy one...</h3>
+        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  display:initial; float:right;">
+            <h3 id="messageBoard" >Let's start with an easy one...</h3>
         </div>
-        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid black; display:initial; float:right;">
-            <h3 id="messageBoard" style="padding-left:10px;">Awards...</h3>
-            <img src='images/awards/1Badge.png' style='width:60px; padding-left:10px;'>
-        </div>
-        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid black; display:initial; float:right;">
-            <h3 id="messageBoard" style="padding-left:10px;">Leaderboard</h3>
+        <!--<div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  border: 2px solid grey; display:initial; float:right;">
+            <h3 id="messageBoard" style="padding:5px;">Awards...</h3>
+            <img src='images/awards/1Badge.png' style='width:60px; padding: 5px;'>
+        </div>-->
+        <div id="mBoard" style="width: 32%; margin-top:15px; margin-right:0px;  display:initial; float:right;">
+            <h3 id="messageBoard" >Leaderboard - Top 10</h3>
+            <table>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Nickname</th>
+                    <th>XP</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td id="n1"></td>
+                    <td id="s1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td id="n2"></td>
+                    <td id="s2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td id="n3"></td>
+                    <td id="s3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td id="n4"></td>
+                    <td id="s4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td id="n5"></td>
+                    <td id="s5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td id="n6"></td>
+                    <td id="s6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td id="n7"></td>
+                    <td id="s7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td id="n8"></td>
+                    <td id="s8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td id="n9"></td>
+                    <td id="s9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td id="n10"></td>
+                    <td id="s10"></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

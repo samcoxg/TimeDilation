@@ -99,6 +99,7 @@ var Questions = [
     [96, "Finish the following pattern: <br> blue, red, green, yellow, green...", "f", "blue", "green", "yellow", "purple", "orange", "red", "blue", "green", 5]
     
 ];
+//global variables with stored values throughout the functions of the app
 let instructions = undefined;
 let iWhile = 0;
 let correctAnswer = undefined;
@@ -122,6 +123,7 @@ let musicSelection = ['Echos', 'Sad', 'Happy', 'Reflection', 'Sad2', 'Inspiratio
 let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
+let nickname = undefined;
 
 /*window.onbeforeunload = function() {
     return "Please do not leave this page, doing so will mean your results will not be recorded.";
@@ -431,6 +433,9 @@ function displayLever()
     //high cognitive engagement in a positive state
     else if(userID[userID.length -1] == 8)
     {
+        nickname = prompt("Please enter a nickname to be used for recording on the leaderboard!");
+        leaderBoard(0,0);
+        document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
         document.getElementById("wholeGame").style.display = "initial";
         document.getElementById("gameBar").style.display = "initial";
         gameSetting = true;
@@ -614,16 +619,13 @@ function checkAcc()
 function gameFunction()
 {
     let gamePercent = Math.floor((totalAnswers[1]/totalAnswers[0])*100);
-    document.getElementById("gameBar2").style.width = gamePercent + "%";
-    document.getElementById("gameBar2").innerHTML = gamePercent + "%";
-    document.getElementById("gameBar2").style.color = "black";
     document.getElementById("gameBar").style.display = "initial";
-    if(gamePercent < 50)
-    {document.getElementById("gameBar2").style.backgroundColor = "#f44336";}
-    else if(gamePercent < 75)
-    {document.getElementById("gameBar2").style.backgroundColor = "#ffeb3b";}
+    if(perfLevel < 25)
+    {document.getElementById("gameBar").style.color = "#f44336";}
+    else if(gamePercent < 50)
+    {document.getElementById("gameBar").style.color = "#ffeb3b";}
     else
-    {document.getElementById("gameBar2").style.backgroundColor = "#4CAF50";}
+    {document.getElementById("gameBar").style.color = "#4CAF50";}
     let messageBoard = undefined;
     if(answerSelected == true)
     {
@@ -634,6 +636,8 @@ function gameFunction()
         if(winStreak % 5 == 0)
         {
             messageBoard = "Nice Job! " + winStreak + " in a row!";
+            document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
+
         }
         else if(winStreak % 8 ==0)
         {
@@ -642,6 +646,8 @@ function gameFunction()
         else
         {
             messageBoard = "Great work! Keep it up!";
+            document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
+
         }
         
     }
@@ -653,17 +659,45 @@ function gameFunction()
         document.getElementById("mBoard").style.borderColor = "red";
         messageBoard = "You missed the last one, but no worries, you've got this!";
     }
-    if(winStreak == 10)
-    {document.getElementById("awards").innerHTML}
-    document.getElementById("perf2").style.width = "100%";
-    document.getElementById("perf2").innerHTML = perfLevel;
-    if(perf < 0)
-    {document.getElementById("gameBar2").style.backgroundColor = "#f44336";}
-    else if(gamePercent < 15)
-    {document.getElementById("gameBar2").style.backgroundColor = "#ffeb3b";}
-    else
-    {document.getElementById("gameBar2").style.backgroundColor = "#4CAF50";}
+    leaderBoard(nickname, perfLevel);
+
+    
+
     document.getElementById("messageBoard").innerHTML = messageBoard;
     displayCap();
 
+}
+function leaderBoard(nickname, perfLevel)
+{
+    let gameObjects = [
+        {name: "cosmo1!", points: 25},
+        {name: "iEatChicken4ever!", points: 23},
+        {name: "provo_all$tar_12", points: 22},
+        {name: "goUtes", points: 20},
+        {name: "tom", points: 24},
+        {name: "rachael14!", points: 178},
+        {name: "sarah#3", points: 177},
+        {name: "IDrink2%", points: 158},
+        {name: "sam5!", points: 154},
+        {name: "doubleroadkill2!", points: 2},
+        {name: nickname, points: perfLevel}
+    ];
+
+    gameObjects = gameObjects.sort((a, b) => (a.points < b.points) ? 1 : -1)
+
+    for(let gCount=0; gCount<10; gCount++)
+    {
+        document.getElementById("n" + (gCount + 1)).innerHTML = gameObjects[gCount].name;
+        document.getElementById("s" + (gCount + 1)).innerHTML = gameObjects[gCount].points;
+        if(gameObjects[gCount].name == nickname)
+        {
+            document.getElementById("n" + (gCount + 1)).style.fontWeight = "bold";
+            document.getElementById("s" + (gCount + 1)).style.fontWeight = "bold";
+        }
+        else
+        {
+            document.getElementById("n" + (gCount + 1)).style.fontWeight = "normal";
+            document.getElementById("s" + (gCount + 1)).style.fontWeight = "normal";
+        }
+    }
 }
