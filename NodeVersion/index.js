@@ -13,6 +13,8 @@ let knex = require('knex')({
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
+
 app.set('view engine', 'ejs');
 
 app.get('/database', (req, res) =>
@@ -26,6 +28,7 @@ app.get('/database', (req, res) =>
     })
 );
 
+//this is the directory that the application will point to for files
 app.use(express.static(path.join(__dirname, 'capTests')));
 
 

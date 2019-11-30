@@ -5,127 +5,8 @@
    <title>Survey</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   <style>
-       body
-       {
-            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-            color:#4a4a4a;
-            font-weight: 400;
-            background-color: white;
-       }
-       h1{font-size:250%;}
-       html, body 
-       {
-            margin: 0;
-            height: 100%;
-        }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-        
-.radioImage { 
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* IMAGE STYLES */
-.radioImage + img {
-  cursor: pointer;
-}
-
-/* CHECKED STYLES */
-.radioImage:checked + img {
-  border: 2px solid #0819ff;
-  box-shadow: 0 0 3px #0819ff;
-}
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  background: #D3D3D3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #0026ff;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #0026ff;
-  cursor: pointer;
-}
-
-.sliderticks {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.sliderticks p {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 1px;
-  background: #D3D3D3;
-  height: 10px;
-  line-height: 40px;
-  margin: 0 0 20px 0;
-}
-.mybutton {
-    background-color: #e7e7e7; 
-    color: black;    
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    }
-.mybutton:hover {
-    background-color:#d3d3d3;
-}
-.mybutton:active{
-    background-color: white;
-}
-
-img{
-    width:400px;
-    height:auto;
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-}
-   </style>
 </head>
 
 <body>
@@ -147,12 +28,13 @@ img{
             <p>This page contains samples of different styles of music. The music is instrumental. Play each sample and rate the songs based on how they make you feel, indicating whether they <strong>improve your mood (negative),</strong> or <strong>detract from it (positive).</strong>
                   After you have rated all of the song samples,
                 please press "Begin." Music will play throughout your experiment so you will need to be able to continue listening. 
-            </p><br><br>
+            </p><br>
             <p>Click the buttons to play the audio.</p>
             <br>
+            <h3>Sample 1</h3>
             <form id="musicLibrary">
-                <button onclick="playAudio(1)" type="button">Play Sample 1</button>
-                <button onclick="pauseAudio(1)" type="button">Pause</button>
+                <button onclick="playAudio(1)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(1)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Negative</p><p style="float:right;">Positive</p>
                 <div class="range">
@@ -160,9 +42,10 @@ img{
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
-                </div><br><br><br>
-                <button onclick="playAudio(2)" type="button">Play Sample 2</button>
-                <button onclick="pauseAudio(2)" type="button">Pause</button>
+                </div><br><br>
+                <h3>Sample 2</h3>
+                <button onclick="playAudio(2)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(2)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
@@ -170,9 +53,10 @@ img{
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
-                </div><br><br><br>
-                <button onclick="playAudio(3)" type="button">Play Sample 3</button>
-                <button onclick="pauseAudio(3)" type="button">Pause</button>
+                </div><br><br>
+                <h3>Sample 3</h3>
+                <button onclick="playAudio(3)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(3)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
@@ -180,9 +64,10 @@ img{
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
-                </div><br><br><br>
-                <button onclick="playAudio(4)" type="button">Play Sample 4</button>
-                <button onclick="pauseAudio(4)" type="button">Pause</button>
+                </div><br><br>
+                <h3>Sample 4</h3>
+                <button onclick="playAudio(4)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(4)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
@@ -190,9 +75,10 @@ img{
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
-                </div><br><br><br>
-                <button onclick="playAudio(5)" type="button">Play Sample 5</button>
-                <button onclick="pauseAudio(5)" type="button">Pause</button>
+                </div><br><br>
+                <h3>Sample 5</h3>
+                <button onclick="playAudio(5)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(5)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
@@ -200,9 +86,10 @@ img{
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
-                </div><br><br><br>
-                <button onclick="playAudio(6)" type="button">Play Sample 6</button>
-                <button onclick="pauseAudio(6)" type="button">Pause</button>
+                </div><br><br>
+                <h3>Sample 6</h3>
+                <button onclick="playAudio(6)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(6)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
                 <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
@@ -550,8 +437,10 @@ img{
 </div>
 
     
-    
-    <script type="text/javascript" src="/captcha.js"></script>
-</div>    
+
+</div> 
+<link rel="stylesheet" href="/Content/style.css">
+<script type="text/javascript" src="/captcha.js"></script>
+
 </body>
 </html>
