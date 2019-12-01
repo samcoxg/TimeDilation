@@ -436,7 +436,10 @@ function displayLever()
         document.getElementById("cap").style.width = "50%";
         document.getElementById("cap").style.margin = "0 auto";
         document.getElementById("cap").style.cssFloat = "left";
-        nickname = prompt("Please enter a nickname to be used for recording on the leaderboard!");
+        while(nickname == "" || nickname == undefined || nickname == null)
+        {
+            nickname = prompt("You have been selected for a competition. Please enter a nickname to be used for recording on the leaderboard!");
+        }
         leaderBoard(0,0);
         document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
         document.getElementById("wholeGame").style.display = "initial";
