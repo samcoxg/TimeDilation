@@ -241,6 +241,7 @@ function getQuestion()
                         
                         else
                         {
+                            document.getElementById("cap").style.width = "50%";
                             correctAnswer = Questions[iCount][2];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
@@ -432,6 +433,9 @@ function displayLever()
     //high cognitive engagement in a positive state
     else if(userID[userID.length -1] == 8)
     {
+        document.getElementById("cap").style.width = "50%";
+        document.getElementById("cap").style.margin = "0 auto";
+        document.getElementById("cap").style.cssFloat = "left";
         nickname = prompt("Please enter a nickname to be used for recording on the leaderboard!");
         leaderBoard(0,0);
         document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
@@ -475,7 +479,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (210000 * 2); // 2 minutes = 420,000 * 2
+    let end = start + (60000 * 2); // 2 minutes = 420,000 * 2
 
     function spinWheel() 
     {
