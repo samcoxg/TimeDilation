@@ -122,6 +122,8 @@ let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
 let nickname = undefined;
+let id = undefined;
+
 
 /*window.onbeforeunload = function() {
     return "Please do not leave this page, doing so will mean your results will not be recorded.";
@@ -456,9 +458,18 @@ function displayLever()
         displayCap();
 
     }
-    //random anything
+    //time pressure lever
     else if(userID[userID.length -1] == 0)
     {
+        let userConf = undefined;
+        while(userConf != 'YES')
+        {
+            userConf = prompt("You will be answering many different types of questions. " +
+            "However, question will have a short time limit!" + 
+            " You must click the correct answer before the timer runs out. Failing to do so will result in a missed question. " +
+            "Do your very best... your accuracy will be recorded." +
+             "\n\n Type YES (all caps) into the box below to immediately begin. ");
+        }
         leverType = 0;
         displayCap();
         //
@@ -479,6 +490,11 @@ function displayCap()
         //select the appropriate song and then do this for levertype 6 as well. will need to 
         //add songs to the html page in order to play them as needed. Songs need to play one after the other
         //for a total of 7 minutes.
+    }
+    if(leverType == 0)
+    {
+        timeOutLeverSTOP();
+        timeOutLever();
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
@@ -706,4 +722,38 @@ function leaderBoard(nickname, perfLevel)
             document.getElementById("s" + (gCount + 1)).style.fontWeight = "normal";
         }
     }
+}
+function timeOutLever()
+{
+    document.getElementById("checkAcc").style.display = "none";
+    var i = 0;
+    move();
+    function move() {
+    if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 100;
+        id = setInterval(frame, 50);
+        function frame() {
+        if (width <= 0) {
+            clearInterval(id);
+            i = 0;
+            //document.getElementById("checkAcc").click();
+        } else {
+            if(width >= 60)
+            {elem.style.backgroundColor = "green"}
+            if(width < 60)
+            {elem.style.backgroundColor = "#ffff1a";}
+            if (width < 20)
+            {elem.style.backgroundColor = "#ff3300"}
+            width--;
+            elem.style.width = width + "%";
+        }
+        }
+    }
+    }
+}
+function timeOutLeverSTOP()
+{
+    clearInterval(id);
 }
