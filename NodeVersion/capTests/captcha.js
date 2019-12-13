@@ -726,6 +726,7 @@ function leaderBoard(nickname, perfLevel)
 function timeOutLever()
 {
     document.getElementById("checkAcc").style.display = "none";
+    document.getElementById("myProgressOwner").style.display = "initial";
     var i = 0;
     move();
     function move() {
@@ -739,6 +740,7 @@ function timeOutLever()
             clearInterval(id);
             i = 0;
             //document.getElementById("checkAcc").click();
+            checkAcc();
         } else {
             if(width >= 60)
             {elem.style.backgroundColor = "green"}
