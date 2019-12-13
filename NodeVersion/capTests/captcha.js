@@ -226,18 +226,20 @@ function getQuestion()
                         
                         if(Questions[iCount][11] == 4 || Questions[iCount][11] == 2)
                         {
-                            document.getElementById("cap").style.width = "90%";
+                            document.getElementById("cap").style.left = "20%";
+                            document.getElementById("cap").style.width = "60%"; 
                             correctAnswer = Questions[iCount][10];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                            + "</h3><br><br><label><input type='radio' id='a1' value='a' class='radioImage'/> <img src='" + Questions[iCount][2] +"' style='object-fit:cover; width:300px;'></label>"  
-                            + "<label><input type='radio' id='a2' value='b'class='radioImage'/> <img src='" + Questions[iCount][3] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a3' value='c'class='radioImage'/> <img src='" + Questions[iCount][4] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a4' value='d'class='radioImage'/> <img src='" + Questions[iCount][5] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a5' value='e'class='radioImage'/> <img src='" + Questions[iCount][6] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a6' value='f'class='radioImage'/> <img src='" + Questions[iCount][7] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a7' value='g'class='radioImage'/> <img src='" + Questions[iCount][8] +"' style='object-fit:cover; width:300px;'></label>"
-                            + "<label><input type='radio' id='a8' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' id='checkAcc' class='mybutton' onClick='checkAcc()'>";
+                            + "</h3><br><br><label><input type='radio' name='test' id='a1' value='a' class = 'radioHide'><img src='" + Questions[iCount][2] +"' class='imgRadio'></label>"  
+                            + "<label><input type='radio' name='test' id='a2' value='b' class = 'radioHide'><img src='" + Questions[iCount][3] +"' class='imgRadio'></label>"
+                            + "<label><input type='radio' name='test' id='a3' value='c' class = 'radioHide'><img src='" + Questions[iCount][4] +"' class='imgRadio'></label>"
+                            + "<label><input type='radio' name='test' id='a4' value='d' class = 'radioHide'><img src='" + Questions[iCount][5] +"' class='imgRadio'></label>"
+                            + "<label><input type='radio' name='test' id='a5' value='e' class = 'radioHide'><img src='" + Questions[iCount][6] +"' class='imgRadio'></label>"  
+                            + "<label><input type='radio' name='test' id='a6' value='f' class = 'radioHide'><img src='" + Questions[iCount][7] +"' class='imgRadio'></label>"
+                            + "<label><input type='radio' name='test' id='a7' value='g' class = 'radioHide'><img src='" + Questions[iCount][8] +"' class='imgRadio'></label>"
+                            + "<label><input type='radio' name='test' id='a8' value='h' class = 'radioHide'><img src='" + Questions[iCount][9] +"' class='imgRadio'></label>" 
+                            + "<br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             Questions[iCount][0] = 0;
                             numFound = true;
                             iWhile++;
@@ -245,7 +247,8 @@ function getQuestion()
                         
                         else
                         {
-                            document.getElementById("cap").style.width = "50%";
+                            document.getElementById("cap").style.left = "30%";
+                            document.getElementById("cap").style.width = "40%"; 
                             correctAnswer = Questions[iCount][2];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
@@ -456,7 +459,6 @@ function displayLever()
     //add extra answer options 
     else if(userID[userID.length -1] == 9)
     {
-    //
         leverType = 9;
         displayCap();
 
@@ -502,7 +504,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (60000 * 2); // 2 minutes = 420,000 * 2
+    let end = start + (5000); // 
 
     function spinWheel() 
     {
@@ -537,6 +539,10 @@ function displayCap()
 }
 function displaySurvey()
 {
+    let cap1 = document.getElementById("cap");
+    cap1.style.position = "relative";
+    cap1.style.left = "20%";
+    cap1.style.width = "60%";
     document.getElementById("title").innerHTML = "Time has run out. Please complete the following survey regarding your experience.";
     document.getElementById("survey1").style.display = "initial";
     document.getElementById("mainStyle").style.backgroundColor = "white";
