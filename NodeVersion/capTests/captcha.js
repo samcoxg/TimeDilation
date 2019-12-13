@@ -31,23 +31,23 @@ var Questions = [
     [30, "Which of the following images contains fruit?", 'images/dogs/18.jpg', '', 'images/dogs/17.jpg', 'images/dogs/16.jpg', "images/random/4.jpg", "images/fruit/fruit1.jpg", "images/random/8.jpg", "images/random/5.jpg", "f",  4],
     [31, "Which of the following images contains fruit?", 'images/dogs/3.jpg', 'images/dogs/15.jpg', '', 'images/dogs/13.jpg', "images/random/3.jpg", "images/random/18.jpg", "images/fruit/fruit2.jpg", "images/random/7.jpg", "g",  4],
     [32, "Which of the following images contains fruit?", 'images/wrongImage/1.1.jpg', 'images/wrongImage/2.1.jpg', 'images/wrongImage/3.1.jpg', 'images/random/1.jpg', "images/random/14.jpg", "images/random/12.jpg", "images/random/10.jpg", "images/fruit/fruit3.jpg", "h",  4],
-    [33, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/1.jpg' style='width:200px;'>", "a", "28ivw", "28ivv", "82ivw", "28iivw", "2ivw", "29ivw", "", "", 3],
-    [34, "Type out the numbers and letters in the image below.  <br><br><img src='images/typeWords/2.jpg' style='width:200px;'>", "b", "ke4z", "k4ez", "kezy", "kezj", "4kez", "d4ez", "5tfr", "4keez", 3],
-    [35, "Type out the numbers and letters in the image below.  <br><br><img src='images/typeWords/6.jpg' style='width:200px;'>", "f", "anoyanceoct", "annoyancoct", "annoyanecoct", "annoyanceoc1", "annoyannceoct1", "annoyanceoct", "annoyeroct", "annoyeroctt", 3],
-    [36, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/7.jpg' style='width:200px;'>", "g", "overlookinquiry", "overloksinquiry", "overllooksinquiry", "overlooksinquiry", "overlooksinquiryy", "overlooksinquiry","overloksinquiry", "overlookerquiry", 3],
-    [37, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/8.jpg' style='width:200px;'>", "h", "nrtgwkn", "ntrgdkwn", "nrtgdvn", "nr1gdkwn", "nntgdkwn", "nrtgdkww", "nrtqdkwn", "nrtgdkwn", 3],
-    [38, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/9.jpg' style='width:200px;'>", "a", "frupereog", "furpereog", "fruperoeg", "frupreoeg", "furperoge", "lrupereog", "purpereog", "fergereog", 3],
-    [39, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/10.jpg' style='width:200px;'>", "d", "r9hodfq", "r6hodfp", "r6hodfq", "v6hodfq", "r6hodfp", "r6hodfg", "r6bodfq", "r5hodfq", 3],
-    [40, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/3.jpg' style='width:200px;'>", "c", "jw26k", "jw6k2", "jw62k", "jw2k6", "wj26k", "jw66k", "jw22k", "jvv26k", 3],
-    [41, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/4.jpg' style='width:200px;'>", "d", "fhd2e", "fhhede", "fh2dd", "fh2de", "f2hde", "ff2hde", "hf2de", "efhde", 3],
-    [42, "Type out the numbers and letters in the image below.  <br><br><img src='images/typeWords/5.jpg' style='width:200px;'>", "e", "p98p", "o98p", "q89p", "q68p", "q98p", "q68p", "q86p", "g98p", 3],
-    [43, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/11.jpg' style='width:200px;'>", "e", "bkngkp", "pkn9kp", "bkn9pk", "bnk9kp", "bkn9kp", "bkn99p", "pkn9kp", "bkm9kp", 3],
-    [44, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/12.jpg' style='width:200px;'>", "f", "y6g9nf", "y5g9mf", "y5g9fn", "y5n9fg", "y5n9fl", "y5g9nf", "y5g99f", "y5g9yf", 3],
-    [45, "Type out the numbers and letters in the image below. <br><br><img src='images/typeWords/13.jpg' style='width:200px;'>", "g", "w86hp", "w68ph", "vv68hp", "uu80hp", "tv68hp", "v68hp", "w68hp", "w98hp", 3],
-    [46, "Which of the following images does not belong?", 'images/wrongImage/1.1.jpg', 'images/wrongImage/1.2.jpg', 'images/wrongImage/2.1.jpg', 'images/wrongImage/1.3.jpg', "images/wrongImage/1.4.jpg", "images/wrongImage/1.5.jpg", "images/wrongImage/1.6.jpg", "images/wrongImage/1.7.jpg", "c", 2],
-    [47, "Which of the following images does not belong?", 'images/wrongImage/3.1.jpg', 'images/wrongImage/3.2.jpg', 'images/wrongImage/3.3.jpg', 'images/wrongImage/4.1.jpg', "images/wrongImage/3.4.jpg", "images/wrongImage/3.5.jpg", "images/wrongImage/3.6.jpg", "images/wrongImage/3.7.jpg", "d", 2],
-    [48, "Which of the following images does not belong?", 'images/wrongImage/2.4.jpg', 'images/wrongImage/4.2.jpg', 'images/wrongImage/4.1.jpg', 'images/wrongImage/4.3.jpg', "images/wrongImage/4.4.jpg", "images/wrongImage/4.5.jpg", "images/wrongImage/4.6.jpg", "images/wrongImage/4.7.jpg", "a", 2],
-    [49, "Which of the following images does not belong?", 'images/wrongImage/1.4.jpg', 'images/wrongImage/2.4.jpg', 'images/wrongImage/2.3.jpg', 'images/wrongImage/2.2.jpg', "images/wrongImage/2.1.jpg", "images/wrongImage/2.5.jpg", "images/wrongImage/2.6.jpg", "images/wrongImage/2.7.jpg", "a", 2],        
+    [33, "Which of the following images does not belong?", 'images/wrongImage/1.1.jpg', 'images/wrongImage/1.2.jpg', 'images/wrongImage/2.1.jpg', 'images/wrongImage/1.3.jpg', "images/wrongImage/1.4.jpg", "images/wrongImage/1.5.jpg", "images/wrongImage/1.6.jpg", "images/wrongImage/1.7.jpg", "c", 2],
+    [34, "Which of the following images does not belong?", 'images/wrongImage/3.1.jpg', 'images/wrongImage/3.2.jpg', 'images/wrongImage/3.3.jpg', 'images/wrongImage/4.1.jpg', "images/wrongImage/3.4.jpg", "images/wrongImage/3.5.jpg", "images/wrongImage/3.6.jpg", "images/wrongImage/3.7.jpg", "d", 2],
+    [35, "Which of the following images does not belong?", 'images/wrongImage/2.4.jpg', 'images/wrongImage/4.2.jpg', 'images/wrongImage/4.1.jpg', 'images/wrongImage/4.3.jpg', "images/wrongImage/4.4.jpg", "images/wrongImage/4.5.jpg", "images/wrongImage/4.6.jpg", "images/wrongImage/4.7.jpg", "a", 2],
+    [36, "Which of the following images does not belong?", 'images/wrongImage/1.4.jpg', 'images/wrongImage/2.4.jpg', 'images/wrongImage/2.3.jpg', 'images/wrongImage/2.2.jpg', "images/wrongImage/2.1.jpg", "images/wrongImage/2.5.jpg", "images/wrongImage/2.6.jpg", "images/wrongImage/2.7.jpg", "a", 2],        
+    [37, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/1.jpg' style='width:200px; height:100px;'>", "a", "28ivw", "28ivv", "82ivw", "28iivw", "2ivw", "29ivw", "", "", 3],
+    [38, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/2.jpg' style='width:200px; height:100px;'>", "b", "ke4z", "k4ez", "kezy", "kezj", "4kez", "d4ez", "5tfr", "4keez", 3],
+    [39, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/6.jpg' style='width:200px; height:100px;'>", "f", "anoyanceoct", "annoyancoct", "annoyanecoct", "annoyanceoc1", "annoyannceoct1", "annoyanceoct", "annoyeroct", "annoyeroctt", 3],
+    [40, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/7.jpg' style='width:200px; height:100px;'>", "g", "overlookinquiry", "overloksinquiry", "overllooksinquiry", "overlooksinquiry", "overlooksinquiryy", "overlooksinquiry","overloksinquiry", "overlookerquiry", 3],
+    [41, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/8.jpg' style='width:200px; height:100px;'>", "h", "nrtgwkn", "ntrgdkwn", "nrtgdvn", "nr1gdkwn", "nntgdkwn", "nrtgdkww", "nrtqdkwn", "nrtgdkwn", 3],
+    [42, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/9.jpg' style='width:200px; height:100px;'>", "a", "frupereog", "furpereog", "fruperoeg", "frupreoeg", "furperoge", "lrupereog", "purpereog", "fergereog", 3],
+    [43, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/10.jpg' style='width:200px; height:100px;'>", "d", "r9hodfq", "r6hodfp", "r6hodfq", "v6hodfq", "r6hodfp", "r6hodfg", "r6bodfq", "r5hodfq", 3],
+    [44, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/3.jpg' style='width:200px; height:100px;'>", "c", "jw26k", "jw6k2", "jw62k", "jw2k6", "wj26k", "jw66k", "jw22k", "jvv26k", 3],
+    [45, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/4.jpg' style='width:200px; height:100px;'>", "d", "fhd2e", "fhhede", "fh2dd", "fh2de", "f2hde", "ff2hde", "hf2de", "efhde", 3],
+    [46, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/5.jpg' style='width:200px; height:100px;'>", "e", "p98p", "o98p", "q89p", "q68p", "q98p", "q68p", "q86p", "g98p", 3],
+    [47, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/11.jpg' style='width:200px; height:100px;'>", "e", "bkngkp", "pkn9kp", "bkn9pk", "bnk9kp", "bkn9kp", "bkn99p", "pkn9kp", "bkm9kp", 3],
+    [48, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/12.jpg' style='width:200px; height:100px;'>", "f", "y6g9nf", "y5g9mf", "y5g9fn", "y5n9fg", "y5n9fl", "y5g9nf", "y5g99f", "y5g9yf", 3],
+    [49, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/13.jpg' style='width:200px; height:100px;'>", "g", "w86hp", "w68ph", "vv68hp", "uu80hp", "tv68hp", "v68hp", "w68hp", "w98hp", 3],
     [50, "Choose the option that does NOT belong.", "a", "pillow", "river", "tree", "log", "forest", "bird", "deer", "creek",6],
     [51, "Choose the option that does NOT belong.", "b", "toaster", "iPhone", "waffle", "hashbrowns", "eggs", "bacon", "frying pan", "sausage",6],
     [52, "Choose the option that does NOT belong.", "b", "sparrow", "moose", "hawk", "eagle", "bird", "robin", "sparrow", "falcon", 6],
@@ -162,18 +162,20 @@ function getQuestion()
                             if(correctAnswer == 'a' || correctAnswer == 'b' || correctAnswer == 'c' || correctAnswer == 'd')
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><br><label><input type='radio' id='a1' value='a' class='radioImage'/> <img src='" + Questions[iCount][2] +"' style='object-fit:cover; width:300px;'></label>"  
-                                + "<label><input type='radio' id='a2' value='b'class='radioImage'/> <img src='" + Questions[iCount][3] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a3' value='c'class='radioImage'/> <img src='" + Questions[iCount][4] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a4' value='d'class='radioImage'/> <img src='" + Questions[iCount][5] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
+                                + "</h3><br><br><label><input type='radio' name='test' id='a1' value='a' class = 'radioHide'><img src='" + Questions[iCount][2] +"' class='imgRadio'></label>"  
+                                + "<label><input type='radio' name='test' id='a2' value='b' class = 'radioHide'><img src='" + Questions[iCount][3] +"' class='imgRadio'></label>"
+                                + "<label><input type='radio' name='test' id='a3' value='c' class = 'radioHide'><img src='" + Questions[iCount][4] +"' class='imgRadio'></label>"
+                                + "<label><input type='radio' name='test' id='a4' value='d' class = 'radioHide'><img src='" + Questions[iCount][5] +"' class='imgRadio'></label>"
+                                + "<br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             else
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><br><label><input type='radio' id='a1' value='e' class='radioImage'/> <img src='" + Questions[iCount][6] +"' style='object-fit:cover; width:300px;'></label>"  
-                                + "<label><input type='radio' id='a2' value='f'class='radioImage'/> <img src='" + Questions[iCount][7] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a3' value='g'class='radioImage'/> <img src='" + Questions[iCount][8] +"' style='object-fit:cover; width:300px;'></label>"
-                                + "<label><input type='radio' id='a4' value='h'class='radioImage'/> <img src='" + Questions[iCount][9] +"' style='object-fit:cover; width:300px;'></label><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
+                                + "</h3><br><br><label><input type='radio' name='test' id='a1' value='e' class = 'radioHide'><img src='" + Questions[iCount][6] +"' class='imgRadio'></label>"  
+                                + "<label><input type='radio' name='test' id='a2' value='f' class = 'radioHide'><img src='" + Questions[iCount][7] +"' class='imgRadio'></label>"
+                                + "<label><input type='radio' name='test' id='a3' value='g' class = 'radioHide'><img src='" + Questions[iCount][8] +"' class='imgRadio'></label>"
+                                + "<label><input type='radio' name='test' id='a4' value='h' class = 'radioHide'><img src='" + Questions[iCount][9] +"' class='imgRadio'></label>" 
+                                + "<br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             Questions[iCount][0] = 0;
                             numFound = true;
@@ -428,6 +430,7 @@ function displayLever()
     //repetetive
     else if(userID[userID.length -1] == 7)
     {
+        document.getElementById("cap").style.height = "700px";
         leverType = 7;
         rNumRepeat = true;
         displayCap();
@@ -465,8 +468,9 @@ function displayLever()
         while(userConf != 'YES')
         {
             userConf = prompt("You will be answering many different types of questions. " +
-            "However, question will have a short time limit!" + 
-            " You must click the correct answer before the timer runs out. Failing to do so will result in a missed question. " +
+            "However, each question will have a time limit!" + 
+            " You must click the correct answer before the timer runs out and the program submits your answer." + 
+            "Failing to do so will result in a missed question. " +
             "Do your very best... your accuracy will be recorded." +
              "\n\n Type YES (all caps) into the box below to immediately begin. ");
         }

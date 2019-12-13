@@ -171,3 +171,25 @@ img{
   height: 30px;
   background-color: #4CAF50;
 }
+
+/* HIDE RADIO */
+.radioHide { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+.imgRadio{
+  cursor: pointer;
+  width:200px;
+  height:200px;
+  
+}
+
+/* CHECKED STYLES */
+.radioHide:checked + img {
+  outline: 2px solid #0819ff;
+  padding:2px;
+}
