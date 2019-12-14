@@ -24,7 +24,7 @@
 
         <div style="width:70%; margin:0 auto;">
             <h2>Audio Sampler</h2>
-            <h4><strong>Stop! Put on earphones or move to a room where you can hear music without distraction. You will be listening to songs will carrying out your version of the experiment.</strong></h4>
+            <h4><strong>Stop! Put on earphones or move to a room where you can hear music without distraction. You will be listening to songs while carrying out your version of the experiment.</strong></h4>
             <p>This page contains samples of different styles of music. The music is instrumental. Play each sample and rate the songs based on how they make you feel, indicating whether they <strong>improve your mood (negative),</strong> or <strong>detract from it (positive).</strong>
                   After you have rated all of the song samples,
                 please press "Begin." Music will play throughout your experiment so you will need to be able to continue listening. 
@@ -135,7 +135,7 @@
             <input type="hidden" id="wrongWordA" name="wrongWordA"></input>
             <input type="hidden" id="wrongWordC" name="wrongWordC"></input>
             <input type="hidden" id="avgResTime" name="avgResTime"></input>
-            <input type="hidden" id="leverTested" name="lever"></input>
+            <input type="hidden" id="leverTested" name="leverTested"></input>
             <input type="hidden" id="musicPlayed" name="musicPlayed"></input>
 
             
@@ -144,7 +144,6 @@
                 Please indicate the number of minutes you think passed as you answered the questions. Do not try to 
                 calculate the elapsed time.   
             </label><br><br>
-            <!--<input id="timeEstimate" type="number" name="timeEstimate">-->
             <div class="range">
                 <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="timeEstimate" name="timeEstimate">
                 <div class="sliderticks">
@@ -171,193 +170,130 @@
             <br><br>
 
             <h4>How quickly did the time seem to pass for you during the image-labeling task?</h4>            
-            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Very Slowly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Somewhat Slowly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Normal<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Somewhat Quickly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="0"> Very Quickly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="1"> Very Slowly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="2"> Somewhat Slowly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="3"> Normal<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="4"> Somewhat Quickly<br>
+            <input type="radio" id="timeFeel" name="timeFeel" value="5"> Very Quickly<br>
             <br>
             <br>
 
-           
-
-            <h3>
-                With 0 being "Not at all" and 10 being "Extensively", during the image-labeling task, to 
-                what extent do you feel the experiment software…
-            </h3>
-       
-            <div style = "margin:0 auto;">
-                <h4>made you feel rushed or in a hurry:</h4>
+            <h4>How much pressure did you feel to answer the questions in time?</h4>
                 <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="hurry" name="hurry">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timePressure" name="timePressure">
                     <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
+                        <p>No Pressure</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                        <p>Extreme Pressure</p>
+                        
                     </div>
                 </div>
-
+           
+            <div style = "margin:0 auto; border: 1px solid grey; padding: 25px;">
+                <h3>
+                    To what extent do you feel the experiment software…
+                </h3>
                 <h4>kept you aware of the time passing:</h4>
                 <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="awareness" name="awareness">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timeAwareness" name="timeAwareness">
                     <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
+                        <p>Completely Unaware</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                        <p>Very Aware</p>
+            
                     </div>
                 </div>
-                <h4>was distracting from the task:</h4>
+        
+                <h4>kept you engaged in the current task:</h4>
                 <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="distraction" name="distraction">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="engaging" name="engaging">
                     <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
+                        <p>Unengaged</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                        <p>Very Engaged</p>
+                        
                     </div>
                 </div>
 
-                
-                <h4>was boring:</h4>
+                <h4>provided a positive, motivating experience:</h4>
                 <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="engaging" name="engaging">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="motivating" name="motivating">
                     <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
+                        <p>Not at all</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                        <p>Absolutely</p>
+                        
                     </div>
                 </div>
 
-                <h4>provided a positive, motivating opportunity:</h4>
+                <h4>was habit forming, or repetitive, to the point of automatic behavior:</h4>
                 <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="motivating" name="motivating">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="repetitive" name="repetitive">
                     <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
+                        <p>Not at all</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
-                    </div>
-                </div>
-
-                <h4>was habit forming, or repetetive, to the point of automatic behavior:</h4>
-                <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="repetitive" name="repetitive">
-                    <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
-                        <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
-                    </div>
-                </div>
-
-                <h4>was challenging:</h4>
-                <div class="range">
-                <input type="range" step="1" min="0" max="10" value="0" class="slider" id="timePressure" name="timePressure">
-                    <div class="sliderticks">
-                        <p>0</p>
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
-                        <p>4</p>
-                        <p>5</p>
-                        <p>6</p>
-                        <p>7</p>
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                        <p>Very repetitive</p>
                     </div>
                 </div>
             </div>
             <br>
             <br>
-            <h4>Please select your education level.</h4>
-            <br>
-            <br><br>
 
-            <h4>Please rate your general emotional state throughout the experiment with 0 being very negative (sad, angry, or highly stressed) and 10 being very positive (happy, joyful, pleasant): </h4><br><br>
+            <h4>How distracted were you from the experiment? </h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="distraction" name="distraction">
+                    <div class="sliderticks">
+                        <p>Very focused</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Distracted</p>
+                       
+                    </div>
+                </div>
+                <br><br>
+
+            <h4>Please rate your general emotional state throughout the experiment with as being very negative (sad, angry, or highly stressed) or very positive (happy, joyful, pleasant): </h4><br><br>
             <div class="range">
-            <input type="range" step="1" min="0" max="10" value="0" class="slider" id="emotion" name="emotion">
+            <input type="range" step="1" min="1" max="5" value="1" class="slider" id="emotion" name="emotion">
                 <div class="sliderticks">
-                    <p>0</p>
+                    <p>Very Negative</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>Very Positive</p>
+                   
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <h4>Please rate how the music it affected you emotionally with 1 meaning it had a negative affect, and 5 being very positive affect.</h4><br><br>
+            <div class="range">
+            <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
+                <div class="sliderticks">
                     <p>1</p>
                     <p>2</p>
                     <p>3</p>
                     <p>4</p>
                     <p>5</p>
-                    <p>6</p>
-                    <p>7</p>
-                    <p>8</p>
-                    <p>9</p>
-                    <p>10</p>
                 </div>
             </div>
             <br>
             <br>
 
-            <h4>If music was played, please rate how it affected you emotionally with 0 being very negative, and 10 being positive.</h4><br><br>
-            <div class="range">
-            <input type="range" step="1" min="0" max="10" value="0" class="slider" id="musicAffect" name="musicAffect">
-                <div class="sliderticks">
-                    <p>0</p>
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                    <p>5</p>
-                    <p>6</p>
-                    <p>7</p>
-                    <p>8</p>
-                    <p>9</p>
-                    <p>10</p>
-                </div>
-            </div>
-            <br>
-            <br>
+
+
 
             <label>Please select your gender.</label>
             <br>
@@ -367,18 +303,6 @@
             <br>
             <br>
 
-            <label>How did the music played through the experiment affect your emotions?</label>
-            <br>
-            <!--
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It helped me feel happy.<br>
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It helped me to relax.<br>
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It had no effect.<br>
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It made me feel sad.<br>
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It made me angry.<br>
-            <input type="radio" id="musicEffect" name="musicEffect" value="0"> It was annoying<br>
-            <br>
-            <br>
--->
             <label>Please indicate your age.</label>
             <br>
             <input type="number" id="age" name="age">

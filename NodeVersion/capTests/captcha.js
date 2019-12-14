@@ -38,10 +38,10 @@ var Questions = [
     [37, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/1.jpg' style='width:200px; height:100px;'>", "a", "28ivw", "28ivv", "82ivw", "28iivw", "2ivw", "29ivw", "", "", 3],
     [38, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/2.jpg' style='width:200px; height:100px;'>", "b", "ke4z", "k4ez", "kezy", "kezj", "4kez", "d4ez", "5tfr", "4keez", 3],
     [39, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/6.jpg' style='width:200px; height:100px;'>", "f", "anoyanceoct", "annoyancoct", "annoyanecoct", "annoyanceoc1", "annoyannceoct1", "annoyanceoct", "annoyeroct", "annoyeroctt", 3],
-    [40, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/7.jpg' style='width:200px; height:100px;'>", "g", "overlookinquiry", "overloksinquiry", "overllooksinquiry", "overlooksinquiry", "overlooksinquiryy", "overlooksinquiry","overloksinquiry", "overlookerquiry", 3],
+    [40, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/7.jpg' style='width:200px; height:100px;'>", "f", "overlookinquiry", "overloksinquiry", "overllooksinquiry", "overlooksinquiry", "overlooksinquiryy", "overlooksinquiry","overloksinquiry", "overlookerquiry", 3],
     [41, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/8.jpg' style='width:200px; height:100px;'>", "h", "nrtgwkn", "ntrgdkwn", "nrtgdvn", "nr1gdkwn", "nntgdkwn", "nrtgdkww", "nrtqdkwn", "nrtgdkwn", 3],
     [42, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/9.jpg' style='width:200px; height:100px;'>", "a", "frupereog", "furpereog", "fruperoeg", "frupreoeg", "furperoge", "lrupereog", "purpereog", "fergereog", 3],
-    [43, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/10.jpg' style='width:200px; height:100px;'>", "d", "r9hodfq", "r6hodfp", "r6hodfq", "v6hodfq", "r6hodfp", "r6hodfg", "r6bodfq", "r5hodfq", 3],
+    [43, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/10.jpg' style='width:200px; height:100px;'>", "c", "r9hodfq", "r6hodfp", "r6hodfq", "v6hodfq", "r6hodfp", "r6hodfg", "r6bodfq", "r5hodfq", 3],
     [44, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/3.jpg' style='width:200px; height:100px;'>", "c", "jw26k", "jw6k2", "jw62k", "jw2k6", "wj26k", "jw66k", "jw22k", "jvv26k", 3],
     [45, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/4.jpg' style='width:200px; height:100px;'>", "d", "fhd2e", "fhhede", "fh2dd", "fh2de", "f2hde", "ff2hde", "hf2de", "efhde", 3],
     [46, "Select the option that matches the numbers and letters in the image below.  <br><br><img src='images/typeWords/5.jpg' style='width:200px; height:100px;'>", "e", "p98p", "o98p", "q89p", "q68p", "q98p", "q68p", "q86p", "g98p", 3],
@@ -66,7 +66,7 @@ var Questions = [
     [65, "Choose the option that describes the others.", "d", "tuesday", "sunday", "monday", "day", "wednesday", "thursday", "friday", "week",6],
     [66, "Choose the option that describes the others.", "c", "spoon", "fork", "utinsel", "butter knife", "spork", "steak knife", "a giant spork", "plastic fork",6],
     [67, "Choose the option that describes the others.", "d", "windy", "rainy", "snowy", "weather", "hail", "tornado", "blizzard", "sunshine",6],
-    [68, "Choose the option that connects all of the others", "h", "ticket", "passengers", "wheels", "wings", "flying", "terminal", "engine", "plane",6],
+    [68, "Choose the option that connects all of the others", "h", "ticket", "passengers", "wheels", "wings", "seats", "terminal", "engine", "plane",6],
     [69, "Choose the option that connects all of the others", "b", "birds", "nature", "cactus", "rainforest", "fish", "snow", "hot", "green",6],
     [70, "Choose the option that connects all of the others", "e", "fetch", "eat", "bark", "friendly", "dog", "pet", "tail", "ball",6],
     [71, "Choose the word that belongs with the following: <br> apple, banana, orange... ", "a", "grape", "carrot", "pickle", "potato", "chicken", "celary", "fruit", "cheese", 5],
@@ -80,7 +80,7 @@ var Questions = [
     [79, "Choose the option that does NOT have a pattern.", "a", "200, 100, 50, 10", "1,2,3,4", "2,4,8,16", "200,100,50,25", "3,6,9,12", "100, 50, 25, 22.5", "100, 90, 70, 40", "1,2,4,8",5],
     [80, "Choose the option that does NOT have a pattern.", "b", "1234", "1235", "2323", "2342", "12345", "2 4 6 8 10", "54321", "6420",5],
     [81, "Choose the option that does NOT have a pattern.", "c", "blue, red, blue, red", "1357", "blue, red, yellow", "7531", "green, blue, green, blue", "2468", "8642", "1234",5],
-    [82, "Choose the option that DOES have an evident pattern.", "d", "1,2,3,4,6", "1,3,4,6", "2,4,8,10,12", "1,3,4,6,7,9", "13576", "1223", "1342", "1240",5],
+    [82, "Choose the option that DOES have an evident pattern.", "c", "1,2,3,4,6", "1,3,4,6", "2,4,8,10,12", "1,3,4,6,7,9", "13576", "1223", "1342", "1240",5],
     [83, "Choose the option that DOES have an evident pattern.", "f", "red, yellow, orange, blue", "blue, red, green, yellow", "blue, brown, green, orange, navy", "soccer, football, tennis, basketball", "january, june, february, december", "maybe this one, maybe?, maybe this one, maybe?", "do, not, pick, this, one, please", "135248",5],
     [84, "Choose the option that DOES have an evident pattern.", "h", "the", "acfg", "abzd", "13247", "asxf", "qhjt", "sfhk", "aceg",5],
     [85, "Finish the following pattern: <br> blue, red, orange, blue... ", "a", "red", "blue", "orange", "brown", "green", "yellow", "black", "purple",5],
@@ -110,6 +110,7 @@ var findWrongWord = [0,0];
 var totalAnswers = [0,0];
 var inputType = undefined;
 let leverType = undefined;
+let songChosen = undefined;
 let storeUID = undefined;
 let imageChoice = undefined;
 let userID = undefined;
@@ -361,6 +362,7 @@ function playMusicFull(lever)
     if(lever == 5)
     {
         let audio = new Audio('/songs/' + musicSelection[maxIndex] + '/1.mp3');
+        songChosen = musicSelection[maxIndex];
         audio.play();
         /*audio.addEventListener('ended',function(){
             //play next song
@@ -371,6 +373,7 @@ function playMusicFull(lever)
     else if(lever == 6)
     {
         let audio = new Audio('/songs/' + musicSelection[minIndex] + '/1.mp3');
+        songChosen = musicSelection[minIndex];
         audio.play();
     }
 }
@@ -504,7 +507,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (1000); // 
+    let end = start + (60000); // 
 
     function spinWheel() 
     {
@@ -530,7 +533,8 @@ function displayCap()
             document.getElementById("wrongWordA").value = findWrongWord[0];
             document.getElementById("wrongWordC").value = findWrongWord[1];
             document.getElementById("avgResTime").value = avgResponse;//7 minutes divided by total responses
-            document.getElementById("lever").value = leverType;
+            document.getElementById("leverTested").value = leverType;
+            document.getElementById("musicPlayed").value = songChosen;
             displaySurvey();
         } 
     }
