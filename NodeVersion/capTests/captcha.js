@@ -504,7 +504,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (5000); // 
+    let end = start + (1000); // 
 
     function spinWheel() 
     {
@@ -543,7 +543,7 @@ function displaySurvey()
     cap1.style.position = "relative";
     cap1.style.left = "20%";
     cap1.style.width = "60%";
-    document.getElementById("title").innerHTML = "Time has run out. Please complete the following survey regarding your experience.";
+    document.getElementById("title").style.display = "none";
     document.getElementById("survey1").style.display = "initial";
     document.getElementById("mainStyle").style.backgroundColor = "white";
     document.getElementById("mainStyle").style.color = "#6b6b6b";
