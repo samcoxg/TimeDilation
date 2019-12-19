@@ -124,7 +124,20 @@ let maxIndex = 0;
 let answerSelected = false;
 let nickname = undefined;
 let id = undefined;
-let perfLevel = undefined;
+let perfLevel = 0;
+let pastGameObjects = [
+    {name: "cosmo1!", points: 25},
+    {name: "iEatChicken4ever!", points: 23},
+    {name: "provo_all$tar_12", points: 22},
+    {name: "goUtes", points: 20},
+    {name: "tom", points: 24},
+    {name: "rachael14!", points: 178},
+    {name: "sarah#3", points: 177},
+    {name: "IDrink2%", points: 158},
+    {name: "sam5!", points: 154},
+    {name: "doubleroadkill2!", points: 2},
+    {name: nickname, points: perfLevel}
+];
 
 
 
@@ -698,9 +711,8 @@ function leaderBoard(nickname, perfLevel)
         {name: "doubleroadkill2!", points: 2},
         {name: nickname, points: perfLevel}
     ];
-    
-    let inValue = gameObjects.findIndex(x => x.name == nickname);
     gameObjects = gameObjects.sort((a, b) => (a.points < b.points) ? 1 : -1);
+    let inValue = pastGameObjects.findIndex(x => x.name == nickname);
     let endValue = gameObjects.findIndex(x => x.name == nickname);
 
     for(let gCount=0; gCount<10; gCount++)
@@ -722,6 +734,7 @@ function leaderBoard(nickname, perfLevel)
     {
         showSnackBar("You leveled up!!", 2500, "blue");
     }
+    pastGameObjects = gameObjects;
 }
 function timeOutLever()
 {
