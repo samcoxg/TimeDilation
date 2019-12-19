@@ -32,8 +32,12 @@
             <br>
             <h3>Sample 1</h3>
             <form id="musicLibrary">
-                <button onclick="playAudio(1)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(1)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
+                <!--<button onclick="playAudio(1)" type="button" class="playButton"><i class="fa fa-play"></i></button>
+                <button onclick="pauseAudio(1)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>-->
+                <audio controls>
+                    <source src="/songs/test.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
                 <br><br>
                 <p style="float:left;">Negative</p><p style="float:right;">Positive</p>
                 <div class="range">
