@@ -15,11 +15,12 @@
     <p id='storeUID'><%= mainData[0].userID %></p>
     
     <div id="musicPlayerDiv" style="display: none;">
-        <audio id="myAudio1"><source src="/songs/accousticMain.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio2"><source src="/songs/sadPianoMain.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio3"><source src="/songs/electroMain.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio4"><source src="/songs/cinematicMain.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio5"><source src="/songs/somberCinematicMain.mp3" type="audio/mpeg"></audio>
+        
+        <audio id="myAudio1"><source src="/songs/acousticMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio2"><source src="/songs/sadMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio3"><source src="/songs/cinematicMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio4"><source src="/songs/electroMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio5"><source src="/songs/somberMain.mp3" type="audio/mpeg"></audio>
 
         <div style="width:70%; margin:0 auto;">
             <h2>Audio Sampler</h2>
@@ -32,60 +33,67 @@
             <br>
             <h3>Sample 1</h3>
             <form id="musicLibrary">
-                <!--<button onclick="playAudio(1)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(1)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>-->
+                
                 <audio controls>
-                    <source src="/songs/test.mp3" type="audio/mpeg">
+                    <source src="/songs/acousticSample.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                   </audio>
                 <br><br>
                 <p style="float:left;">Negative</p><p style="float:right;">Positive</p>
                 <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio1" name="audio1">
+                        <input type="range" step="1" min="0" max="10" value="0" class="slider" id="audio1" name="audio1">
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
                 </div><br><br>
                 <h3>Sample 2</h3>
-                <button onclick="playAudio(2)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(2)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
-                <br><br>
+                <audio controls>
+                    <source src="/songs/sadSample.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio2" name="audio2">
+                        <input type="range" step="1" min="0" max="10" value="0" class="slider" id="audio2" name="audio2">
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
                 </div><br><br>
                 <h3>Sample 3</h3>
-                <button onclick="playAudio(3)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(3)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
-                <br><br>
+                <audio controls>
+                    <source src="/songs/cinematicSample.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio3" name="audio3">
+                        <input type="range" step="1" min="0" max="10" value="0" class="slider" id="audio3" name="audio3">
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
                 </div><br><br>
                 <h3>Sample 4</h3>
-                <button onclick="playAudio(4)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(4)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
-                <br><br>
+                <audio controls>
+                    <source src="/songs/electroSample.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio4" name="audio4">
+                        <input type="range" step="1" min="0" max="10" value="0" class="slider" id="audio4" name="audio4">
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
                 </div><br><br>
                 <h3>Sample 5</h3>
-                <button onclick="playAudio(5)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(5)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
-                <br><br>
+                <audio controls>
+                    <source src="/songs/somberSample.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <br><br>
                 <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
                 <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio5" name="audio5">
+                        <input type="range" step="1" min="0" max="10" value="0" class="slider" id="audio5" name="audio5">
                         <div class="sliderticks">
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>

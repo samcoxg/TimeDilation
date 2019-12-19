@@ -118,7 +118,7 @@ let userID = undefined;
 let rNumRepeat = false;
 let gameSetting = false;
 let winStreak = 0;
-let musicSelection = ['test', 'sadPianoMain', 'electroMain', 'cinematicMain', 'somberCinematicMain'];
+let musicSelection = ['acousticMain', 'sadMain', 'cinematicMain', 'electroMain', 'somberMain'];
 let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
@@ -306,7 +306,7 @@ function musicPlayer()
     document.getElementById("musicPlayerDiv").style.display = "initial"; 
 
 }
-function playAudio(songSelected) 
+/*function playAudio(songSelected) 
 { 
     if(songSelected == 1) 
     songSelected = document.getElementById("myAudio1");
@@ -333,7 +333,7 @@ songSelected = document.getElementById("myAudio4");
 else if(songSelected == 5) 
 songSelected = document.getElementById("myAudio5");
 songSelected.pause(); 
-} 
+} */
 function selectMusic()
 {
     let max = 0;
@@ -342,9 +342,9 @@ function selectMusic()
     document.getElementById("musicPlayerDiv").style.display = "none"; 
     //add all music values to the array
     let musicRating = [];
-    for(let iCount = 0; iCount < 6; iCount++)
+    for(let iCount = 0; iCount < 5; iCount++)
     {
-        musicRating.push(parseInt((document.getElementById(("audio" + (iCount + 1)).value))));
+        musicRating.push(parseInt(document.getElementById("audio" + (iCount + 1)).value));
     }
     max = musicRating[0];
     min = musicRating[0];
@@ -509,7 +509,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (4000); // 
+    let end = start + (20000); // 
 
     function spinWheel() 
     {
