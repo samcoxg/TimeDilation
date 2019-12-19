@@ -478,7 +478,7 @@ function displayLever()
             userConf = prompt("You will be answering many different types of questions. " +
             "However, each question will have a time limit!" + 
             " You must click the correct answer before the timer runs out and the program submits your answer." + 
-            "Failing to do so will result in a missed question. " +
+            " Failing to do so will result in a missed question. " +
             "Do your very best... your accuracy will be recorded." +
              "\n\n Type YES (all caps) into the box below to immediately begin. ");
         }
@@ -509,7 +509,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (20000); // 
+    let end = start + (60000); // 
 
     function spinWheel() 
     {
