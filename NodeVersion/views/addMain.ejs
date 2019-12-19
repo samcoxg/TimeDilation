@@ -91,14 +91,14 @@
                         </div>
                 </div><br><br>
                 
-                <input type="button" value="Begin!" onclick="selectMusic()">
+                <input type="button" class="mybutton" value="Begin!" onclick="selectMusic()">
             </form>
             
         </div>
     </div>
     <div id="myProgressOwner"  style="display:none;">
         
-        <div id="myProgress" style="width:30%; margin:0 auto;"">
+        <div id="myProgress" style="width:30%; margin:0 auto;">
             <div id="myBar"></div>
         </div>
     </div>
@@ -182,9 +182,9 @@
                         <p>Extreme Pressure</p>
                         
                     </div>
-                </div>
+                </div><br><br><br>
            
-            <div style = "margin:0 auto; border: 1px solid grey; padding: 25px;">
+            <div style = "margin:0 auto; border: 1px solid grey; padding: 65px;">
                 <h3>
                     To what extent do you feel the experiment software…
                 </h3>
@@ -218,11 +218,11 @@
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="motivating" name="motivating">
                     <div class="sliderticks">
-                        <p>Not at all</p>
+                        <p>No motivating</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>Absolutely</p>
+                        <p>Highly motivating</p>
                         
                     </div>
                 </div>
@@ -231,18 +231,18 @@
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="repetitive" name="repetitive">
                     <div class="sliderticks">
-                        <p>Not at all</p>
+                        <p>No repetition</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>Very repetitive</p>
+                        <p>Extremly repetitive</p>
                     </div>
                 </div>
             </div>
             <br>
             <br>
 
-            <h4>How distracted were you from the experiment? </h4>
+            <h4>How distracted were you during the experiment? </h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="distraction" name="distraction">
                     <div class="sliderticks">
@@ -270,20 +270,21 @@
             </div>
             <br>
             <br>
-
-            <h4>Please rate how the music it affected you emotionally with 1 meaning it had a negative affect, and 5 being very positive affect.</h4><br><br>
-            <div class="range">
-            <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
-                <div class="sliderticks">
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                    <p>5</p>
+            <div id="musicQuestion">
+                <h4>Please rate how the music affected you emotionally.</h4><br><br>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
+                    <div class="sliderticks">
+                        <p>Very Negatively</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Positively</p>
+                    </div>
                 </div>
+                <br>
+                <br>
             </div>
-            <br>
-            <br>
 
 
 
@@ -293,17 +294,17 @@
             <input type="radio" id="gender" name="gender" value="male"> Male</input><br>
             <input type="radio" id="gender" name="gender" value="female"> Female</input><br>
             <input type="radio" id="gender" name="gender" value="other"> Other</input>
-            <br>
+            <br><br>
             <br>
 
             <label>Please indicate your age.</label>
             <br>
             <input type="number" id="age" name="age">
             <br>
-            <br>
+            <br><br>
 
             
-            <button type="submit" value="Submit">Submit</button>
+            <button type="submit" class="mybutton" value="Submit">Submit</button><br><br>
         
         </form>
         
@@ -321,6 +322,7 @@
                     <th>Ranking</th>
                     <th>Nickname</th>
                     <th>XP</th>
+       
                 </tr>
                 <tr>
                     <td>1</td>
@@ -376,7 +378,7 @@
         </div>
     </div>
 </div>
-<div id="snackbar">Some text some message..</div>
+<div id="snackbar"></div>
 <link rel="stylesheet" href="/Content/style.css">
 <script type="text/javascript" src="/captcha.js"></script>
 

@@ -118,7 +118,7 @@ let userID = undefined;
 let rNumRepeat = false;
 let gameSetting = false;
 let winStreak = 0;
-let musicSelection = ['accousticMain', 'sadPianoMain', 'electroMain', 'cinematicMain', 'somberCinematicMain'];
+let musicSelection = ['test', 'sadPianoMain', 'electroMain', 'cinematicMain', 'somberCinematicMain'];
 let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
@@ -138,6 +138,8 @@ let pastGameObjects = [
     {name: "doubleroadkill2!", points: 2},
     {name: nickname, points: perfLevel}
 ];
+let musicPlaying = false;
+let audio = undefined;
 
 
 
@@ -184,7 +186,7 @@ function getQuestion()
                             else
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><br><label><input type='radio' name='test' id='a1' value='e' class = 'radioHide'><img src='" + Questions[iCount][6] +"' class='imgRadio'></label>"  
+                                + "</h3><br><br><label><input type='radio' name='test' id='a1' value='e' class = 'radioHide' ><img src='" + Questions[iCount][6] +"' class='imgRadio'></label>"  
                                 + "<label><input type='radio' name='test' id='a2' value='f' class = 'radioHide'><img src='" + Questions[iCount][7] +"' class='imgRadio'></label>"
                                 + "<label><input type='radio' name='test' id='a3' value='g' class = 'radioHide'><img src='" + Questions[iCount][8] +"' class='imgRadio'></label>"
                                 + "<label><input type='radio' name='test' id='a4' value='h' class = 'radioHide'><img src='" + Questions[iCount][9] +"' class='imgRadio'></label>" 
@@ -202,7 +204,7 @@ function getQuestion()
                             if(correctAnswer == 'a' || correctAnswer == 'b' || correctAnswer == 'c' || correctAnswer == 'd')
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><input type='radio' name='answer' id='a1' value='a'> "
+                                + "</h3><br><input type='radio' name='answer' id='a1' value='a' required> "
                                 + Questions[iCount][3]
                                 + "<br><input type='radio' name='answer' id='a2' value='b'> "
                                 + Questions[iCount][4]
@@ -210,7 +212,7 @@ function getQuestion()
                                 + Questions[iCount][5]
                                 + "<br><input type='radio' name='answer' id='a4' value='d'> "
                                 + Questions[iCount][6]
-                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
+                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onclick='checkAcc()'>";
                             }
                             else
                             {
@@ -369,13 +371,13 @@ function playMusicFull(lever)
 {
     if(lever == 5)
     {
-        let audio = new Audio('/songs/' + musicSelection[maxIndex] + '.mp3');
+        audio = new Audio('/songs/' + musicSelection[maxIndex] + '.mp3');
         songChosen = musicSelection[maxIndex];
         audio.play();
     }
     else if(lever == 6)
     {
-        let audio = new Audio('/songs/' + musicSelection[minIndex] + '.mp3');
+        audio = new Audio('/songs/' + musicSelection[minIndex] + '.mp3');
         songChosen = musicSelection[minIndex];
         audio.play();
     }
@@ -494,12 +496,11 @@ function displayCap()
     getQuestion();
     document.getElementById("title").innerHTML = instructions;
     document.getElementById("cap").className = "cap";
-    if(leverType == 5 || leverType == 6)
+    if((leverType == 5 || leverType == 6) && musicPlaying == false)
     {
+        musicPlaying = true;
         playMusicFull(leverType);
-        //select the appropriate song and then do this for levertype 6 as well. will need to 
-        //add songs to the html page in order to play them as needed. Songs need to play one after the other
-        //for a total of 7 minutes.
+
     }
     if(leverType == 0)
     {
@@ -508,7 +509,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (60000); // 
+    let end = start + (4000); // 
 
     function spinWheel() 
     {
@@ -544,6 +545,16 @@ function displayCap()
 }
 function displaySurvey()
 {
+    if(leverType == 5 || leverType == 6)
+    {
+        audio.pause();
+    }
+    else
+    {
+        document.getElementById("musicQuestion").style.display = "none";
+    }
+    timeOutLeverSTOP();
+    document.getElementById("myProgressOwner").style.display = "none";
     let cap1 = document.getElementById("cap");
     cap1.style.position = "relative";
     cap1.style.left = "20%";
@@ -560,7 +571,7 @@ function checkAcc()
     {iACount = 8;}
     else
     {iACount = 4;}
-
+    answerSelected = false;
     for(let iCount = 0; iCount < iACount; iCount++)
     {
         let checkSelect = document.getElementById("a" + (iCount + 1));
@@ -657,8 +668,6 @@ function gameFunction()
 {
     if(answerSelected == true)
     {
-        document.getElementById("mBoard").style.color = "#008a0b";
-        document.getElementById("mBoard").style.borderColor = "#008a0b";
         showSnackBar("Correct!", 1500, "green");
         winStreak++;
         perfLevel = perfLevel + Math.ceil(Math.random()*3);
@@ -723,7 +732,7 @@ function leaderBoard(nickname, perfLevel)
     }
     if(endValue < inValue)
     {
-        showSnackBar("You leveled up!!", 2500, "blue");
+        showSnackBar("You moved up on the leaderboard!!", 2500, "blue");
     }
     pastGameObjects = gameObjects;
 }
