@@ -118,7 +118,7 @@ let userID = undefined;
 let rNumRepeat = false;
 let gameSetting = false;
 let winStreak = 0;
-let musicSelection = ['Echos', 'Sad', 'Happy', 'Reflection', 'Sad2', 'Inspirational'];
+let musicSelection = ['accousticMain', 'sadPianoMain', 'electroMain', 'cinematicMain', 'somberCinematicMain'];
 let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
@@ -316,8 +316,6 @@ function playAudio(songSelected)
     songSelected = document.getElementById("myAudio4");
     else if(songSelected == 5) 
     songSelected = document.getElementById("myAudio5");
-    else if(songSelected == 6) 
-    songSelected = document.getElementById("myAudio6");
     songSelected.play(); 
 } 
 function pauseAudio(songSelected) 
@@ -332,8 +330,6 @@ else if(songSelected == 4)
 songSelected = document.getElementById("myAudio4");
 else if(songSelected == 5) 
 songSelected = document.getElementById("myAudio5");
-else if(songSelected == 6) 
-songSelected = document.getElementById("myAudio6");
 songSelected.pause(); 
 } 
 function selectMusic()
@@ -346,7 +342,7 @@ function selectMusic()
     let musicRating = [];
     for(let iCount = 0; iCount < 6; iCount++)
     {
-        musicRating.push(parseInt((document.getElementById("audio" + (iCount + 1)).value)));
+        musicRating.push(parseInt((document.getElementById(("audio" + (iCount + 1)).value))));
     }
     max = musicRating[0];
     min = musicRating[0];
@@ -373,18 +369,13 @@ function playMusicFull(lever)
 {
     if(lever == 5)
     {
-        let audio = new Audio('/songs/' + musicSelection[maxIndex] + '/1.mp3');
+        let audio = new Audio('/songs/' + musicSelection[maxIndex] + '.mp3');
         songChosen = musicSelection[maxIndex];
         audio.play();
-        /*audio.addEventListener('ended',function(){
-            //play next song
-            audio = new Audio('/songs/' + musicSelection[minIndex] + '/2.mp3');
-            audio.play();
-        });*/
     }
     else if(lever == 6)
     {
-        let audio = new Audio('/songs/' + musicSelection[minIndex] + '/1.mp3');
+        let audio = new Audio('/songs/' + musicSelection[minIndex] + '.mp3');
         songChosen = musicSelection[minIndex];
         audio.play();
     }

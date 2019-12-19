@@ -15,12 +15,11 @@
     <p id='storeUID'><%= mainData[0].userID %></p>
     
     <div id="musicPlayerDiv" style="display: none;">
-        <audio id="myAudio1"><source src="/songs/Echos/1.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio2"><source src="/songs/Sad/1.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio3"><source src="/songs/Happy/1.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio4"><source src="/songs/Reflection/1.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio5"><source src="/songs/Sad2/1.mp3" type="audio/mpeg"></audio>
-        <audio id="myAudio6"><source src="/songs/Inspirational/1.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio1"><source src="/songs/accousticMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio2"><source src="/songs/sadPianoMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio3"><source src="/songs/electroMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio4"><source src="/songs/cinematicMain.mp3" type="audio/mpeg"></audio>
+        <audio id="myAudio5"><source src="/songs/somberCinematicMain.mp3" type="audio/mpeg"></audio>
 
         <div style="width:70%; margin:0 auto;">
             <h2>Audio Sampler</h2>
@@ -87,17 +86,7 @@
                             <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
                         </div>
                 </div><br><br>
-                <h3>Sample 6</h3>
-                <button onclick="playAudio(6)" type="button" class="playButton"><i class="fa fa-play"></i></button>
-                <button onclick="pauseAudio(6)" type="button" class="pauseButton"><i class="fa fa-pause"></i></button>
-                <br><br>
-                <p style="float:left;">Very Sad</p><p style="float:right;">Very Happy</p>
-                <div class="range">
-                        <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="audio6" name="audio6">
-                        <div class="sliderticks">
-                            <p>0</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
-                        </div>
-                </div><br><br><br>
+                
                 <input type="button" value="Begin!" onclick="selectMusic()">
             </form>
             
