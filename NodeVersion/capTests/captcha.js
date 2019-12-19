@@ -97,6 +97,7 @@ var Questions = [
     [96, "Finish the following pattern: <br> blue, red, green, yellow, green...", "f", "blue", "green", "yellow", "purple", "orange", "red", "blue", "green", 5]
     
 ];
+
 //global variables with stored values throughout the functions of the app
 let instructions = undefined;
 let iWhile = 0;
@@ -117,18 +118,16 @@ let userID = undefined;
 let rNumRepeat = false;
 let gameSetting = false;
 let winStreak = 0;
-let perfLevel = 0;
 let musicSelection = ['Echos', 'Sad', 'Happy', 'Reflection', 'Sad2', 'Inspirational'];
 let minIndex = 0;
 let maxIndex = 0;
 let answerSelected = false;
 let nickname = undefined;
 let id = undefined;
+let perfLevel = undefined;
 
 
-/*window.onbeforeunload = function() {
-    return "Please do not leave this page, doing so will mean your results will not be recorded.";
- };*/
+
 displayLever();
 function getQuestion()
 {
@@ -444,9 +443,7 @@ function displayLever()
     //high cognitive engagement in a positive state
     else if(userID[userID.length -1] == 8)
     {
-        document.getElementById("cap").style.width = "50%";
-        document.getElementById("cap").style.margin = "0 auto";
-        document.getElementById("cap").style.cssFloat = "left";
+        document.getElementById("cap").style.left = "10%";
         while(nickname == "" || nickname == undefined || nickname == null)
         {
             nickname = prompt("You have been selected for a competition. Please enter a nickname to be used for recording on the leaderboard!");
@@ -654,55 +651,38 @@ function checkAcc()
 }
 function gameFunction()
 {
-    let gamePercent = Math.floor((totalAnswers[1]/totalAnswers[0])*100);
-    document.getElementById("gameBar").style.display = "initial";
-    if(perfLevel < 25)
-    {document.getElementById("gameBar").style.color = "#f44336";}
-    else if(gamePercent < 50)
-    {document.getElementById("gameBar").style.color = "#ffeb3b";}
-    else
-    {document.getElementById("gameBar").style.color = "#4CAF50";}
-    let messageBoard = undefined;
     if(answerSelected == true)
     {
         document.getElementById("mBoard").style.color = "#008a0b";
         document.getElementById("mBoard").style.borderColor = "#008a0b";
+        showSnackBar("Correct!", 1500, "green");
         winStreak++;
         perfLevel = perfLevel + Math.ceil(Math.random()*3);
-        if(winStreak % 5 == 0)
-        {
-            messageBoard = "Nice Job! " + winStreak + " in a row!";
-            document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
-
-        }
-        else if(winStreak % 8 ==0)
-        {
-            //document.getElementById("mBoard").innerHTML += "<img src='images/awards/1Badge.png' width='10px'>";
-        }
-        else
-        {
-            messageBoard = "Great work! Keep it up!";
-            document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
-
-        }
-        
+        document.getElementById("gameBar").innerHTML = " XP: " + perfLevel;
     }
     else
     {
         winStreak = 0;
         perfLevel = perfLevel - 5;
-        document.getElementById("mBoard").style.color = "red";
-        document.getElementById("mBoard").style.borderColor = "red";
-        messageBoard = "You missed the last one, but no worries, you've got this!";
+        showSnackBar("Better luck next time!", 2000, "red");
     }
+    displayCap();
     leaderBoard(nickname, perfLevel);
 
-    
-
-    document.getElementById("messageBoard").innerHTML = messageBoard;
-    displayCap();
 
 }
+function showSnackBar(snackMessage, snackDuration, snackColor) {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    x.style.backgroundColor = snackColor;
+    x.innerHTML = snackMessage;
+    x.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, snackDuration);
+  }
 function leaderBoard(nickname, perfLevel)
 {
     let gameObjects = [
@@ -718,8 +698,10 @@ function leaderBoard(nickname, perfLevel)
         {name: "doubleroadkill2!", points: 2},
         {name: nickname, points: perfLevel}
     ];
-
-    gameObjects = gameObjects.sort((a, b) => (a.points < b.points) ? 1 : -1)
+    
+    let inValue = gameObjects.findIndex(x => x.name == nickname);
+    gameObjects = gameObjects.sort((a, b) => (a.points < b.points) ? 1 : -1);
+    let endValue = gameObjects.findIndex(x => x.name == nickname);
 
     for(let gCount=0; gCount<10; gCount++)
     {
@@ -735,6 +717,10 @@ function leaderBoard(nickname, perfLevel)
             document.getElementById("n" + (gCount + 1)).style.fontWeight = "normal";
             document.getElementById("s" + (gCount + 1)).style.fontWeight = "normal";
         }
+    }
+    if(endValue < inValue)
+    {
+        showSnackBar("You leveled up!!", 2500, "blue");
     }
 }
 function timeOutLever()
