@@ -414,8 +414,8 @@ function displayLever()
     else if(userID[userID.length -1] == 3)
     {
         leverType = 3;
-        document.getElementById("mainStyle").style.backgroundColor="#ffbcb5";
-        document.body.style.backgroundColor = "#ffbcb5";
+        document.getElementById("mainStyle").style.backgroundColor="#ff9900";
+        document.body.style.backgroundColor = "#ff9900";
         document.body.style.color="black";
         displayCap();
     }
@@ -423,9 +423,9 @@ function displayLever()
     else if(userID[userID.length -1] == 4)
     {
         leverType = 4;
-        document.getElementById("mainStyle").style.backgroundColor="#b5deff";
-        document.body.style.backgroundColor = "#b5deff";
-        document.body.style.color="black";
+        document.getElementById("mainStyle").style.backgroundColor="#4d4dff";
+        document.body.style.backgroundColor = "#4d4dff";
+        document.body.style.color="white";
         displayCap();
     }
     //music selection --positive
