@@ -18,9 +18,37 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 app.get('/database', (req, res) =>
-    knex.select('userID', 'allA', 'allC', 'labelA', 'labelC', 'findWrongA', 'findWrongC', 'findImageA', 'findImageC',
-     'typeWordsA', 'typeWordsC','findPatternA', 'findPatternC', 'wrongWordA', 'wrongWordC', 'avgResTime', 'timeEstimate', 'timeFeel',
-     'leverTested', 'musicPlayed', 'musicAffect', 'repetitive', 'motivating', 'engaging', 'distraction', 'timePressure', 'timeAwareness', 'emotion', 'gender', 'age').from('Main')
+    knex.select('userID', 
+    'allA', 
+    'allC', 
+    'labelA', 
+    'labelC', 
+    'findWrongA', 
+    'findWrongC',
+    'typeWordsA', 
+    'typeWordsC', 
+    'findImageA', 
+    'findImageC',
+    'wrongWordA', 
+    'wrongWordC',
+    'descOthersA',
+    'descOthersC',
+    'connectsA',
+    'connectsC',
+    'belongsA',
+    'belongsC',
+    'specificA',
+    'specificC',
+    'noPatternA',
+    'noPatternC',
+    'findPatternA', 
+    'findPatternC', 
+    'finishWordA',
+    'finishWordC',
+     'avgResTime', 'timeEstimate', 'timeFeel',
+     'leverTested', 'musicPlayed', 'musicAffect', 
+     'repetitive', 'motivating', 'engaging', 'distraction', 
+     'timePressure', 'timeAwareness', 'emotion', 'gender', 'age').from('Main')
     .orderBy('userID').then(mainRec => {
         res.render('index', {
             mainData: mainRec
