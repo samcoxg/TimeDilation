@@ -127,14 +127,26 @@
             <input type="hidden" id="labelC" name="labelC"></input>
             <input type="hidden" id="findWrongA" name="findWrongA"></input>
             <input type="hidden" id="findWrongC" name="findWrongC"></input>
-            <input type="hidden" id="findImageA" name="findImageA"></input>
-            <input type="hidden" id="findImageC" name="findImageC"></input>
             <input type="hidden" id="typeWordsA" name="typeWordsA"></input>
             <input type="hidden" id="typeWordsC" name="typeWordsC"></input>
-            <input type="hidden" id="findPatternA" name="findPatternA"></input>
-            <input type="hidden" id="findPatternC" name="findPatternC"></input>
+            <input type="hidden" id="findImageA" name="findImageA"></input>
+            <input type="hidden" id="findImageC" name="findImageC"></input>
             <input type="hidden" id="wrongWordA" name="wrongWordA"></input>
             <input type="hidden" id="wrongWordC" name="wrongWordC"></input>
+            <input type="hidden" id="descOthersA" name="descOthersA"></input>
+            <input type="hidden" id="descOthersC" name="descOthersC"></input>
+            <input type="hidden" id="connectsA" name="connectsA"></input>
+            <input type="hidden" id="connectsC" name="connectsC"></input>
+            <input type="hidden" id="belongsA" name="belongsA"></input>
+            <input type="hidden" id="belongsC" name="belongsC"></input>
+            <input type="hidden" id="specificA" name="specificA"></input>
+            <input type="hidden" id="specificC" name="specificC"></input>
+            <input type="hidden" id="noPatternA" name="noPatternA"></input>
+            <input type="hidden" id="noPatternC" name="noPatternC"></input>
+            <input type="hidden" id="findPatternA" name="findPatternA"></input>
+            <input type="hidden" id="findPatternC" name="findPatternC"></input>
+            <input type="hidden" id="finishWordA" name="finishWordA"></input>
+            <input type="hidden" id="finishWordC" name="finishWordC"></input>
             <input type="hidden" id="avgResTime" name="avgResTime"></input>
             <input type="hidden" id="leverTested" name="leverTested"></input>
             <input type="hidden" id="musicPlayed" name="musicPlayed"></input>
@@ -170,7 +182,7 @@
             <br>
             <br><br>
 
-            <h4>How quickly did the time seem to pass for you during the image-labeling task?</h4>            
+            <h4>How quickly did the time seem to pass for you during the tasks?</h4>            
             <input type="radio" id="timeFeel" name="timeFeel" value="1"> Very Slowly<br>
             <input type="radio" id="timeFeel" name="timeFeel" value="2"> Somewhat Slowly<br>
             <input type="radio" id="timeFeel" name="timeFeel" value="3"> Normal<br>
@@ -179,7 +191,7 @@
             <br>
             <br>
 
-            <h4>How much pressure did you feel to answer the questions in time?</h4>
+            <h4>How much pressure did you feel to answer the questions quickly?</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timePressure" name="timePressure">
                     <div class="sliderticks">
@@ -194,7 +206,7 @@
            
             <div style = "margin:0 auto; border: 1px solid grey; padding: 65px;">
                 <h3>
-                    To what extent do you feel the experiment software…
+                    To what extent do you feel the task…
                 </h3>
                 <h4>kept you aware of the time passing:</h4>
                 <div class="range">
@@ -226,7 +238,7 @@
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="motivating" name="motivating">
                     <div class="sliderticks">
-                        <p>No motivating</p>
+                        <p>Not motivating</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
@@ -250,7 +262,7 @@
             <br>
             <br>
 
-            <h4>How distracted were you during the experiment? </h4>
+            <h4>How distracted were you during the tasks? </h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="distraction" name="distraction">
                     <div class="sliderticks">
@@ -264,7 +276,7 @@
                 </div>
                 <br><br>
 
-            <h4>Please rate your general emotional state throughout the experiment with as being very negative (sad, angry, or highly stressed) or very positive (happy, joyful, pleasant): </h4><br><br>
+            <h4>Please rate your general emotional state throughout the tasks as being very negative (sad, angry, or highly stressed) or very positive (happy, joyful, pleasant): </h4><br><br>
             <div class="range">
             <input type="range" step="1" min="1" max="5" value="1" class="slider" id="emotion" name="emotion">
                 <div class="sliderticks">
@@ -333,52 +345,52 @@
        
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td id="r1">1</td>
                     <td id="n1"></td>
                     <td id="s1"></td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td id="r2">2</td>
                     <td id="n2"></td>
                     <td id="s2"></td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td id="r3">3</td>
                     <td id="n3"></td>
                     <td id="s3"></td>
                 </tr>
                 <tr>
-                    <td>4</td>
+                    <td id="r4">4</td>
                     <td id="n4"></td>
                     <td id="s4"></td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td id="r5">5</td>
                     <td id="n5"></td>
                     <td id="s5"></td>
                 </tr>
                 <tr>
-                    <td>6</td>
+                    <td id="r6">6</td>
                     <td id="n6"></td>
                     <td id="s6"></td>
                 </tr>
                 <tr>
-                    <td>7</td>
+                    <td id="r7">7</td>
                     <td id="n7"></td>
                     <td id="s7"></td>
                 </tr>
                 <tr>
-                    <td>8</td>
+                    <td id="r8">8</td>
                     <td id="n8"></td>
                     <td id="s8"></td>
                 </tr>
                 <tr>
-                    <td>9</td>
+                    <td id="r9">9</td>
                     <td id="n9"></td>
                     <td id="s9"></td>
                 </tr>
                 <tr>
-                    <td>10</td>
+                    <td id="r10">10</td>
                     <td id="n10"></td>
                     <td id="s10"></td>
                 </tr>

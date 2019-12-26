@@ -48,16 +48,16 @@ var Questions = [
     [47, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/11.jpg' style='width:200px; height:100px;'>", "e", "bkngkp", "pkn9kp", "bkn9pk", "bnk9kp", "bkn9kp", "bkn99p", "pkn9kp", "bkm9kp", 3],
     [48, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/12.jpg' style='width:200px; height:100px;'>", "f", "y6g9nf", "y5g9mf", "y5g9fn", "y5n9fg", "y5n9fl", "y5g9nf", "y5g99f", "y5g9yf", 3],
     [49, "Select the option that matches the numbers and letters in the image below. <br><br><img src='images/typeWords/13.jpg' style='width:200px; height:100px;'>", "g", "w86hp", "w68ph", "vv68hp", "uu80hp", "tv68hp", "v68hp", "w68hp", "w98hp", 3],
-    [50, "Choose the option that does NOT belong.", "a", "pillow", "river", "tree", "log", "forest", "bird", "deer", "creek",6],
-    [51, "Choose the option that does NOT belong.", "b", "toaster", "iPhone", "waffle", "hashbrowns", "eggs", "bacon", "frying pan", "sausage",6],
-    [52, "Choose the option that does NOT belong.", "b", "sparrow", "moose", "hawk", "eagle", "bird", "robin", "sparrow", "falcon", 6],
-    [53, "Choose the option that does NOT belong.", "c", "train", "car", "piano", "bus", "truck", "plane", "jet", "bike", 6],
-    [54, "Choose the option that does NOT belong.", "d", "ski", "snowboard", "snowshoe", "volcano", "snow", "ice", "cold", "winter", 6],
-    [55, "Choose the option that does NOT belong.", "a", "halloween", "roses", "pine tree", "ornaments", "green", "decorations", "gingersnaps", "hearts",5],
+    [50, "Choose the option that does NOT belong.", "a", "pillow", "river", "tree", "log", "forest", "bird", "deer", "creek", 5],
+    [51, "Choose the option that does NOT belong.", "b", "toaster", "iPhone", "waffle", "hashbrowns", "eggs", "bacon", "frying pan", "sausage",5],
+    [52, "Choose the option that does NOT belong.", "b", "sparrow", "moose", "hawk", "eagle", "bird", "robin", "sparrow", "falcon", 5],
+    [53, "Choose the option that does NOT belong.", "c", "train", "car", "piano", "bus", "truck", "plane", "jet", "bike", 5],
+    [54, "Choose the option that does NOT belong.", "d", "ski", "snowboard", "snowshoe", "volcano", "snow", "ice", "cold", "winter", 5],
+    [55, "Choose the option that does NOT belong.", "a", "halloween", "roses", "pine tree", "ornaments", "green", "decorations", "gingersnaps", "hearts", 5],
     [56, "Choose the option that does NOT belong.", "b", "sports", "tree", "football", "goals", "lacrosse", "score", "basketball", "timeout",5],
-    [57, "Choose the option that does NOT belong.", "c", "shoe", "sock", "pepper", "boot", "pants", "shirt", "jacket", "belt",6],
-    [58, "Choose the option that does NOT belong.", "d", "schools", "classes", "teachers", "emperor penguins", "grades", "students", "report cards", "desks",6],
-    [59, "Choose the option that does NOT belong.", "a", "chicken", "banana", "apple", "orange", "grape", "strawberry", "lemon", "grapefruit", 6],
+    [57, "Choose the option that does NOT belong.", "c", "shoe", "sock", "pepper", "boot", "pants", "shirt", "jacket", "belt",5],
+    [58, "Choose the option that does NOT belong.", "d", "schools", "classes", "teachers", "emperor penguins", "grades", "students", "report cards", "desks",5],
+    [59, "Choose the option that does NOT belong.", "a", "chicken", "banana", "apple", "orange", "grape", "strawberry", "lemon", "grapefruit", 5],
     [60, "Choose the option that describes the others.", "a", "color", "red", "blue", "brown", "yellow", "green", "purple", "more green",6],
     [61, "Choose the option that describes the others.", "b", "aunt", "relative", "uncle", "cousin", "brother", "sister", "grandma", "niece",6],
     [62, "Choose the option that describes the others.", "a", "country", "Japan", "Mexico", "Canada", "Brazil", "China", "Germany", "France", 6],
@@ -66,35 +66,35 @@ var Questions = [
     [65, "Choose the option that describes the others.", "d", "tuesday", "sunday", "monday", "day", "wednesday", "thursday", "friday", "week",6],
     [66, "Choose the option that describes the others.", "c", "spoon", "fork", "utinsel", "butter knife", "spork", "steak knife", "a giant spork", "plastic fork",6],
     [67, "Choose the option that describes the others.", "d", "windy", "rainy", "snowy", "weather", "hail", "tornado", "blizzard", "sunshine",6],
-    [68, "Choose the option that connects all of the others", "h", "ticket", "passengers", "wheels", "wings", "seats", "terminal", "engine", "plane",6],
-    [69, "Choose the option that connects all of the others", "b", "birds", "nature", "cactus", "rainforest", "fish", "snow", "hot", "green",6],
-    [70, "Choose the option that connects all of the others", "e", "fetch", "eat", "bark", "friendly", "dog", "pet", "tail", "ball",6],
-    [71, "Choose the word that belongs with the following: <br> apple, banana, orange... ", "a", "grape", "carrot", "pickle", "potato", "chicken", "celary", "fruit", "cheese", 5],
-    [72, "Choose the word that belongs with the following: <br> hiking, kayaking, repelling... ", "b", "sharing", "backpacking", "driving", "eating", "laughing", "chewing", "crying", "being", 5],
-    [73, "Choose the word that belongs with the following: <br> toaster, fridge, oven... ", "h", "knife", "painting", "couch", "couch", "floor", "soda", "earbuds", "stove", 5],
-    [74, "Choose the word that belongs with the following: <br> mother, brother, sister... ", "e", "employee", "affiliate", "friend", "individual", "father", "person", "human", "being", 5],
-    [75, "Choose the word that belongs with the following: <br>socks, shirt, pants...", "g", "foot", "computer", "glasses", "leaf", "tree", "earbuds", "shoes", "feet", 5],
-    [76, "Choose the option that is most specific", "e", "animal", "mammal", "thing", "species", "red-tailed hawk", "predator", "bird", "hawk",6],
-    [77, "Choose the option that is most specific", "f", "car", "vehicle", "motor", "4-wheeled", "transportation", "toyota minivan", "toyota", "van",6],
-    [78, "Choose the option that is most specific", "g", "house in California", "home on the beach", "shelter", "building - large", "condo - samll", "miniature condo", "first floor small hawaii condo", "barn",6],
-    [79, "Choose the option that does NOT have a pattern.", "a", "200, 100, 50, 10", "1,2,3,4", "2,4,8,16", "200,100,50,25", "3,6,9,12", "100, 50, 25, 22.5", "100, 90, 70, 40", "1,2,4,8",5],
-    [80, "Choose the option that does NOT have a pattern.", "b", "1234", "1235", "2323", "2342", "12345", "2 4 6 8 10", "54321", "6420",5],
-    [81, "Choose the option that does NOT have a pattern.", "c", "blue, red, blue, red", "1357", "blue, red, yellow", "7531", "green, blue, green, blue", "2468", "8642", "1234",5],
-    [82, "Choose the option that DOES have an evident pattern.", "c", "1,2,3,4,6", "1,3,4,6", "2,4,8,10,12", "1,3,4,6,7,9", "13576", "1223", "1342", "1240",5],
-    [83, "Choose the option that DOES have an evident pattern.", "f", "red, yellow, orange, blue", "blue, red, green, yellow", "blue, brown, green, orange, navy", "soccer, football, tennis, basketball", "january, june, february, december", "maybe this one, maybe?, maybe this one, maybe?", "do, not, pick, this, one, please", "135248",5],
-    [84, "Choose the option that DOES have an evident pattern.", "h", "the", "acfg", "abzd", "13247", "asxf", "qhjt", "sfhk", "aceg",5],
-    [85, "Finish the following pattern: <br> blue, red, orange, blue... ", "a", "red", "blue", "orange", "brown", "green", "yellow", "black", "purple",5],
-    [86, "Finish the following pattern: <br> 12, 21, 13, 31, 14... ", "b", "15", "41", "14", "4.1", "114", "4", ".14", "35",5],
-    [87, "Finish the following pattern: <br> 10, 20, 40, 80... ", "b", "90", "160", "100", "120", "90", "60", "40", "140",5],
-    [88, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer: ", "c", "fall", "leaves", "sun", "christmas", "valentine", "canada", "junior mint", "snow",5],
-    [89, "Finish the following pattern: <br> 80, 40, 20, 10... ", "d", "20", "2", "0", "5", "4", "10", "2.5", "20",5],
-    [90, "Finish the following pattern: <br> 132435...", "c", "1", "2", "4", "3", "5", "7", "6", "8", 5],
-    [91, "Finish the following pattern: <br> 3, 6, 9, 12...", "c", "16", "11", "15", "18", "16", "12", "9", "14", 5],
-    [92, "Finish the following pattern: <br> 2, 4, 3, 5, 4...", "f", "7", "8", "2", "3", "1", "6", "4", "5", 5],
-    [93, "Finish the following pattern: <br> 10, 20, 40, 80...", "h", "90", "60", "90", "120", "14", "140", "100", "160", 5],
-    [94, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer:", "h", "fall", "leaves", "valentines", "christmas", "chocolate", "time", "rain", "sun", 5],
-    [95, "Finish the following pattern: <br> 80, 40, 20, 10...", "c", "20", "2", "5", "0", "-10", "-20", "25", "40", 5],
-    [96, "Finish the following pattern: <br> blue, red, green, yellow, green...", "f", "blue", "green", "yellow", "purple", "orange", "red", "blue", "green", 5]
+    [68, "Choose the option that connects all of the others", "h", "ticket", "passengers", "wheels", "wings", "seats", "terminal", "engine", "plane",7],
+    [69, "Choose the option that connects all of the others", "b", "birds", "nature", "cactus", "rainforest", "fish", "snow", "hot", "green",7],
+    [70, "Choose the option that connects all of the others", "e", "fetch", "eat", "bark", "friendly", "dog", "pet", "tail", "ball",7],
+    [71, "Choose the word that belongs with the following: <br> apple, banana, orange... ", "a", "grape", "carrot", "pickle", "potato", "chicken", "celary", "fruit", "cheese", 8],
+    [72, "Choose the word that belongs with the following: <br> hiking, kayaking, repelling... ", "b", "sharing", "backpacking", "driving", "eating", "laughing", "chewing", "crying", "being", 8],
+    [73, "Choose the word that belongs with the following: <br> toaster, fridge, oven... ", "h", "knife", "painting", "couch", "couch", "floor", "soda", "earbuds", "stove", 8],
+    [74, "Choose the word that belongs with the following: <br> mother, brother, sister... ", "e", "employee", "affiliate", "friend", "individual", "father", "person", "human", "being", 8],
+    [75, "Choose the word that belongs with the following: <br>socks, shirt, pants...", "g", "foot", "computer", "glasses", "leaf", "tree", "earbuds", "shoes", "feet", 8],
+    [76, "Choose the option that is most specific", "e", "animal", "mammal", "thing", "species", "red-tailed hawk", "predator", "bird", "hawk",9],
+    [77, "Choose the option that is most specific", "f", "car", "vehicle", "motor", "4-wheeled", "transportation", "toyota minivan", "toyota", "van",9],
+    [78, "Choose the option that is most specific", "g", "house in California", "home on the beach", "shelter", "building - large", "condo - samll", "miniature condo", "first floor small hawaii condo", "barn",9],
+    [79, "Choose the option that does NOT have a pattern.", "a", "200, 100, 50, 10", "1,2,3,4", "2,4,8,16", "200,100,50,25", "3,6,9,12", "100, 50, 25, 22.5", "100, 90, 70, 40", "1,2,4,8",10],
+    [80, "Choose the option that does NOT have a pattern.", "b", "1234", "1235", "2323", "2342", "12345", "2 4 6 8 10", "54321", "6420",10],
+    [81, "Choose the option that does NOT have a pattern.", "c", "blue, red, blue, red", "1357", "blue, red, yellow", "7531", "green, blue, green, blue", "2468", "8642", "1234",10],
+    [82, "Choose the option that DOES have an evident pattern.", "c", "1,2,3,4,6", "1,3,4,6", "2,4,8,10,12", "1,3,4,6,7,9", "13576", "1223", "1342", "1240",11],
+    [83, "Choose the option that DOES have an evident pattern.", "f", "red, yellow, orange, blue", "blue, red, green, yellow", "blue, brown, green, orange, navy", "soccer, football, tennis, basketball", "january, june, february, december", "this, one, this, one, this, one", "do, not, pick, this, one, please", "135248",11],
+    [84, "Choose the option that DOES have an evident pattern.", "h", "the", "acfg", "abzd", "13247", "asxf", "qhjt", "sfhk", "aceg",11],
+    [85, "Finish the following pattern: <br> blue, red, orange, blue... ", "a", "red", "blue", "orange", "brown", "green", "yellow", "black", "purple",12],
+    [86, "Finish the following pattern: <br> 12, 21, 13, 31, 14... ", "b", "15", "41", "14", "4.1", "114", "4", ".14", "35",12],
+    [87, "Finish the following pattern: <br> 10, 20, 40, 80... ", "b", "90", "160", "100", "120", "90", "60", "40", "140",12],
+    [88, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer: ", "c", "fall", "leaves", "sun", "christmas", "valentine", "canada", "junior mint", "snow",12],
+    [89, "Finish the following pattern: <br> 80, 40, 20, 10... ", "d", "20", "2", "0", "5", "4", "10", "2.5", "20",12],
+    [90, "Finish the following pattern: <br> 132435...", "c", "1", "2", "4", "3", "5", "7", "6", "8", 12],
+    [91, "Finish the following pattern: <br> 3, 6, 9, 12...", "c", "16", "11", "15", "18", "16", "12", "9", "14", 12],
+    [92, "Finish the following pattern: <br> 2, 4, 3, 5, 4...", "f", "7", "8", "2", "3", "1", "6", "4", "5", 12],
+    [93, "Finish the following pattern: <br> 10, 20, 40, 80...", "h", "90", "60", "90", "120", "14", "140", "100", "160", 12],
+    [94, "Finish the following pattern: <br> Spring: rain, Winter: snow, Summer:", "h", "fall", "leaves", "valentines", "christmas", "chocolate", "time", "rain", "sun", 12],
+    [95, "Finish the following pattern: <br> 80, 40, 20, 10...", "c", "20", "2", "5", "0", "-10", "-20", "25", "40", 12],
+    [96, "Finish the following pattern: <br> blue, red, green, yellow, green...", "f", "blue", "green", "yellow", "purple", "orange", "red", "blue", "green", 12]
     
 ];
 
@@ -102,12 +102,18 @@ var Questions = [
 let instructions = undefined;
 let iWhile = 0;
 let correctAnswer = undefined;
-var labelI = [0,0];
-var find_wrongI = [0,0];
-var findDog = [0,0];
-var typeWords = [0,0];
-var findPattern = [0,0];
-var findWrongWord = [0,0];
+var labelI = [0,0];     //1
+var find_wrongI = [0,0];//2
+var typeWords = [0,0];  //3
+var findImage = [0,0];  //4
+var findWrongWord = [0,0]; //5
+var descOthers = [0,0]; //6
+var connects = [0,0];//7
+var belongs = [0,0];    //8
+var specific = [0,0]; //9
+var noPattern = [0,0]; //10
+var findPattern = [0,0]; //11
+var finishWord = [0,0]; //12
 var totalAnswers = [0,0];
 var inputType = undefined;
 let leverType = undefined;
@@ -522,18 +528,31 @@ function displayCap()
             document.getElementById("cap").style.width = "80%";
             //document.forms[0].fid_17.value = totalAnswers[0];
             document.getElementById("allC").value = totalAnswers[1];
-            document.getElementById("labelA").value = labelI[0];
-            document.getElementById("labelC").value = labelI[1];
-            document.getElementById("findWrongA").value = find_wrongI[0];
-            document.getElementById("findWrongC").value = find_wrongI[1];
-            document.getElementById("findImageA").value = findDog[0];
-            document.getElementById("findImageC").value = findDog[1];
-            document.getElementById("typeWordsA").value = typeWords[0];
-            document.getElementById("typeWordsC").value = typeWords[1];
-            document.getElementById("findPatternA").value = findPattern[0];
-            document.getElementById("findPatternC").value = findPattern[1];
-            document.getElementById("wrongWordA").value = findWrongWord[0];
-            document.getElementById("wrongWordC").value = findWrongWord[1];
+            document.getElementById("labelA").value = labelI[0];            //1
+            document.getElementById("labelC").value = labelI[1];            //1
+            document.getElementById("findWrongA").value = find_wrongI[0];   //2
+            document.getElementById("findWrongC").value = find_wrongI[1];   //2
+            document.getElementById("typeWordsA").value = typeWords[0];     //3
+            document.getElementById("typeWordsC").value = typeWords[1];     //3
+            document.getElementById("findImageA").value = findImage[0];     //4
+            document.getElementById("findImageC").value = findImage[1];     //4
+            document.getElementById("wrongWordA").value = findWrongWord[0]; //5
+            document.getElementById("wrongWordC").value = findWrongWord[1]; //5
+            document.getElementById("descOthersA").value = descOthers[0];   //6
+            document.getElementById("descOthersC").value = descOthers[1];   //6
+            document.getElementById("connectsA").value = connects[0];       //7
+            document.getElementById("connectsC").value = connects[1];       //7
+            document.getElementById("belongsA").value = belongs[0];         //8
+            document.getElementById("belongsC").value = belongs[1];         //8
+            document.getElementById("specificA").value = specific[0];       //9
+            document.getElementById("specificC").value = specific[1];       //9
+            document.getElementById("noPatternA").value = noPattern[0];     //10
+            document.getElementById("noPatternC").value = noPattern[1];     //10
+            document.getElementById("findPatternA").value = findPattern[0]; //11
+            document.getElementById("findPatternC").value = findPattern[1]; //11
+            document.getElementById("finishWordA").value = finishWord[0];   //12
+            document.getElementById("finishWordC").value = finishWord[1];   //12
+            
             document.getElementById("avgResTime").value = avgResponse;//7 minutes divided by total responses
             document.getElementById("leverTested").value = leverType;
             document.getElementById("musicPlayed").value = songChosen;
@@ -609,18 +628,48 @@ function checkAcc()
             }
             else if(inputType == 4)
             {
-                findDog[0] = findDog[0] + 1;
-                findDog[1] = findDog[1] + 1;
+                findImage[0] = findImage[0] + 1;
+                findImage[1] = findImage[1] + 1;
             }
             else if(inputType == 5)
+            {
+                findWrongWord[0] = findWrongWord[0] + 1;
+                findWrongWord[1] = findWrongWord[1] + 1;
+            }
+            else if(inputType == 6)
+            {
+                descOthers[0] = descOthers[0] + 1;
+                descOthers[1] = descOthers[1] + 1;
+            }
+            else if(inputType == 7)
+            {
+                connects[0] = connects[0] + 1;
+                connects[1] = connects[1] + 1;
+            }
+            else if(inputType == 8)
+            {
+                belongs[0] = belongs[0] + 1;
+                belongs[1] = belongs[1] + 1;
+            }
+            else if(inputType == 9)
+            {
+                specific[0] = specific[0] + 1;
+                specific[1] = specific[1] + 1;
+            }
+            else if(inputType == 10)
+            {
+                noPattern[0] = noPattern[0] + 1;
+                noPattern[1] = noPattern[1] + 1;
+            }
+            else if(inputType == 11)
             {
                 findPattern[0] = findPattern[0] + 1;
                 findPattern[1] = findPattern[1] + 1;
             }
             else
             {
-                findWrongWord[0] = findWrongWord[0] + 1;
-                findWrongWord[1] = findWrongWord[1] + 1;
+                finishWord[0] = finishWord[0] + 1;
+                finishWord[1] = finishWord[1] + 1;
             }
     
         }
@@ -630,6 +679,7 @@ function checkAcc()
             if(inputType == 1)
             {
                 labelI[0] = labelI[0] + 1;
+                labelI[1] = labelI[1] + 1;
             }
             else if(inputType == 2)
             {
@@ -641,15 +691,39 @@ function checkAcc()
             }
             else if(inputType == 4)
             {
-                findDog[0] = findDog[0] + 1;
+                findImage[0] = findImage[0] + 1;
             }
             else if(inputType == 5)
+            {
+                findWrongWord[0] = findWrongWord[0] + 1;
+            }
+            else if(inputType == 6)
+            {
+                descOthers[0] = descOthers[0] + 1;
+            }
+            else if(inputType == 7)
+            {
+                connects[0] = connects[0] + 1;
+            }
+            else if(inputType == 8)
+            {
+                belongs[0] = belongs[0] + 1;
+            }
+            else if(inputType == 9)
+            {
+                specific[0] = specific[0] + 1;
+            }
+            else if(inputType == 10)
+            {
+                noPattern[0] = noPattern[0] + 1;
+            }
+            else if(inputType == 11)
             {
                 findPattern[0] = findPattern[0] + 1;
             }
             else
             {
-                findWrongWord[0] = findWrongWord[0] + 1;
+                finishWord[0] = finishWord[0] + 1;
             }
             
     
@@ -719,20 +793,40 @@ function leaderBoard(nickname, perfLevel)
     {
         document.getElementById("n" + (gCount + 1)).innerHTML = gameObjects[gCount].name;
         document.getElementById("s" + (gCount + 1)).innerHTML = gameObjects[gCount].points;
+        let e1 = document.getElementById("n" + (gCount + 1));
+        let e2 = document.getElementById("s" + (gCount + 1));
+        let e3 = document.getElementById("r" + (gCount + 1));
         if(gameObjects[gCount].name == nickname)
         {
-            document.getElementById("n" + (gCount + 1)).style.fontWeight = "bold";
-            document.getElementById("s" + (gCount + 1)).style.fontWeight = "bold";
+            
+            e1.style.fontWeight = "bold";
+            e1.style.backgroundColor = "green";
+            e1.style.color = "white";
+
+            e2.style.fontWeight = "bold";
+            e2.style.backgroundColor = "green";
+            e2.style.color = "white";
+
+            e3.style.fontWeight = "bold";
+            e3.style.backgroundColor = "green";
+            e3.style.color = "white";
         }
         else
         {
-            document.getElementById("n" + (gCount + 1)).style.fontWeight = "normal";
-            document.getElementById("s" + (gCount + 1)).style.fontWeight = "normal";
+            e1.style.fontWeight = "normal";
+            e1.style.backgroundColor = "white";
+            e1.style.color = "black";
+            e2.style.fontWeight = "normal";
+            e2.style.backgroundColor = "white";
+            e2.style.color = "black";
+            e3.style.fontWeight = "normal";
+            e3.style.backgroundColor = "white";
+            e3.style.color = "black";
         }
     }
     if(endValue < inValue)
     {
-        showSnackBar("You moved up on the leaderboard!!", 2500, "blue");
+        showSnackBar("You moved up on the leaderboard!!", 4000, "blue");
     }
     pastGameObjects = gameObjects;
 }
