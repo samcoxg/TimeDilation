@@ -53,5 +53,13 @@
                 <input style='float:right;' type="submit" class="mybutton" id="start" value="Start">
             </form> 
         </div>
+        <script>
+            //verify adequate screen size
+            if(window.innerWidth < 700)
+            {
+                document.getElementById("iMain").innerHTML = "Please use a monitor or laptop screen to complete this experiment. " 
+                 + "Tablets and phones will not work.";
+            }
+        </script>
 </body>
 </html>

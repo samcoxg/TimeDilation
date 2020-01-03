@@ -94,6 +94,7 @@ var Questions = [
     
 ];
 
+
 //global variables with stored values throughout the functions of the app
 let instructions = undefined;
 let iWhile = 0;
