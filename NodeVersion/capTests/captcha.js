@@ -143,6 +143,8 @@ let pastGameObjects = [
 ];
 let musicPlaying = false;
 let audio = undefined;
+let startTime = undefined;
+let endTime = undefined;
 
 
 
@@ -512,7 +514,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (180000); // 
+    let end = start + (100); // 
 
     function spinWheel() 
     {
@@ -862,4 +864,20 @@ function timeOutLever()
 function timeOutLeverSTOP()
 {
     clearInterval(id);
+}
+function setTimestamp(timeType)
+{
+    //set a new date
+    let d = new Date();
+    //evaluate if the date is being recorded at the start or end of the program
+    if(timeType = "start")
+    {
+        startTime = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
+            + "." + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+    }
+    else
+    {
+        endTime = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
+        + "." + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+    }
 }

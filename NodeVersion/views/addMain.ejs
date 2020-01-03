@@ -306,10 +306,122 @@
                 <br>
             </div>
 
+            <!--Additional levers and questions-->
+            <h4>How loud did you feel the music was?</h4>            
+            <input type="radio" id="volume" name="volume" value="1"> Too quiet<br>
+            <input type="radio" id="volume" name="volume" value="2"> Fairly quiet<br>
+            <input type="radio" id="volume" name="volume" value="3"> Normal<br>
+            <input type="radio" id="volume" name="volume" value="4"> Fairly loud<br>
+            <input type="radio" id="volume" name="volume" value="5"> Too Loud<br>
+            <br>
+            <br>
+
+
+            <div id="enjoyment">
+                <h4>How much did you enjoy completing the tasks?</h4><br><br>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="enjoyment" name="enjoyment">
+                    <div class="sliderticks">
+                        <p>Very little</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very much</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <h4>How much anxiety did you experience while completing the tasks?</h4>            
+            <input type="radio" id="anxiety" name="anxiety" value="1"> None at all<br>
+            <input type="radio" id="anxiety" name="anxiety" value="2"> A small amount<br>
+            <input type="radio" id="anxiety" name="anxiety" value="3"> A large amount<br>
+            <input type="radio" id="anxiety" name="anxiety" value="4"> Extreme anxiety<br>
+            <br>
+            <br>
+
+            <div id="challenge">
+                <h4>How challenging did you find the tasks?</h4><br><br>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="challenge" name="challenge">
+                    <div class="sliderticks">
+                        <p>Not challenging</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very challenging</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <div id="comfort">
+                <h4>How physically comfortable were you during the experiment (tempurature, sitting position, lighting)?</h4><br><br>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="comfort" name="comfort">
+                    <div class="sliderticks">
+                        <p>Very uncomfortable</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very comfortable</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <div id="recentExp">
+                <h4>I have recently engaged in tasks similar to these to the following extent:</h4><br><br>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="recentExp" name="recentExp">
+                    <div class="sliderticks">
+                        <p>None</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>A lot</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+
+
+            <label>Please select your education level.</label>
+            <br>
+            <select id="educationLevel" name="educationLevel">
+                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                <option value="No formal education">No formal education</option>
+                <option value="Primary education">Primary education</option>
+                <option value="Secondary education">Secondary education or high school</option>
+                <option value="GED">GED</option>
+                <option value="Vocational qualification">Vocational qualification</option>
+                <option value="Bachelor's degree">Bachelor's degree</option>
+                <option value="Master's degree">Master's degree</option>
+                <option value="Doctorate or higher">Doctorate or higher</option>
+                </select>
+            <br><br><br>
+
+            <label>Please indicate your marital status.</label>
+            <br>
+            <select id="maritalStatus" name="maritalStatus">
+                <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                <option value="married">Married</option>
+                <option value="not married">Not Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="engaged">Engaged</option>
+                <option value="widowed">Widowed</option>
+                <option value="seperated">Seperated</option>
+                </select>
+            <br><br><br>
 
 
 
-            <label>Please select your gender.</label>
+
+            <label>Please indicate your gender.</label>
             <br>
             <input type="radio" id="gender" name="gender" value="male"> Male</input><br>
             <input type="radio" id="gender" name="gender" value="female"> Female</input><br>
