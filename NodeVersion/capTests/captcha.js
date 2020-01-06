@@ -112,7 +112,10 @@ var noPattern = [0,0]; //10
 var findPattern = [0,0]; //11
 var finishWord = [0,0]; //12
 var totalAnswers = [0,0];
-var inputType = undefined;
+var oldType = 0; //initially set to identical value as inputType to avoid an extra count
+var inputType = 0;
+var typeChange = 0;//to measure the number of times a question changes
+
 let leverType = undefined;
 let songChosen = undefined;
 let storeUID = undefined;
@@ -154,7 +157,7 @@ function getQuestion()
     //random number and loops to eliminate repetition
     let numFound = false; 
     let rNum = 0;
-    
+    oldType = inputType;
     while (numFound == false)
     {
         if(iWhile < Questions.length)
@@ -302,6 +305,11 @@ function getQuestion()
         {
             numFound = true;
             instructions = "Out of questions"
+        }
+        //check to see if old input is the same as the current one, this will measure the number of times a question is changing
+        if(inputType != oldType)
+        {
+            typeChange++;
         }
     }   
 }
@@ -477,7 +485,8 @@ function displayLever()
     //time pressure lever
     else if(userID[userID.length -1] == 0)
     {
-        let userConf = undefined;
+        timePressure();
+        /*let userConf = undefined;
         while(userConf != 'YES')
         {
             userConf = prompt("You will be answering many different types of questions. " +
@@ -486,10 +495,9 @@ function displayLever()
             " Failing to do so will result in a missed question. " +
             "Do your very best... your accuracy will be recorded." +
              "\n\n Type YES (all caps) into the box below to immediately begin. ");
-        }
+        }*/
         leverType = 0;
-        displayCap();
-        //
+        //displayCap();
     }
     
 }
@@ -501,6 +509,7 @@ function displayCap()
     getQuestion();
     document.getElementById("title").innerHTML = instructions;
     document.getElementById("cap").className = "cap";
+    document.getElementById("timePressureSamples").style.display = "none";
     if((leverType == 5 || leverType == 6) && musicPlaying == false)
     {
         musicPlaying = true;
@@ -514,7 +523,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (100); // 
+    let end = start + (120000); // 1000 is one second
 
     function spinWheel() 
     {
@@ -880,4 +889,8 @@ function setTimestamp(timeType)
         endTime = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
         + "." + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
     }
+}
+function timePressure()
+{
+    document.getElementById("timePressureSamples").style.display = "initial";
 }
