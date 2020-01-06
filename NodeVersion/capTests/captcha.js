@@ -150,7 +150,7 @@ let startTime = undefined;
 let endTime = undefined;
 
 
-
+setTimestamp();
 displayLever();
 function getQuestion()
 {
@@ -523,7 +523,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (120000); // 1000 is one second
+    let end = start + (2000); // 1000 is one second
 
     function spinWheel() 
     {
@@ -565,7 +565,6 @@ function displayCap()
             document.getElementById("leverTested").value = leverType;
             document.getElementById("musicPlayed").value = songChosen;
             document.getElementById("startTime").value = startTime;
-            document.getElementById("endTime").value = endTime;
             document.getElementById("typeChange").value = typeChange;
 
             displaySurvey();
@@ -878,21 +877,14 @@ function timeOutLeverSTOP()
 {
     clearInterval(id);
 }
-function setTimestamp(timeType)
+function setTimestamp()
 {
     //set a new date
     let d = new Date();
-    //evaluate if the date is being recorded at the start or end of the program
-    if(timeType = "start")
-    {
-        startTime = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
-            + "." + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
-    }
-    else
-    {
-        endTime = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
-        + "." + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
-    }
+    //set the start time
+    startTime = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate()
+            + "-" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+    
 }
 function timePressure()
 {
