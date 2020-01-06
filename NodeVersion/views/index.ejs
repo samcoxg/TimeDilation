@@ -33,6 +33,12 @@
                 <tr class="w3-light-grey">
                 <th></th>
                 <th>UserID</th>
+
+                <th>startTime</th>
+                <th>endTime</th>
+                <th>typeChange</th>
+                <th>leverTested</th>
+
                 <th>TotalA</th>
                 <th>TotalC</th>
                 <th>labelA</th>
@@ -45,7 +51,6 @@
                 <th>findImageC</th>
                 <th>wrongWordA</th>
                 <th>wrongWordC</th>
-                
                 <th>descOthersA</th>
                 <th>descOthersC</th>
                 <th>connectsA</th>
@@ -60,14 +65,19 @@
                 <th>findPatternC</th>
                 <th>finishWordA</th>
                 <th>finishWordC</th>
-
-
                 <th>AVGResTime (sec)</th>
                 <th>timeEstimate</th>
                 <th>timeFeel</th>
-                <th>leverTested</th>
                 <th>musicPlayed</th>
                 <th>musicAffect</th>
+
+                <th>volume</th>
+                <th>enjoyment</th>
+                <th>anxiety</th>
+                <th>challenge</th>
+                <th>comfort</th>
+                <th>recentExp</th>
+
                 <th>repetitive</th>
                 <th>motivating</th>
                 <th>engaging</th>
@@ -75,6 +85,9 @@
                 <th>timePressure</th>
                 <th>timeAwareness</th>
                 <th>emotion</th>
+
+                <th>educationLevel</th>
+                <th>maritalStatus</th>
                 <th>gender</th>
                 <th>age</th>
             </tr>
@@ -89,6 +102,13 @@
                     </form>
                 </td>
                 <td><%= mainData[i].userID %></td>
+
+                <td><%= mainData[i].startTime %></td>
+                <td><%= mainData[i].endTime %></td>
+                <td><%= mainData[i].typeChange %></td>
+                <td><%= mainData[i].leverTested %></td>
+
+
                 <td><%= mainData[i].allA %></td>
                 <td><%= mainData[i].allC %></td>
                 <td><%= mainData[i].labelA %></td>
@@ -121,6 +141,13 @@
                 <td><%= mainData[i].leverTested %></td>
                 <td><%= mainData[i].musicPlayed %></td>
                 <td><%= mainData[i].musicAffect %></td>
+
+                <td><%= mainData[i].volume %></td>
+                <td><%= mainData[i].enjoyment %></td>
+                <td><%= mainData[i].anxiety %></td>
+                <td><%= mainData[i].challenge %></td>
+                <td><%= mainData[i].comfort %></td>
+                <td><%= mainData[i].recentExp %></td>
                 <td><%= mainData[i].repetitive %></td>
                 <td><%= mainData[i].motivating %></td>
                 <td><%= mainData[i].engaging %></td>
@@ -128,6 +155,9 @@
                 <td><%= mainData[i].timePressure %></td>
                 <td><%= mainData[i].timeAwareness %></td>
                 <td><%= mainData[i].emotion %></td>
+                
+                <td><%= mainData[i].educationLevel %></td>
+                <td><%= mainData[i].maritalStatus %></td>
                 <td><%= mainData[i].gender %></td>
                 <td><%= mainData[i].age %></td>
                 <% }%>

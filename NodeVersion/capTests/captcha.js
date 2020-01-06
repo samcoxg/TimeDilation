@@ -564,6 +564,10 @@ function displayCap()
             document.getElementById("avgResTime").value = avgResponse;//7 minutes divided by total responses
             document.getElementById("leverTested").value = leverType;
             document.getElementById("musicPlayed").value = songChosen;
+            document.getElementById("startTime").value = startTime;
+            document.getElementById("endTime").value = endTime;
+            document.getElementById("typeChange").value = typeChange;
+
             displaySurvey();
         } 
     }

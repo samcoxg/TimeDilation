@@ -19,6 +19,10 @@ app.set('view engine', 'ejs');
 
 app.get('/database', (req, res) =>
     knex.select('userID', 
+    'timeStart',
+    'timeEnd',
+    'leverTested',
+    'typeChange', 
     'allA', 
     'allC', 
     'labelA', 
@@ -45,10 +49,12 @@ app.get('/database', (req, res) =>
     'findPatternC', 
     'finishWordA',
     'finishWordC',
-     'avgResTime', 'timeEstimate', 'timeFeel',
-     'leverTested', 'musicPlayed', 'musicAffect', 
-     'repetitive', 'motivating', 'engaging', 'distraction', 
-     'timePressure', 'timeAwareness', 'emotion', 'gender', 'age').from('Main')
+     'avgResTime', 
+     'timeEstimate', 
+     'timeFeel',
+     'musicPlayed', 'musicAffect', 'volume',
+     'repetitive', 'motivating', 'engaging', 'distraction', 'enjoyment', 'anxiety', 'challenge',
+     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age').from('Main')
     .orderBy('userID').then(mainRec => {
         res.render('index', {
             mainData: mainRec
