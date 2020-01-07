@@ -6,6 +6,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     
 </head>
 
@@ -185,37 +187,33 @@
                 Please indicate the number of minutes you think passed as you answered the questions. Do not try to 
                 calculate the elapsed time.   
             </label><br><br>
-            <div class="range">
-                <input type="range" step=".1" min="0" max="15" value="0" class="slider" id="timeEstimate" name="timeEstimate">
-                <div class="sliderticks">
-                    <p>0</p>
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                    <p>5</p>
-                    <p>6</p>
-                    <p>7</p>
-                    <p>8</p>
-                    <p>9</p>
-                    <p>10</p>
-                    <p>11</p>
-                    <p>12</p>
-                    <p>13</p>
-                    <p>14</p>
-                    <p>15</p>
-
-                </div>
-            </div>
+                <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeEstimate" name="timeEstimate" placeholder="Minutes">
+                
+            
             <br>
             <br><br>
 
             <h4>How quickly did the time seem to pass for you during the tasks?</h4>            
-            <input type="radio" id="timeFeel" name="timeFeel" value="1"> Very Slowly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="2"> Somewhat Slowly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="3"> Normal<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="4"> Somewhat Quickly<br>
-            <input type="radio" id="timeFeel" name="timeFeel" value="5"> Very Quickly<br>
+            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel1" value="1"> 
+            <label class="form-check-label" for="timeFeel1">
+                Very Slowly
+            </label><br>
+            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel2" value="2"> 
+            <label class="form-check-label" for="timeFeel2">
+                Fairly Slowly
+            </label><br>
+            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel3" value="3"> 
+            <label class="form-check-label" for="timeFeel3">
+                Normal
+            </label><br>
+            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel4" value="4">
+            <label class="form-check-label" for="timeFeel4">
+                Fairly Quickly
+            </label><br>
+            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel5" value="5"> 
+            <label class="form-check-label" for="timeFeel5">
+                Very Quickly
+            </label>
             <br>
             <br>
 
@@ -423,7 +421,7 @@
 
             <label>Please select your education level.</label>
             <br>
-            <select id="educationLevel" name="educationLevel">
+            <select id="educationLevel" class="col-4 custom-select mr-sm-2" name="educationLevel">
                 <option value="" selected="selected" disabled="disabled">-- select one --</option>
                 <option value="No formal education">No formal education</option>
                 <option value="Primary education">Primary education</option>
@@ -438,7 +436,7 @@
 
             <label>Please indicate your marital status.</label>
             <br>
-            <select id="maritalStatus" name="maritalStatus">
+            <select id="maritalStatus" class="col-4 custom-select mr-sm-2" name="maritalStatus">
                 <option value="" selected="selected" disabled="disabled">-- select one --</option>
                 <option value="married">Married</option>
                 <option value="not married">Not Married</option>
@@ -462,15 +460,15 @@
 
             <label>Please indicate your age.</label>
             <br>
-            <input type="number" id="age" name="age">
+            <input type="number" class="col-2 form-control" id="age" name="age">
             <br>
-            <br><br>
+            
 
             
-            <button type="submit" class="mybutton" value="Submit">Submit</button><br><br>
+            <button type="submit" class="btn btn-primary btn-lg" style="float: right;" value="Submit">Submit</button><br>
         
         </form>
-        
+        <br><br>
     </div>
     <div id='wholeGame' style="display: none; height:900px; margin-left:35px; position:fixed; left:60%; width:40%;">
         <div id="gameCover" style="display:hidden; ">

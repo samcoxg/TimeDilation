@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Start Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Instructions</title>
     <style>
     body{
         font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -32,25 +34,26 @@
 
     </style>
 </head>
-<body>
+<body style="margin-top: 50px;">
 
         <div id="iMain" style="width:60%; margin:0 auto;" >
                 <h1 style="text-align: center;">Instructions</h1><br>
-                <h3><strong>Please move to an area or room where you will not be distracted from answering the questions.</strong></h3><br><br>
+                <h4>Please move to an area where you will not be distracted from answering the questions.</h2><br>
                 <p>
                     The following experiment will require you to answer several captcha-like questions.
                      Once you click start please
-                    <strong>do not refresh the page or press the "back" button at any point</strong> as refreshing will cause problems with the experiment. 
-                     <br><br>Your privacy will be maintained and while the website will request your BYU ID number at some point, your responses will remain private and will be recorded separately, so please answer all of the questions to the best of your ability.
+                    <u>do not refresh the page or press the "back" button at any point,</u> doing so will damage experiment accuracy. 
+                     <br><br>Your privacy will be maintained and your responses will be kept anonymous, so please answer all of the questions to the best of your ability.
                     Answers will be monitored and checked for accuracy. 
                     <br><br>At a certain point in the experiment the questions will stop and you will be automatically
                     redirected to a survey. Again, your privacy will be maintained, so please answer the survey questions honestly.
                     <br><br>
+                    When you are ready to begin performing the tasks, press 'Start'.
                     
                 </p>
                 <br>
             <form id="survey1" class="survey1" action="/captchaStart" method="post"  name="myForm">
-                <input style='float:right;' type="submit" class="mybutton" id="start" value="Start">
+                <input style='float:right;' type="submit" class="btn btn-primary btn-lg" id="start" value="Start">
             </form> 
         </div>
         <script>
