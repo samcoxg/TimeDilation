@@ -582,6 +582,8 @@ function displaySurvey()
     else
     {
         document.getElementById("musicQuestion").style.display = "none";
+        document.getElementById("volumeQuestion").style.display = "none";
+
     }
     timeOutLeverSTOP();
     document.getElementById("myProgressOwner").style.display = "none";
