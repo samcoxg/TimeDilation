@@ -237,3 +237,17 @@ img{
   from {top: 20px; opacity: 1;}
   to {top: 0; opacity: 0;}
 }
+
+.labelSpecial
+{
+  border-radius: 5px;
+  padding: 7px 12px 7px 12px;
+}
+.labelSpecial:hover
+{
+  background-color: #ececec;
+}
+.labelSpecial:active
+{
+  background-color: #f8f7f7;
+}

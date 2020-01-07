@@ -194,26 +194,18 @@
             <br><br>
 
             <h4>How quickly did the time seem to pass for you during the tasks?</h4>            
-            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel1" value="1"> 
-            <label class="form-check-label" for="timeFeel1">
-                Very Slowly
-            </label><br>
-            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel2" value="2"> 
-            <label class="form-check-label" for="timeFeel2">
-                Fairly Slowly
-            </label><br>
-            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel3" value="3"> 
-            <label class="form-check-label" for="timeFeel3">
-                Normal
-            </label><br>
-            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel4" value="4">
-            <label class="form-check-label" for="timeFeel4">
-                Fairly Quickly
-            </label><br>
-            <input type="radio" class="form-check-input" type="timeFeel" name="timeFeel" id="timeFeel5" value="5"> 
-            <label class="form-check-label" for="timeFeel5">
-                Very Quickly
-            </label>
+            <div class="range">
+            <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timeFeel" name="timeFeel">
+                    <div class="sliderticks">
+                        <p>Very Slowly</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Quickly</p>
+                        
+                    </div>
+            </div><br>
+            
             <br>
             <br>
 
@@ -363,10 +355,16 @@
             </div>
 
             <h4>How much anxiety did you experience while completing the tasks?</h4>            
-            <input type="radio" id="anxiety" name="anxiety" value="1"> None at all<br>
-            <input type="radio" id="anxiety" name="anxiety" value="2"> A small amount<br>
-            <input type="radio" id="anxiety" name="anxiety" value="3"> A large amount<br>
-            <input type="radio" id="anxiety" name="anxiety" value="4"> Extreme anxiety<br>
+            <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="anxiety" name="anxiety">
+                    <div class="sliderticks">
+                        <p>None</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Extreme Anxiety</p>
+                    </div>
+                </div>
             <br>
             <br>
 
@@ -452,9 +450,17 @@
 
             <label>Please indicate your gender.</label>
             <br>
-            <input type="radio" id="gender" name="gender" value="male"> Male</input><br>
-            <input type="radio" id="gender" name="gender" value="female"> Female</input><br>
-            <input type="radio" id="gender" name="gender" value="other"> Other</input>
+            <label for="gender1" class="labelSpecial">
+                <input type="radio" name="gender" id="gender1" value="male"> Male
+            </label>           
+            
+            <label for="gender2" class="labelSpecial">
+                <input type="radio" name="gender" id="gender2" value="female"> Female
+            </label>
+            <label for="gender3" class="labelSpecial">
+                    <input type="radio" name="gender" id="gender3" value="other"> Other
+            </label>
+            
             <br><br>
             <br>
 
