@@ -212,15 +212,15 @@ function getQuestion()
                             if(correctAnswer == 'a' || correctAnswer == 'b' || correctAnswer == 'c' || correctAnswer == 'd')
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><input type='radio' name='answer' id='a1' value='a' required> "
+                                + "</h3><br><label class='labelSpecial'><input type='radio' name='answer' id='a1' value='a' required> "
                                 + Questions[iCount][3]
-                                + "<br><input type='radio' name='answer' id='a2' value='b'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a2' value='b'> "
                                 + Questions[iCount][4]
-                                + "<br><input type='radio' name='answer' id='a3' value='c'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a3' value='c'> "
                                 + Questions[iCount][5]
-                                + "<br><input type='radio' name='answer' id='a4' value='d'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a4' value='d'> "
                                 + Questions[iCount][6]
-                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onclick='checkAcc()'>";
+                                + "</label><br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onclick='checkAcc()'>";
                             }
                             else
                             {
@@ -319,34 +319,7 @@ function musicPlayer()
     document.getElementById("musicPlayerDiv").style.display = "initial"; 
 
 }
-/*function playAudio(songSelected) 
-{ 
-    if(songSelected == 1) 
-    songSelected = document.getElementById("myAudio1");
-    else if(songSelected == 2) 
-    songSelected = document.getElementById("myAudio2");
-    else if(songSelected == 3) 
-    songSelected = document.getElementById("myAudio3");
-    else if(songSelected == 4) 
-    songSelected = document.getElementById("myAudio4");
-    else if(songSelected == 5) 
-    songSelected = document.getElementById("myAudio5");
-    songSelected.play(); 
-} 
-function pauseAudio(songSelected) 
-{ 
-if(songSelected == 1) 
-songSelected = document.getElementById("myAudio1");
-else if(songSelected == 2) 
-songSelected = document.getElementById("myAudio2");
-else if(songSelected == 3) 
-songSelected = document.getElementById("myAudio3");
-else if(songSelected == 4) 
-songSelected = document.getElementById("myAudio4");
-else if(songSelected == 5) 
-songSelected = document.getElementById("myAudio5");
-songSelected.pause(); 
-} */
+
 function selectMusic()
 {
     let max = 0;
@@ -523,7 +496,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (200); // 1000 is one second
+    let end = start + (20000); // 1000 is one second
 
     function spinWheel() 
     {
