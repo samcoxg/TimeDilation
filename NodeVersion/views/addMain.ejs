@@ -189,10 +189,8 @@
                 calculate the elapsed time.   
             </label><br><br>
                 <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeEstimate" name="timeEstimate" placeholder="Minutes">
-                
-            
             <br>
-            <br><br>
+            <br>
 
             <h4>How quickly did the time seem to pass for you during the tasks?</h4>            
             <div class="range">
@@ -223,10 +221,11 @@
                     </div>
                 </div><br><br><br>
            
-            <div style = "margin:0 auto; border: 1px solid grey; padding: 65px;">
+            <div style = "margin:0 auto; border: 1px solid grey; padding: 75px;">
                 <h3>
                     To what extent do you feel the task…
                 </h3>
+                <br>
                 <h4>kept you aware of the time passing:</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timeAwareness" name="timeAwareness">
@@ -239,6 +238,7 @@
             
                     </div>
                 </div>
+                <br>
         
                 <h4>kept you engaged in the current task:</h4>
                 <div class="range">
@@ -252,8 +252,9 @@
                         
                     </div>
                 </div>
+                <br>
 
-                <h4>provided a positive, motivating experience:</h4>
+                <h4>provided a motivating experience:</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="motivating" name="motivating">
                     <div class="sliderticks">
@@ -265,12 +266,13 @@
                         
                     </div>
                 </div>
+                <br>
 
                 <h4>was habit forming, or repetitive, to the point of automatic behavior:</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="repetitive" name="repetitive">
                     <div class="sliderticks">
-                        <p>No repetition</p>
+                        <p>Not repetitive</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
@@ -293,9 +295,9 @@
                        
                     </div>
                 </div>
-                <br><br>
+                <br><br><br>
 
-            <h4>Please rate your general emotional state throughout the tasks as being very negative (sad, angry, or highly stressed) or very positive (happy, joyful, pleasant): </h4><br><br>
+            <h4>Please rate your general emotional state throughout the tasks as being very negative (sad, angry, or highly stressed) or very positive (happy, joyful, pleasant): </h4>
             <div class="range">
             <input type="range" step="1" min="1" max="5" value="1" class="slider" id="emotion" name="emotion">
                 <div class="sliderticks">
@@ -307,10 +309,10 @@
                    
                 </div>
             </div>
-            <br>
-            <br>
+            <br><br><br>
+
             <div id="musicQuestion">
-                <h4>Please rate how the music affected you emotionally.</h4><br><br>
+                <h4>Please rate how the music affected you emotionally.</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
                     <div class="sliderticks">
@@ -321,9 +323,10 @@
                         <p>Very Positively</p>
                     </div>
                 </div>
-                <br>
-                <br>
+                <br><br><br>
             </div>
+            
+
 
             <!--Additional levers and questions-->
             <div id="volumeQuestion">
@@ -333,14 +336,14 @@
                 <input type="radio" id="volume" name="volume" value="3"> Normal<br>
                 <input type="radio" id="volume" name="volume" value="4"> Fairly loud<br>
                 <input type="radio" id="volume" name="volume" value="5"> Too Loud<br>
-                <br>
-                <br>
+                <br><br><br>
             </div>
             
 
 
+
             <div id="enjoyment">
-                <h4>How much did you enjoy completing the tasks?</h4><br><br>
+                <h4>How much did you enjoy completing the tasks?</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="enjoyment" name="enjoyment">
                     <div class="sliderticks">
@@ -351,9 +354,9 @@
                         <p>Very much</p>
                     </div>
                 </div>
-                <br>
-                <br>
+             
             </div>
+            <br><br><br>
 
             <h4>How much anxiety did you experience while completing the tasks?</h4>            
             <div class="range">
@@ -366,11 +369,11 @@
                         <p>Extreme Anxiety</p>
                     </div>
                 </div>
-            <br>
-            <br>
+           
+            <br><br><br>
 
             <div id="challenge">
-                <h4>How challenging did you find the tasks?</h4><br><br>
+                <h4>How challenging did you find the tasks?</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="challenge" name="challenge">
                     <div class="sliderticks">
@@ -381,12 +384,12 @@
                         <p>Very challenging</p>
                     </div>
                 </div>
-                <br>
-                <br>
+                
             </div>
+            <br><br><br>
 
             <div id="comfort">
-                <h4>How physically comfortable were you during the experiment (tempurature, sitting position, lighting)?</h4><br><br>
+                <h4>How physically comfortable were you during the experiment (tempurature, sitting position, lighting)?</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="comfort" name="comfort">
                     <div class="sliderticks">
@@ -397,12 +400,12 @@
                         <p>Very comfortable</p>
                     </div>
                 </div>
-                <br>
-                <br>
+                
             </div>
+            <br><br><br>
 
             <div id="recentExp">
-                <h4>I have recently engaged in tasks similar to these to the following extent:</h4><br><br>
+                <h4>I have recently engaged in tasks similar to these to the following extent:</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="recentExp" name="recentExp">
                     <div class="sliderticks">
@@ -413,9 +416,9 @@
                         <p>A lot</p>
                     </div>
                 </div>
-                <br>
-                <br>
+                
             </div>
+            <br><br><br>
 
 
             <label>Please select your education level.</label>

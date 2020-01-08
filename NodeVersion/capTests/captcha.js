@@ -565,7 +565,7 @@ function displaySurvey()
     document.getElementById("myProgressOwner").style.display = "none";
     let cap1 = document.getElementById("cap");
     cap1.style.position = "relative";
-    cap1.style.left = "20%";
+    cap1.style.marginLeft = "20%";
     cap1.style.width = "60%";
     document.getElementById("title").style.display = "none";
     document.getElementById("survey1").style.display = "initial";
