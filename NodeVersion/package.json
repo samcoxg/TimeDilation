@@ -1,5 +1,5 @@
 {
-  "name": "timedilation",
+  "name": "node-timedilation",
   "version": "1.0.0",
   "description": "Data",
   "main": "index.js",
