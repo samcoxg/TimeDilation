@@ -12,9 +12,9 @@
 </head>
 
 <body>
-<div id="mainStyle">
-    <p>User ID:</p>
-    <p id='storeUID'><%= mainData[0].userID %></p>
+<div id="mainStyle" style="padding-top:20px;">
+    <p style="display: none;">User ID:</p>
+    <p style="display: none;" id='storeUID'><%= mainData[0].userID %></p>
     
     <div id="musicPlayerDiv" style="display: none;">
         
@@ -101,24 +101,25 @@
                         </div>
                 </div><br><br>
                 
-                <input type="button" class="mybutton" value="Begin!" onclick="selectMusic()">
+                <input type="button" class="btn btn-primary btn-lg" value="Begin!" style="float:right;" onclick="selectMusic()">
             </form>
             
         </div>
     </div>
     <div id="myProgressOwner"  style="display:none;">
         
-        <div id="myProgress" style="width:30%; margin:0 auto;">
+        <div id="myProgress" style="width:30%; margin-left:30%; margin-bottom: 20px;">
             <div id="myBar"></div>
         </div>
     </div>
 
     <div id="timePressureSamples" style="display: none;">
-        <div style="width:80%; margin: 0 auto;">
+        <div style="width:60%; margin: 0 auto;">
             <h1>Question Samples</h1>
             <p>
-                Questions will have
-                time limits and will require fast reading and response on your part. Not all questions will have the same time limit, some may 
+                The questions you will be answering will have
+                time limits and will require fast reading and response on your part. After the time runs out, the question will be automatically submitted
+                 and the next question will be displayed. Be sure to have selected your answer prior to time running out. Not all questions will have the same time limit, some may 
                 be longer or shorter depending on their level of difficulty. Please view the samples of the general types of questions you will 
                 be answering below. Look at each of them carefully and be sure you understand, because you will not have time to do so later on.
             </p>
@@ -131,14 +132,14 @@
                 <img src="/images/samples/5.png" style="margin-bottom: 50px; border:1px solid black;"><br>
                 <img src="/images/samples/6.png" style="margin-bottom: 50px; border:1px solid black;">
             </div>
-            <button class="mybutton" style="float:right;" onclick="displayCap()">Begin</button>
+            <button class="btn btn-primary btn-lg" style="float:right;" onclick="displayCap()">Begin</button>
             <br><br><br>
         </div>
     </div>
 
     
 
-    <div id="cap" style="width:50%; margin-left:30%; min-width: 700px; float: left;">
+    <div id="cap" style="width:50%; margin-left:30%; min-width: 700px; float:left; ">
 
         <p id="title"></p>
         

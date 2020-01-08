@@ -830,7 +830,16 @@ function timeOutLever()
         i = 1;
         var elem = document.getElementById("myBar");
         var width = 100;
-        id = setInterval(frame, 50);
+        
+        if(inputType == 1 || inputType == 4)
+        {
+            id = setInterval(frame, 50);//5 seconds
+        }
+        else
+        {
+            id = setInterval(frame, 70);//7 seconds
+        }
+
         function frame() {
         if (width <= 0) {
             clearInterval(id);

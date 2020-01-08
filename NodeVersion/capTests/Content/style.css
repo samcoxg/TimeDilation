@@ -95,9 +95,10 @@ tr:nth-child(even) {
 }
 .mybutton {
     background-color: #e7e7e7; 
+    border-radius: 5px;
     color: black;    
     border: none;
-    padding: 10px 22px;
+    padding: 10px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -111,50 +112,7 @@ tr:nth-child(even) {
   .mybutton:active{
       background-color: #e7e7e7;
   }
-  .playButton {
-  background-color: #2230f3; 
-  color: white;    
-  border: none;
-  border-radius: 2px;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  }
-  .playButton:hover
-  {
-    background-color: #303dfa; 
-  }
-  .playButton:active
-  {
-    background-color: #1d2cfa; 
-  }
-  .pauseButton {
-  background-color: #4d31b1; 
-  color: white;    
-  border: none;
-  border-radius: 2px;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  }
-  .pauseButton:hover
-  {
-    background-color:#5b44af
-  }
-  .pauseButton:active
-  {
-    background-color:#4d33a8
-  }
-
-
+  
 img{
     width:400px;
     height:auto;
