@@ -225,15 +225,15 @@ function getQuestion()
                             else
                             {
                                 instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><input type='radio' name='answer' id='a1' value='e'> "
+                                + "</h3><br><label class='labelSpecial'><input type='radio' name='answer' id='a1' value='e'> "
                                 + Questions[iCount][7]
-                                + "<br><input type='radio' name='answer' id='a2' value='f'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a2' value='f'> "
                                 + Questions[iCount][8]
-                                + "<br><input type='radio' name='answer' id='a3' value='g'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a3' value='g'> "
                                 + Questions[iCount][9]
-                                + "<br><input type='radio' name='answer' id='a4' value='h'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a4' value='h'> "
                                 + Questions[iCount][10]
-                                + "<br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
+                                + "</label><br><br><br><input type='button' value='Submit' class='mybutton' id='checkAcc' onClick='checkAcc()'>";
                             }
                             
                             Questions[iCount][0]= 0;
@@ -249,8 +249,8 @@ function getQuestion()
                         
                         if(Questions[iCount][11] == 4 || Questions[iCount][11] == 2)
                         {
-                            document.getElementById("cap").style.left = "20%";
-                            document.getElementById("cap").style.width = "60%"; 
+                            document.getElementById("cap").style.marginLeft = "10%";
+                            document.getElementById("cap").style.width = "80%";
                             correctAnswer = Questions[iCount][10];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
@@ -270,28 +270,27 @@ function getQuestion()
                         
                         else
                         {
-                            document.getElementById("cap").style.left = "30%";
-                            document.getElementById("cap").style.width = "40%"; 
+                            
                             correctAnswer = Questions[iCount][2];
                             inputType = Questions[iCount][11];
                             instructions = "<h3 style='font-size:1.4em'>" + Questions[iCount][1] 
-                                + "</h3><br><input type='radio' name='answer' id='a1' value='a'> "
+                                + "</h3><br><label class='labelSpecial'><input type='radio' name='answer' id='a1' value='a'> "
                                 + Questions[iCount][3]
-                                + "<br><input type='radio' name='answer' id='a2' value='b'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a2' value='b'> "
                                 + Questions[iCount][4]
-                                + "<br><input type='radio' name='answer' id='a3' value='c'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a3' value='c'> "
                                 + Questions[iCount][5]
-                                + "<br><input type='radio' name='answer' id='a4' value='d'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a4' value='d'> "
                                 + Questions[iCount][6]
-                                + "<br><input type='radio' name='answer' id='a5' value='e'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a5' value='e'> "
                                 + Questions[iCount][7]
-                                + "<br><input type='radio' name='answer' id='a6' value='f'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a6' value='f'> "
                                 + Questions[iCount][8]
-                                + "<br><input type='radio' name='answer' id='a7' value='g'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a7' value='g'> "
                                 + Questions[iCount][9]
-                                + "<br><input type='radio' name='answer' id='a8' value='h'> "
+                                + "</label><br><label class='labelSpecial'><input type='radio' name='answer' id='a8' value='h'> "
                                 + Questions[iCount][10]
-                                + "<br><br><input type='button' value='Submit' id='checkAcc' class='mybutton' onClick='checkAcc()'>";
+                                + "</label><br><br><input type='button' value='Submit' id='checkAcc' class='mybutton' onClick='checkAcc()'>";
                             Questions[iCount][0]= 0;
                             numFound = true;
                             iWhile++;
@@ -306,12 +305,13 @@ function getQuestion()
             numFound = true;
             instructions = "Out of questions"
         }
-        //check to see if old input is the same as the current one, this will measure the number of times a question is changing
-        if(inputType != oldType)
-        {
-            typeChange++;
-        }
-    }   
+        
+    }  
+    //check to see if old input is the same as the current one, this will measure the number of times a question is changing
+    if(inputType != oldType)
+    {
+        typeChange++;
+    } 
 }
 //display the music player for the page.
 function musicPlayer()
@@ -385,6 +385,7 @@ function displayLever()
     {
         leverType = 2;
         document.getElementById("mainStyle").style.backgroundColor="#242323";
+        //document.getElementsByClassName("labelSpecial").style.backgroundColor = "white";
         document.body.style.backgroundColor = "#242323";
         document.body.style.color="white";
         displayCap();
@@ -435,7 +436,9 @@ function displayLever()
     //high cognitive engagement in a positive state
     else if(userID[userID.length -1] == 8)
     {
-        document.getElementById("cap").style.left = "10%";
+        document.getElementById("cap").style.marginLeft = "10%";
+        document.getElementById("cap").style.width = "40%";
+        document.getElementById("cap").style.minWidth = "0px";
         while(nickname == "" || nickname == undefined || nickname == null)
         {
             nickname = prompt("You have been selected for a competition. Please enter a nickname to be used for recording on the leaderboard!");
@@ -496,7 +499,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (20000); // 1000 is one second
+    let end = start + (2000000); // 1000 is one second
 
     function spinWheel() 
     {
@@ -538,7 +541,7 @@ function displayCap()
             document.getElementById("leverTested").value = leverType;
             document.getElementById("musicPlayed").value = songChosen;
             document.getElementById("startTime").value = startTime;
-            document.getElementById("typeChange").value = typeChange;
+            document.getElementById("typeChange").value = typeChange - 1;
 
             displaySurvey();
         } 
@@ -812,7 +815,7 @@ function leaderBoard(nickname, perfLevel)
     }
     if(endValue < inValue)
     {
-        showSnackBar("You moved up on the leaderboard!!", 4000, "blue");
+        showSnackBar("You moved up on the leaderboard!!", 8000, "blue");
     }
     pastGameObjects = gameObjects;
 }
