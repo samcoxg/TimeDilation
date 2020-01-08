@@ -499,7 +499,7 @@ function displayCap()
     }
   //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (2000000); // 1000 is one second
+    let end = start + (200); // 1000 is one second
 
     function spinWheel() 
     {
@@ -815,7 +815,7 @@ function leaderBoard(nickname, perfLevel)
     }
     if(endValue < inValue)
     {
-        showSnackBar("You moved up on the leaderboard!!", 8000, "blue");
+        showSnackBar("YOU MOVED UP!!", 8000, "blue");
     }
     pastGameObjects = gameObjects;
 }
@@ -831,7 +831,7 @@ function timeOutLever()
         var elem = document.getElementById("myBar");
         var width = 100;
         
-        if(inputType == 1 || inputType == 4)
+        if(inputType == 1 || inputType == 4 || inputType == 12)
         {
             id = setInterval(frame, 50);//5 seconds
         }
