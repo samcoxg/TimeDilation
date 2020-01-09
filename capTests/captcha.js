@@ -497,9 +497,9 @@ function displayCap()
         timeOutLeverSTOP();
         timeOutLever();
     }
-  //7 minutes timer
+    //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (2000); // 1000 is one second
+    let end = start + (420000); // 1000 is one second
 
     function spinWheel() 
     {
