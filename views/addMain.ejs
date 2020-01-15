@@ -405,15 +405,15 @@
             <br><br><br>
 
             <div id="recentExp">
-                <h4>I have recently engaged in tasks similar to these to the following extent:</h4>
+                <h4>Over the past three months, how frequently have you engaged in tasks similar to the ones you just completed for this study?</h4>
                 <div class="range">
                 <input type="range" step="1" min="1" max="5" value="1" class="slider" id="recentExp" name="recentExp">
                     <div class="sliderticks">
-                        <p>None</p>
+                        <p>Never</p>
                         <p>2</p>
                         <p>3</p>
                         <p>4</p>
-                        <p>A lot</p>
+                        <p>Daily</p>
                     </div>
                 </div>
                 
@@ -436,17 +436,15 @@
                 </select>
             <br><br><br>
 
-            <label>Please indicate your marital status.</label>
+            <label>Please indicate your relationship status.</label>
             <br>
-            <select id="maritalStatus" class="col-4 custom-select mr-sm-2" name="maritalStatus">
-                <option value="" selected="selected" disabled="disabled">-- select one --</option>
-                <option value="married">Married</option>
-                <option value="not married">Not Married</option>
-                <option value="divorced">Divorced</option>
-                <option value="engaged">Engaged</option>
-                <option value="widowed">Widowed</option>
-                <option value="seperated">Seperated</option>
-                </select>
+            <label class="labelSpecial">
+                <input type="radio" name="maritalStatus" id="maritalStatus" value="relationship"> In a relationship
+            </label>           
+            
+            <label class="labelSpecial">
+                <input type="radio" name="maritalStatus" id="maritalStatus2" value="not"> Not in a relationship
+            </label>
             <br><br><br>
 
 

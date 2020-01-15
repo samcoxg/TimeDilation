@@ -571,6 +571,7 @@ function displaySurvey()
     document.getElementById("survey1").style.display = "initial";
     document.getElementById("mainStyle").style.backgroundColor = "white";
     document.getElementById("mainStyle").style.color = "#6b6b6b";
+    document.body.style.backgroundColor = "white";
 }
 function checkAcc()
 {
