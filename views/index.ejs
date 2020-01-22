@@ -30,14 +30,13 @@
         <table class="w3-table-all w3-hoverable">
         <thead>
                 <tr class="w3-light-grey">
-                <th></th>
                 <th>UserID</th>
 
                 <th>startTime</th>
                 <th>endTime</th>
                 <th>typeChange</th>
                 <th>leverTested</th>
-
+                <th>finishEarly</th>
                 <th>TotalA</th>
                 <th>TotalC</th>
                 <th>labelA</th>
@@ -89,23 +88,26 @@
                 <th>maritalStatus</th>
                 <th>gender</th>
                 <th>age</th>
+                <th>byuID</th>
             </tr>
         </thead>
         <tbody style="border: 1px solid black;">
             <% for(var i = 0; i < mainData.length; i++) {%>
             <tr>
                 
-                <td style="text-align:center;">
+                <!--<td style="text-align:center;">
                     <form action="/DeleteMain/<%= mainData[i].userID%>" method="post">
                         <input type="submit" name="Delete" value="Delete" class="mybutton" />
                     </form>
-                </td>
+                </td>-->
                 <td><%= mainData[i].userID %></td>
 
                 <td><%= mainData[i].startTime %></td>
                 <td><%= mainData[i].endTime %></td>
                 <td><%= mainData[i].typeChange %></td>
                 <td><%= mainData[i].leverTested %></td>
+                <td><%= mainData[i].finishEarly %></td>
+
                 <td><%= mainData[i].allA %></td>
                 <td><%= mainData[i].allC %></td>
                 <td><%= mainData[i].labelA %></td>
@@ -157,6 +159,8 @@
                 <td><%= mainData[i].maritalStatus %></td>
                 <td><%= mainData[i].gender %></td>
                 <td><%= mainData[i].age %></td>
+                <td><%= mainData[i].byuID %></td>
+
                 <% }%>
             
         </tbody>

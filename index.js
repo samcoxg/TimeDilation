@@ -22,6 +22,7 @@ app.get('/database', (req, res) =>
     'startTime',
     'endTime',
     'leverTested',
+    'finishEarly',
     'typeChange', 
     'allA', 
     'allC', 
@@ -54,7 +55,7 @@ app.get('/database', (req, res) =>
      'timeFeel',
      'musicPlayed', 'musicAffect', 'volume',
      'repetitive', 'motivating', 'engaging', 'distraction', 'enjoyment', 'anxiety', 'challenge',
-     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age').from('Main')
+     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age', 'byuID').from('Main')
     .orderBy('userID').then(mainRec => {
         res.render('index', {
             mainData: mainRec
@@ -136,6 +137,7 @@ app.post
                     endTime: setEnd,
                     startTime: req.body.startTime,
                     leverTested: req.body.leverTested,
+                    finishEarly: req.body.finishEarly,
                     typeChange: req.body.typeChange, 
                     allA: req.body.allA, 
                     allC: req.body.allC, 
@@ -184,7 +186,8 @@ app.post
                     educationLevel: req.body.educationLevel, 
                     maritalStatus: req.body.maritalStatus, 
                     gender: req.body.gender, 
-                    age: req.body.age
+                    age: req.body.age,
+                    byuID: req.body.byuID
                 })
                 .then
             (

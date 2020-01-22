@@ -148,6 +148,7 @@
         <!--<form id="survey1" class="survey1" action="/addMain" method="post" style="display: none;" name="myForm">-->
         <form id="survey1" class="survey1"  method="post" style="display: none;" name="myForm" action="/UpdateMain/<%= mainData[0].userID%>">
             <h1>Time has run out. Please complete the following survey regarding your experience.</h1><br><br>
+            <input type="hidden" id="finishEarly" name="finishEarly"></input>
             <input type="hidden" id="allA" name="allA"></input>
             <input type="hidden" id="allC" name="allC"></input>
             <input type="hidden" id="labelA" name="labelA"></input>
@@ -468,6 +469,10 @@
             <br>
             <input type="number" class="col-2 form-control" id="age" name="age">
             <br>
+
+            <label>Input your BYU ID (number)</label>
+            <input type="text" class="col-2 form-control" id="byuID" name="byuID">
+
             
 
             

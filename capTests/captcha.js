@@ -148,6 +148,7 @@ let musicPlaying = false;
 let audio = undefined;
 let startTime = undefined;
 let endTime = undefined;
+let finishEarly = false;
 
 
 setTimestamp();
@@ -304,6 +305,9 @@ function getQuestion()
         {
             numFound = true;
             instructions = "Out of questions"
+            finishEarly = true;
+            recordData();
+            displaySurvey();
         }
         
     }  
@@ -499,50 +503,15 @@ function displayCap()
     }
     //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (20000); // 1000 is one second
+    let end = start + (60000); // 1000 is one second
 
     function spinWheel() 
     {
         start = Date.now(); // Get the date currently
         if(start > end)
         {
-            let avgResponse = (420/(totalAnswers[0]));
-            clearInterval(timer); // If we are 5 seconds later clear interval
-            document.getElementById("allA").value = totalAnswers[0];
-            document.getElementById("cap").style.width = "80%";
-            //document.forms[0].fid_17.value = totalAnswers[0];
-            document.getElementById("allC").value = totalAnswers[1];
-            document.getElementById("labelA").value = labelI[0];            //1
-            document.getElementById("labelC").value = labelI[1];            //1
-            document.getElementById("findWrongA").value = find_wrongI[0];   //2
-            document.getElementById("findWrongC").value = find_wrongI[1];   //2
-            document.getElementById("typeWordsA").value = typeWords[0];     //3
-            document.getElementById("typeWordsC").value = typeWords[1];     //3
-            document.getElementById("findImageA").value = findImage[0];     //4
-            document.getElementById("findImageC").value = findImage[1];     //4
-            document.getElementById("wrongWordA").value = findWrongWord[0]; //5
-            document.getElementById("wrongWordC").value = findWrongWord[1]; //5
-            document.getElementById("descOthersA").value = descOthers[0];   //6
-            document.getElementById("descOthersC").value = descOthers[1];   //6
-            document.getElementById("connectsA").value = connects[0];       //7
-            document.getElementById("connectsC").value = connects[1];       //7
-            document.getElementById("belongsA").value = belongs[0];         //8
-            document.getElementById("belongsC").value = belongs[1];         //8
-            document.getElementById("specificA").value = specific[0];       //9
-            document.getElementById("specificC").value = specific[1];       //9
-            document.getElementById("noPatternA").value = noPattern[0];     //10
-            document.getElementById("noPatternC").value = noPattern[1];     //10
-            document.getElementById("findPatternA").value = findPattern[0]; //11
-            document.getElementById("findPatternC").value = findPattern[1]; //11
-            document.getElementById("finishWordA").value = finishWord[0];   //12
-            document.getElementById("finishWordC").value = finishWord[1];   //12
-            
-            document.getElementById("avgResTime").value = avgResponse;//7 minutes divided by total responses
-            document.getElementById("leverTested").value = leverType;
-            document.getElementById("musicPlayed").value = songChosen;
-            document.getElementById("startTime").value = startTime;
-            document.getElementById("typeChange").value = typeChange - 1;
-
+            recordData();
+            clearInterval(timer);
             displaySurvey();
         } 
     }
@@ -563,6 +532,7 @@ function displaySurvey()
     }
     timeOutLeverSTOP();
     document.getElementById("myProgressOwner").style.display = "none";
+    document.getElementById("wholeGame").style.display = "none";
     let cap1 = document.getElementById("cap");
     cap1.style.position = "relative";
     cap1.style.marginLeft = "20%";
@@ -763,16 +733,16 @@ function showSnackBar(snackMessage, snackDuration, snackColor) {
 function leaderBoard(nickname, perfLevel)
 {
     let gameObjects = [
-        {name: "cosmo1!", points: 25},
-        {name: "iEatChicken4ever!", points: 23},
-        {name: "provo_all$tar_12", points: 22},
-        {name: "goUtes", points: 20},
-        {name: "tom", points: 24},
-        {name: "rachael14!", points: 178},
-        {name: "sarah#3", points: 177},
+        {name: "cosmo1!", points: 125},
+        {name: "I Like Bacon", points: 203},
+        {name: "all$tar_12", points: 82},
+        {name: "winwin", points: 86},
+        {name: "tommy87", points: 44},
+        {name: "rachael14", points: 178},
+        {name: "sarah3", points: 177},
         {name: "IDrink2%", points: 158},
-        {name: "sam5!", points: 154},
-        {name: "doubleroadkill2!", points: 2},
+        {name: "sam1213", points: 154},
+        {name: "doubleroadkill", points: 98},
         {name: nickname, points: perfLevel}
     ];
     gameObjects = gameObjects.sort((a, b) => (a.points < b.points) ? 1 : -1);
@@ -833,13 +803,9 @@ function timeOutLever()
         var width = 100;
         
         if(inputType == 1 || inputType == 4 || inputType == 12)
-        {
-            id = setInterval(frame, 50);//5 seconds
-        }
+        {id = setInterval(frame, 50);}
         else
-        {
-            id = setInterval(frame, 70);//7 seconds
-        }
+        {id = setInterval(frame, 60);}
 
         function frame() {
         if (width <= 0) {
@@ -877,4 +843,48 @@ function setTimestamp()
 function timePressure()
 {
     document.getElementById("timePressureSamples").style.display = "initial";
+}
+
+function recordData()
+{
+    let avgResponse = (420/(totalAnswers[0]));
+     // If we are 5 seconds later clear interval
+    document.getElementById("allA").value = totalAnswers[0];
+    document.getElementById("cap").style.width = "80%";
+    //document.forms[0].fid_17.value = totalAnswers[0];
+    document.getElementById("allC").value = totalAnswers[1];
+    document.getElementById("labelA").value = labelI[0];            //1
+    document.getElementById("labelC").value = labelI[1];            //1
+    document.getElementById("findWrongA").value = find_wrongI[0];   //2
+    document.getElementById("findWrongC").value = find_wrongI[1];   //2
+    document.getElementById("typeWordsA").value = typeWords[0];     //3
+    document.getElementById("typeWordsC").value = typeWords[1];     //3
+    document.getElementById("findImageA").value = findImage[0];     //4
+    document.getElementById("findImageC").value = findImage[1];     //4
+    document.getElementById("wrongWordA").value = findWrongWord[0]; //5
+    document.getElementById("wrongWordC").value = findWrongWord[1]; //5
+    document.getElementById("descOthersA").value = descOthers[0];   //6
+    document.getElementById("descOthersC").value = descOthers[1];   //6
+    document.getElementById("connectsA").value = connects[0];       //7
+    document.getElementById("connectsC").value = connects[1];       //7
+    document.getElementById("belongsA").value = belongs[0];         //8
+    document.getElementById("belongsC").value = belongs[1];         //8
+    document.getElementById("specificA").value = specific[0];       //9
+    document.getElementById("specificC").value = specific[1];       //9
+    document.getElementById("noPatternA").value = noPattern[0];     //10
+    document.getElementById("noPatternC").value = noPattern[1];     //10
+    document.getElementById("findPatternA").value = findPattern[0]; //11
+    document.getElementById("findPatternC").value = findPattern[1]; //11
+    document.getElementById("finishWordA").value = finishWord[0];   //12
+    document.getElementById("finishWordC").value = finishWord[1];   //12
+    
+    document.getElementById("avgResTime").value = avgResponse;//7 minutes divided by total responses
+    document.getElementById("leverTested").value = leverType;
+    document.getElementById("musicPlayed").value = songChosen;
+    document.getElementById("startTime").value = startTime;
+    document.getElementById("typeChange").value = typeChange - 1;
+    if (finishEarly == false)
+    {document.getElementById("finishEarly").value = ""}
+    else
+    {document.getElementById("finishEarly").value = "true"}
 }
