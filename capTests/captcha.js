@@ -171,7 +171,6 @@ function getQuestion()
             {
                 rNum = Math.floor(Math.random()*Questions.length)+1;
             }
-            //rNum = 51;
             for(let iCount=0; iCount<Questions.length; iCount++)
             {
                 if(leverType != 9)
@@ -440,6 +439,7 @@ function displayLever()
     //high cognitive engagement in a positive state
     else if(userID[userID.length -1] == 8)
     {
+        leverType = 8;
         document.getElementById("cap").style.marginLeft = "10%";
         document.getElementById("cap").style.width = "40%";
         document.getElementById("cap").style.minWidth = "0px";
@@ -452,7 +452,6 @@ function displayLever()
         document.getElementById("wholeGame").style.display = "initial";
         document.getElementById("gameBar").style.display = "initial";
         gameSetting = true;
-        leverType = 8;
         displayCap();
     }
     //add extra answer options 
@@ -466,25 +465,12 @@ function displayLever()
     else if(userID[userID.length -1] == 0)
     {
         timePressure();
-        /*let userConf = undefined;
-        while(userConf != 'YES')
-        {
-            userConf = prompt("You will be answering many different types of questions. " +
-            "However, each question will have a time limit!" + 
-            " You must click the correct answer before the timer runs out and the program submits your answer." + 
-            " Failing to do so will result in a missed question. " +
-            "Do your very best... your accuracy will be recorded." +
-             "\n\n Type YES (all caps) into the box below to immediately begin. ");
-        }*/
         leverType = 0;
-        //displayCap();
     }
     
 }
 function displayCap()
 {
-    //let iDisplay = Math.floor(Math.random()*6);
-    //let iDisplay = 3;
     window.scrollTo(0, 0);
     getQuestion();
     document.getElementById("title").innerHTML = instructions;
@@ -713,7 +699,7 @@ function gameFunction()
         perfLevel = perfLevel - 5;
         showSnackBar("Better luck next time!", 2000, "red");
     }
-    displayCap();
+    //displayCap();
     leaderBoard(nickname, perfLevel);
 
 
