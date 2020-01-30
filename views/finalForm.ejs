@@ -15,6 +15,102 @@
 <div style="width:70%; margin:0 auto; padding:5rem;">
 <form id="survey2" class="survey2"  method="post" name="myForm" action="/finalFormSubmit/<%= mainData[0].userID%>">
 
+    <h4>You just tried to accurately estimate the time it took to complete this task. But, how many minutes did it <strong>feel</strong> like?</h4>
+        <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeEstimate" name="timeEstimate" placeholder="Minutes">
+    <br>
+    <br>
+
+    <h4>How quickly did the time seem to pass for you during the tasks?</h4>            
+            <div class="range">
+            <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timeFeel" name="timeFeel">
+                    <div class="sliderticks">
+                        <p>Very Slowly</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Quickly</p>
+                        
+                    </div>
+            </div><br>
+            
+            <br>
+            <br>
+
+            <h4>How much pressure did you feel to answer the questions quickly?</h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timePressure" name="timePressure">
+                    <div class="sliderticks">
+                        <p>No Pressure</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Extreme Pressure</p>
+                        
+                    </div>
+                </div><br><br><br>
+           
+            <div style = "margin:0 auto; border: 1px solid grey; padding: 75px;">
+                <h3>
+                    To what extent do you feel the task…
+                </h3>
+                <br>
+                <h4>kept you aware of the time passing:</h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="timeAwareness" name="timeAwareness">
+                    <div class="sliderticks">
+                        <p>Completely Unaware</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Aware</p>
+            
+                    </div>
+                </div>
+                <br>
+        
+                <h4>kept you engaged in the current task:</h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="engaging" name="engaging">
+                    <div class="sliderticks">
+                        <p>Unengaged</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Very Engaged</p>
+                        
+                    </div>
+                </div>
+                <br>
+
+                <h4>provided a motivating experience:</h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="motivating" name="motivating">
+                    <div class="sliderticks">
+                        <p>Not motivating</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Highly motivating</p>
+                        
+                    </div>
+                </div>
+                <br>
+
+                <h4>was habit forming, or repetitive, to the point of automatic behavior:</h4>
+                <div class="range">
+                <input type="range" step="1" min="1" max="5" value="1" class="slider" id="repetitive" name="repetitive">
+                    <div class="sliderticks">
+                        <p>Not repetitive</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>Extremly repetitive</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
     <h4>How distracted were you during the tasks? </h4>
     <div class="range">
     <input type="range" step="1" min="1" max="5" value="1" class="slider" id="distraction" name="distraction">

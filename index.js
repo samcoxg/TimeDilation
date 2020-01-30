@@ -129,20 +129,27 @@ app.get('/finalForm/:id', function(req, res) {
       knex('Main')
           .where('userID', req.params.id)
           .update({
-              distraction: req.body.distraction, 
-              enjoyment: req.body.enjoyment, 
-              anxiety: req.body.anxiety, 
-              challenge: req.body.challenge,
-              comfort: req.body.comfort, 
-              recentExp: req.body.recentExp, 
-              timePressure: req.body.timePressure, 
-              timeAwareness: req.body.timeAwareness, 
-              emotion: req.body.emotion, 
-              educationLevel: req.body.educationLevel, 
-              maritalStatus: req.body.maritalStatus, 
-              gender: req.body.gender, 
-              age: req.body.age,
-              byuID: req.body.byuID
+            timeFeel: req.body.timeFeel,
+            musicPlayed: req.body.musicPlayed, 
+            musicAffect: req.body.musicAffect, 
+            volume: req.body.volume,
+            repetitive: req.body.repetitive, 
+            motivating: req.body.motivating, 
+            engaging: req.body.engaging,
+            distraction: req.body.distraction, 
+            enjoyment: req.body.enjoyment, 
+            anxiety: req.body.anxiety, 
+            challenge: req.body.challenge,
+            comfort: req.body.comfort, 
+            recentExp: req.body.recentExp, 
+            timePressure: req.body.timePressure, 
+            timeAwareness: req.body.timeAwareness, 
+            emotion: req.body.emotion, 
+            educationLevel: req.body.educationLevel, 
+            maritalStatus: req.body.maritalStatus, 
+            gender: req.body.gender, 
+            age: req.body.age,
+            byuID: req.body.byuID
           })
           .then
       (
@@ -206,29 +213,8 @@ app.post('/UpdateMain/:id', (req, res) =>
                     finishWordA: req.body.finishWordA,
                     finishWordC: req.body.finishWordC,
                     avgResTime: req.body.avgResTime, 
-                    timeEstimate: req.body.timeEstimate, 
-                    timeFeel: req.body.timeFeel,
-                    musicPlayed: req.body.musicPlayed, 
-                    musicAffect: req.body.musicAffect, 
-                    volume: req.body.volume,
-                    repetitive: req.body.repetitive, 
-                    motivating: req.body.motivating, 
-                    engaging: req.body.engaging
-                    /*
-                    distraction: req.body.distraction, 
-                    enjoyment: req.body.enjoyment, 
-                    anxiety: req.body.anxiety, 
-                    challenge: req.body.challenge,
-                    comfort: req.body.comfort, 
-                    recentExp: req.body.recentExp, 
-                    timePressure: req.body.timePressure, 
-                    timeAwareness: req.body.timeAwareness, 
-                    emotion: req.body.emotion, 
-                    educationLevel: req.body.educationLevel, 
-                    maritalStatus: req.body.maritalStatus, 
-                    gender: req.body.gender, 
-                    age: req.body.age,
-                    byuID: req.body.byuID*/
+                    timeEstimate: req.body.timeEstimate
+                    
                 })
                 .then
             (
