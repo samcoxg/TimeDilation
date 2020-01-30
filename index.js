@@ -101,18 +101,58 @@ app.get('/addMain', (req, res) => {
 
 
 app.post('/captchaStart', (req, res) => {
-    knex('Main').insert(req.body/*
-        [{
-            allC: req.body.v2,
-            labelA: req.body.v3,
-            labelC: req.body.v4, 
-            
-            },
-        ]*/
-    ).then(main => {
+    knex('Main').insert(req.body).then(main => {
         res.redirect('/addMain');
     });
 });
+
+
+app.get('/finalForm/:id', function(req, res) {
+    knex.select('userID').from('Main').orderBy('userID', 'desc').then(mainRec => {
+        res.render('finalForm', {
+            mainData: mainRec
+        })
+    })
+  });
+
+  app.get('/finalFormSubmit/:id', (req, res) => {
+    knex.select("*").from('Main').where('userID', req.params.id).then(mainRec => {
+        res.render("UpdateMain", {
+            mainData: mainRec
+        });
+    });
+});
+
+  app.post('/finalFormSubmit/:id', (req, res) => 
+  {
+      knex('Main')
+          .where('userID', req.params.id)
+          .update({
+              distraction: req.body.distraction, 
+              enjoyment: req.body.enjoyment, 
+              anxiety: req.body.anxiety, 
+              challenge: req.body.challenge,
+              comfort: req.body.comfort, 
+              recentExp: req.body.recentExp, 
+              timePressure: req.body.timePressure, 
+              timeAwareness: req.body.timeAwareness, 
+              emotion: req.body.emotion, 
+              educationLevel: req.body.educationLevel, 
+              maritalStatus: req.body.maritalStatus, 
+              gender: req.body.gender, 
+              age: req.body.age,
+              byuID: req.body.byuID
+          })
+          .then
+      (
+          mainData => 
+          {
+              res.redirect('/thankyou');
+              
+          }
+      )
+  }   
+);
 
 app.get('/UpdateMain/:id', (req, res) => {
     knex.select("*").from('Main').where('userID', req.params.id).then(mainRec => {
@@ -124,8 +164,7 @@ app.get('/UpdateMain/:id', (req, res) => {
 
 
 //update and redirect to thankyou page
-app.post
-    ('/UpdateMain/:id', (req, res) => 
+app.post('/UpdateMain/:id', (req, res) => 
         {
             let d = new Date();
             let setEnd = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate()
@@ -173,7 +212,8 @@ app.post
                     volume: req.body.volume,
                     repetitive: req.body.repetitive, 
                     motivating: req.body.motivating, 
-                    engaging: req.body.engaging, 
+                    engaging: req.body.engaging
+                    /*
                     distraction: req.body.distraction, 
                     enjoyment: req.body.enjoyment, 
                     anxiety: req.body.anxiety, 
@@ -187,19 +227,24 @@ app.post
                     maritalStatus: req.body.maritalStatus, 
                     gender: req.body.gender, 
                     age: req.body.age,
-                    byuID: req.body.byuID
+                    byuID: req.body.byuID*/
                 })
                 .then
             (
                 mainData => 
                 {
-                    res.redirect("/thankyou");
+                    res.redirect('/finalForm/:' + req.params.id);
+                    
                 }
             )
         }   
     );
 
-let port = 8000;
+
+
+
+
+
 
 //app.listen(port, () => console.log("Server running."));
 app.set('port', (process.env.PORT || 5000));
