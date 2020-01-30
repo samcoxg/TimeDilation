@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 app.get('/database', (req, res) =>
-    knex.select('userID', 
+    /*knex.select('userID', 
     'startTime',
     'endTime',
     'leverTested',
@@ -55,7 +55,8 @@ app.get('/database', (req, res) =>
      'timeFeel',
      'musicPlayed', 'musicAffect', 'volume',
      'repetitive', 'motivating', 'engaging', 'distraction', 'enjoyment', 'anxiety', 'challenge',
-     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age', 'byuID').from('Main')
+     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age', 'byuID').from('Main')*/
+     knex.select('*').from('Main')
     .orderBy('userID').then(mainRec => {
         res.render('index', {
             mainData: mainRec
