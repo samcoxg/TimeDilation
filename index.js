@@ -130,6 +130,8 @@ app.get('/finalForm/:id', function(req, res) {
           .where('userID', req.params.id)
           .update({
             timeFeel: req.body.timeFeel,
+            timeFeelEstimate: req.body.timeFeelEstimate,
+            lostInterest: req.body.lostInterest,
             musicPlayed: req.body.musicPlayed, 
             musicAffect: req.body.musicAffect, 
             volume: req.body.volume,

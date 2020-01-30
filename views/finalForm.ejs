@@ -16,7 +16,7 @@
 <form id="survey2" class="survey2"  method="post" name="myForm" action="/finalFormSubmit/<%= mainData[0].userID%>">
 
     <h4>You just tried to accurately estimate the time it took to complete this task. But, how many minutes did it <strong>feel</strong> like?</h4>
-        <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeEstimate" name="timeEstimate" placeholder="Minutes">
+        <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeFeelEstimate" name="timeFeelEstimate" placeholder="Minutes">
     <br>
     <br>
 
@@ -45,6 +45,19 @@
                         <p>3</p>
                         <p>4</p>
                         <p>Extreme Pressure</p>
+                        
+                    </div>
+                </div><br><br><br>
+
+                <h4>At what point in the experiment did you lose interest in the tasks??</h4>
+                <div class="range">
+                <input type="range" step="25" min="0" max="100" value="0" class="slider" id="lostInterest" name="lostInterest">
+                    <div class="sliderticks">
+                        <p>Never interested</p>
+                        <p>25%</p>
+                        <p>50%</p>
+                        <p>75%</p>
+                        <p>Always interested</p>
                         
                     </div>
                 </div><br><br><br>
