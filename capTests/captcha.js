@@ -489,7 +489,7 @@ function displayCap()
     }
     //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (360000); // 1000 is one second, 360000
+    let end = start + (3000); // 1000 is one second, 360000
 
     function spinWheel() 
     {
@@ -513,9 +513,7 @@ function displaySurvey()
     else
     {
         let i = 0;
-        //document.getElementById("musicQuestion").style.display = "none";
-        //document.getElementById("volumeQuestion").style.display = "none";
-
+        
     }
     timeOutLeverSTOP();
     document.getElementById("myProgressOwner").style.display = "none";
@@ -530,6 +528,7 @@ function displaySurvey()
     document.getElementById("mainStyle").style.color = "#6b6b6b";
     document.body.style.backgroundColor = "white";
 }
+
 function checkAcc()
 {
     let iACount = undefined;

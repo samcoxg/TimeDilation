@@ -16,7 +16,7 @@
 <form id="survey2" class="survey2"  method="post" name="myForm" action="/finalFormSubmit/<%= mainData[0].userID%>">
 
     <h4>You just tried to accurately estimate the time it took to complete this task. But, how many minutes did it <strong>feel</strong> like?</h4>
-        <input type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeFeelEstimate" name="timeFeelEstimate" placeholder="Minutes">
+        <input required autofocus type="number" width="50px;" step=".5" min="0" max="100" class="col-2 form-control" id="timeFeelEstimate" name="timeFeelEstimate" placeholder="Minutes">
     <br>
     <br>
 
@@ -152,36 +152,34 @@
 </div>
 <br><br><br>
 
-<div id="musicQuestion">
-    <h4>Please rate how the music affected you emotionally.</h4>
-    <div class="range">
-    <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
-        <div class="sliderticks">
-            <p>Very Negatively</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>Very Positively</p>
+<div style = "margin:0 auto; border: 1px solid grey; padding: 75px;">
+    <h4>You only need to answer these if you were asked to listen to music selections:</h4><br><br>
+    <div id="musicQuestion">
+        <h4>Please rate how the music played throughout the tasks affected you emotionally.</h4>
+        <div class="range">
+        <input type="range" step="1" min="1" max="5" value="1" class="slider" id="musicAffect" name="musicAffect">
+            <div class="sliderticks">
+                <p>Very Negatively</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>Very Positively</p>
+            </div>
         </div>
+        <br><br>
     </div>
-    <br><br><br>
+    <div id="volumeQuestion">
+        <h4>How loud did you feel the music was?</h4>            
+        <input type="radio" id="volume" name="volume" value="1"> Too quiet<br>
+        <input type="radio" id="volume" name="volume" value="2"> Fairly quiet<br>
+        <input type="radio" id="volume" name="volume" value="3"> Normal<br>
+        <input type="radio" id="volume" name="volume" value="4"> Fairly loud<br>
+        <input type="radio" id="volume" name="volume" value="5"> Too Loud<br>
+   
+    </div>
+
 </div>
-
-
-
-<!--Additional levers and questions-->
-<div id="volumeQuestion">
-    <h4>How loud did you feel the music was?</h4>            
-    <input type="radio" id="volume" name="volume" value="1"> Too quiet<br>
-    <input type="radio" id="volume" name="volume" value="2"> Fairly quiet<br>
-    <input type="radio" id="volume" name="volume" value="3"> Normal<br>
-    <input type="radio" id="volume" name="volume" value="4"> Fairly loud<br>
-    <input type="radio" id="volume" name="volume" value="5"> Too Loud<br>
-    <br><br><br>
-</div>
-
-
-
+<br><br>
 
 <div id="enjoyment">
     <h4>How much did you enjoy completing the tasks?</h4>
@@ -267,11 +265,11 @@
 <label>Please indicate your relationship status.</label>
 <br>
 <label class="labelSpecial">
-    <input type="radio" name="maritalStatus" id="maritalStatus" value="relationship"> In a relationship
+    <input required type="radio" name="maritalStatus" id="maritalStatus" value="relationship"> In a relationship
 </label>           
 
 <label class="labelSpecial">
-    <input type="radio" name="maritalStatus" id="maritalStatus2" value="not"> Not in a relationship
+    <input required type="radio" name="maritalStatus" id="maritalStatus2" value="not"> Not in a relationship
 </label>
 <br><br><br>
 
@@ -279,14 +277,14 @@
 <label>Please indicate your gender.</label>
 <br>
 <label for="gender1" class="labelSpecial">
-    <input type="radio" name="gender" id="gender1" value="male"> Male
+    <input required type="radio" name="gender" id="gender1" value="male"> Male
 </label>           
 
 <label for="gender2" class="labelSpecial">
-    <input type="radio" name="gender" id="gender2" value="female"> Female
+    <input required type="radio" name="gender" id="gender2" value="female"> Female
 </label>
 <label for="gender3" class="labelSpecial">
-        <input type="radio" name="gender" id="gender3" value="other"> Other
+        <input required type="radio" name="gender" id="gender3" value="other"> Other
 </label>
 
 <br><br>
@@ -294,7 +292,7 @@
 
 <label>Please indicate your education in number of years (including primary and secondary):</label>
 <br>
-<input type="number" class="col-2 form-control" id="educationLevel" name="educationLevel">
+<input required type="number" class="col-2 form-control" id="educationLevel" name="educationLevel">
 <!--<select id="educationLevel" class="col-4 custom-select mr-sm-2" name="educationLevel">
     <option value="" selected="selected" disabled="disabled">-- select one --</option>
     <option value="No formal education">No formal education</option>
@@ -310,17 +308,16 @@
 
 <label>Please indicate your age:</label>
 <br>
-<input type="number" class="col-2 form-control" id="age" name="age">
+<input  required type="number" class="col-2 form-control" id="age" name="age">
 <br>
 
 <label>Input your BYU NetID (example: jordan23):</label>
-<input type="text" class="col-2 form-control" id="byuID" name="byuID">
+<input required type="text" class="col-2 form-control" id="byuID" name="byuID">
 
 <button type="submit" class="btn btn-primary btn-lg" style="float: right;" value="Submit">Submit</button><br>
         
 </form>
 </div>
 <link rel="stylesheet" href="/Content/style.css">
-
 </body>
 </html>
