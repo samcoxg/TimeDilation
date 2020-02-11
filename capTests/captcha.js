@@ -147,11 +147,10 @@ let pastGameObjects = [
 let musicPlaying = false;
 let audio = undefined;
 let startTime = undefined;
-let endTime = undefined;
 let finishEarly = false;
 
 
-setTimestamp();
+//setTimestamp();
 displayLever();
 function getQuestion()
 {
@@ -489,7 +488,7 @@ function displayCap()
     }
     //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (3000); // 1000 is one second, 360000
+    let end = start + (300); // 1000 is one second, 360000
 
     function spinWheel() 
     {

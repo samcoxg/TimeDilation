@@ -18,44 +18,6 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 app.get('/database', (req, res) =>
-    /*knex.select('userID', 
-    'startTime',
-    'endTime',
-    'leverTested',
-    'finishEarly',
-    'typeChange', 
-    'allA', 
-    'allC', 
-    'labelA', 
-    'labelC', 
-    'findWrongA', 
-    'findWrongC',
-    'typeWordsA', 
-    'typeWordsC', 
-    'findImageA', 
-    'findImageC',
-    'wrongWordA', 
-    'wrongWordC',
-    'descOthersA',
-    'descOthersC',
-    'connectsA',
-    'connectsC',
-    'belongsA',
-    'belongsC',
-    'specificA',
-    'specificC',
-    'noPatternA',
-    'noPatternC',
-    'findPatternA', 
-    'findPatternC', 
-    'finishWordA',
-    'finishWordC',
-     'avgResTime', 
-     'timeEstimate', 
-     'timeFeel',
-     'musicPlayed', 'musicAffect', 'volume',
-     'repetitive', 'motivating', 'engaging', 'distraction', 'enjoyment', 'anxiety', 'challenge',
-     'comfort', 'recentExp', 'timePressure', 'timeAwareness', 'emotion', 'educationLevel', 'maritalStatus', 'gender', 'age', 'byuID').from('Main')*/
      knex.select('*').from('Main')
     .orderBy('userID').then(mainRec => {
         res.render('index', {
@@ -102,11 +64,20 @@ app.get('/addMain', (req, res) => {
 
 
 app.post('/captchaStart', (req, res) => {
+    let d = new Date();
+    let setStart = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate()
+    + "-" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+    knex('Main').insert({startTime: setStart}).then(main => {
+        res.redirect('/addMain');
+    });
+});
+/*
+app.post('/captchaStart', (req, res) => {
     knex('Main').insert(req.body).then(main => {
         res.redirect('/addMain');
     });
 });
-
+*/
 
 app.get('/finalForm/:id', function(req, res) {
     knex.select('userID').from('Main').orderBy('userID', 'desc').then(mainRec => {
@@ -116,19 +87,16 @@ app.get('/finalForm/:id', function(req, res) {
     })
   });
 
-  app.get('/finalFormSubmit/:id', (req, res) => {
-    knex.select("*").from('Main').where('userID', req.params.id).then(mainRec => {
-        res.render("UpdateMain", {
-            mainData: mainRec
-        });
-    });
-});
 
   app.post('/finalFormSubmit/:id', (req, res) => 
   {
+        let d = new Date();
+        let setEnd = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate()
+        + "-" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
       knex('Main')
           .where('userID', req.params.id)
           .update({
+            endTime: setEnd,
             timeFeel: req.body.timeFeel,
             timeFeelEstimate: req.body.timeFeelEstimate,
             lostInterest: req.body.lostInterest,
@@ -176,15 +144,11 @@ app.get('/UpdateMain/:id', (req, res) => {
 //update and redirect to thankyou page
 app.post('/UpdateMain/:id', (req, res) => 
         {
-            let d = new Date();
-            let setEnd = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate()
-            + "-" + d.getHours() + "." + d.getMinutes() + "." + d.getSeconds();
+            
             knex('Main')
                 .where('userID', req.params.id)
                 //.update(req.body)
                 .update({
-                    endTime: setEnd,
-                    startTime: req.body.startTime,
                     leverTested: req.body.leverTested,
                     finishEarly: req.body.finishEarly,
                     typeChange: req.body.typeChange, 
@@ -228,7 +192,6 @@ app.post('/UpdateMain/:id', (req, res) =>
             )
         }   
     );
-
 
 
 
