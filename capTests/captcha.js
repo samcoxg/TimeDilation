@@ -488,7 +488,7 @@ function displayCap()
     }
     //7 minutes timer
     let start = Date.now(); // The current date (in miliseconds)
-    let end = start + (300); // 1000 is one second, 360000
+    let end = start + (360000); // 1000 is one second, 360000
 
     function spinWheel() 
     {
