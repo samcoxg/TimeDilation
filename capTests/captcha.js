@@ -787,8 +787,8 @@ function timeOutLever()
         var elem = document.getElementById("myBar");
         var width = 100;
         
-        if(inputType == 1 || inputType == 4 || inputType == 12)
-        {id = setInterval(frame, 50);}
+        if(inputType == 1 || inputType == 4)
+        {id = setInterval(frame, 40);}
         else
         {id = setInterval(frame, 60);}
 
