@@ -119,7 +119,8 @@ app.get('/finalForm/:id', function(req, res) {
             maritalStatus: req.body.maritalStatus, 
             gender: req.body.gender, 
             age: req.body.age,
-            byuID: req.body.byuID
+            byuID: req.body.byuID,
+            feedback: req.body.feedback
           })
           .then
       (
