@@ -71,13 +71,7 @@ app.post('/captchaStart', (req, res) => {
         res.redirect('/addMain');
     });
 });
-/*
-app.post('/captchaStart', (req, res) => {
-    knex('Main').insert(req.body).then(main => {
-        res.redirect('/addMain');
-    });
-});
-*/
+
 
 app.get('/finalForm/:id', function(req, res) {
     knex.select('userID').from('Main').orderBy('userID', 'desc').then(mainRec => {
@@ -99,8 +93,7 @@ app.get('/finalForm/:id', function(req, res) {
             endTime: setEnd,
             timeFeel: req.body.timeFeel,
             timeFeelEstimate: req.body.timeFeelEstimate,
-            lostInterest: req.body.lostInterest,
-            musicPlayed: req.body.musicPlayed, 
+            lostInterest: req.body.lostInterest, 
             musicAffect: req.body.musicAffect, 
             volume: req.body.volume,
             repetitive: req.body.repetitive, 
@@ -180,8 +173,8 @@ app.post('/UpdateMain/:id', (req, res) =>
                     finishWordA: req.body.finishWordA,
                     finishWordC: req.body.finishWordC,
                     avgResTime: req.body.avgResTime, 
-                    timeEstimate: req.body.timeEstimate
-                    
+                    timeEstimate: req.body.timeEstimate,
+                    musicPlayed: req.body.musicPlayed
                 })
                 .then
             (
